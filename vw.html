@@ -1,0 +1,145 @@
+<html>
+
+<head>
+
+<title>Vehicle Weapons</title>
+<script src = "jqMin.js"></script>
+<script src = "script.js"></script>
+<link rel="stylesheet" type="text/css" href="IAWstyle.css">
+</head>
+
+<body>
+
+<p id = "welcomeTitle" class = "title">Vehicle Weapons</p>
+<p class = "subtitle">All cannons and other heavy weapons are found here</p>
+	<br>
+<div id = "menu">
+	<ul>
+		<li class = "first"><a href = "IaWhome.html">Home</a></li>
+		<li class = "first"><a href = "race.html">Races</a>
+			<ul>
+				<li><a href = "SM.html">Space Marines</a></li>
+				<li><a href = "IG.html">Imperial Guard</a></li>
+				<li><a href = "AS.html">Sisters of Battle</a></li>
+				<li><a href = "T.html">Tau</a></li>
+				<li><a href = "E.html">Eldar</a></li>
+			</ul>
+		</li>
+		<li class = "first"><a href = "shop.html">Shop</a>
+			<ul>
+				<li><a href = "cloth.html">Clothes and Armour</a></li>
+				<li><a href = "close.html">Close Combat Weapons</a></li>
+				<li><a href = "ranged.html">Ranged Combat Weapons</a></li>
+				<li><a href = "ammo.html">Ammunition and Weapon Upgrades</a></li>
+				<li><a href = "vehicles.html">Vehicles</a></li>
+				<li><a href = "vw.html">Vehicle Weapons</a></li>
+				<li><a href = "friend.html">Friendly Creatures</a></li>
+				<li><a href = "spells.html">Spells</a></li>
+				<li><a href = "other.html">Other items</a></li>
+			</ul>
+		</li>
+		<li class = "first"><a href = "create.html">Character Creation</a></li>
+		<li class = "first"><a href = "rules.html">Rules and guidelines</a></li>
+	</ul>
+</div>
+
+		<br>
+
+<div id = "main">
+	<p class = "expl">S = Single shot weapons, one shot per standard action; A X = Automatic weapons, X (see Other) shots per standard action, can target up to X enemies with -2 accuracy per enemy after first enemy, each shot deals specified ammount of damage</p>
+	<p class = "expl">Inf = Infinite shots available</p>
+	<p class = "expl">Gunner is responsible for reloading / recharging all weapons, unless otherwise specified</p>
+	<table class = "shop">
+		<tr>
+			<td>Name</td><td>Damage</td><td>Critical</td><td>Range</td><td>Ammo Supply</td><td>Type</td><td>Other</td>
+		</tr>
+		<tr>
+			<td colspan = 7><moo>Small Turrets</moo></td>
+		</tr>
+		<tr>
+			<td>Bolter</td><td>6 + 1d6</td><td>20</td><td>40</td><td>Y</td><td>A 3</td><td>A modified version of the assault rifle, this gun has an ammo belt stored in the tank. It is perfect for killing lightly armoured infantry, deals 50% damage to Light/Medium armour tanks, cannot damage tanks with Heavy/Super Heavy armour</td>
+		</tr>
+		<tr>
+			<td colspan = 7><moo>Medium Turrets</moo></td>
+		</tr>
+		<tr>
+			<td>Heavy Bolter</td><td>8 + 1d8</td><td>20</td><td>60</td><td>Y</td><td>A 3</td><td>A heavier vession of the bolter turret, carries more destructive power in each shot, deals 50% damage to Light/Medium armour tanks, cannot damage tanks with Heavy/Super Heavy armour</td>
+		</tr>
+		<tr>
+			<td>Small Rocket Launcher</td><td>10 + 2d6</td><td>19-20</td><td>80</td><td>Y</td><td>S</td><td>Everything within 2 m radius gets 100% damage, everything within 5 m radius gets 50% of damage, requires movement action to reload, main weapon only</td>
+		</tr>
+		<tr>
+			<td>Shuriken Cannon</td><td>8 + 1d6</td><td>19-20</td><td>60</td><td>Y</td><td>A 3</td><td>A tank version of the shuriken rifles, quite useful in defence against nearby infantry, deals 50% damage to Light/Medium armour tanks, cannot damage tanks with Heavy/Super Heavy armour</td>
+		</tr>
+		<tr>
+			<td colspan = 7><moo>Heavy Turrets</moo></td>
+		</tr>
+		<tr>
+			<td>Chaingun</td><td>12 + 1d6</td><td>19-20</td><td>60</td><td>Y</td><td>A 5</td><td>Fires faster than the bolters, ideal against large groups, can be used as a main weapon or a side weapon, deals 50% damage to tanks with Heavy/Super Heavy armour</td>
+		</tr>
+		<tr>
+			<td>Lascannon</td><td>20 + 2d6</td><td>19-20</td><td>70</td><td>Inf</td><td>S</td><td>A powerful laser fed directly from the tank generator, used primarily against tank armour, ignores 50% of armour on infantry</td>
+		</tr>
+		<tr>
+			<td>Rocket Launcher</td><td>25 + 1d6</td><td>18-20</td><td>120</td><td>Y</td><td>S</td><td>Everything within 5 m radius gets 100% damage, everything within 10 m radius gets 50% of damage, requires movement action to reload, main weapon only</td>
+		</tr>
+		<tr>
+			<td>Cannon</td><td>15 + 2d6</td><td>19-20</td><td>100</td><td>Y</td><td>S</td><td>Fires explosive shells, direct hit gets 100% damage, everything within 2 m radius gets 50% of damage, main weapon only</td>
+		</tr>
+		<tr>
+			<td>Railgun</td><td>15 + 2d6</td><td>19-20</td><td>80</td><td>Y</td><td>S</td><td>Main offensive weapon of the Tau which uses electricity to propell small pellets at hypersonic speeds, main weapon only</td>
+		</tr>
+		<tr>
+			<td colspan = 7><moo>Super Heavy Turrets</moo></td>
+		</tr>
+		<tr>
+			<td>Heavy Lascannon</td><td>30 + 2d8</td><td>19-20</td><td>80</td><td>Inf</td><td>S</td><td>A lascannon with more penetrative power, ignores 75% of armour on infantry</td>
+		</tr>
+		<tr>
+			<td>Heavy Rocket Launcher</td><td>35 + 3d6</td><td>18-20</td><td>200</td><td>Y</td><td>S</td><td>Everything within 5 m radius gets 100% damage, everything within 10 m radius gets 50% of damage, requires standard action to reload</td>
+		</tr>
+		<tr>
+			<td>Heavy Cannon</td><td>30 + 2d6</td><td>19-20</td><td>120</td><td>Y</td><td>S</td><td>Fires explosive shells, direct hit gets 100% damage, everything within 5 m radius gets 50% of damage, requires a movement action to reload</td>
+		</tr>
+		<tr>
+			<td>Plasma Cannon</td><td>35 + 2d6</td><td>19-20</td><td>80</td><td>Inf</td><td>S</td><td>Fires plasma rounds which deteriorate armour at -2 per successful hit and -5 per critical hit, requires 1 standard action cooldown per 4 shots</td>
+		</tr>
+		<tr>
+			<td>Prism Cannon</td><td>25 + 3d8</td><td>17-20</td><td>100</td><td>Inf</td><td>S</td><td>An Eldar laser cannon, capable of focusing its power in one beam, or performing a scatter shot over 5 m radius with 75% damage</td>
+		</tr>
+		<tr>
+			<td>Doomweaver</td><td>20 + 2d6</td><td>18-20</td><td>70</td><td>Y</td><td>S</td><td>A tank version of the death spinner rifle, it deals 100% damage over 5 m radius, with + 2 damage against No/Basic/Medium armour, requires movement action to reload, tanks with V Light armour recieve 50% damage, cannot damage tanks in armour above Light</td>
+		</tr>
+		<tr>
+			<td colspan = 7><moo>Special Weapons</moo></td>
+		</tr>
+		<tr>
+			<td>Icarus Stormcannon</td><td>15 + 1d8</td><td>19-20</td><td>150</td><td>Y</td><td>S</td><td>An anti-aircraft machine gun (one shot shoots 5 rounds, counted as one), designed specifically for fast moving targets, can only target one aircraft, but without loss of accuracy</td>
+		</tr>
+		<tr>
+			<td>Earthshaker Cannon</td><td>40 + 2d8</td><td>19-20</td><td>300</td><td>Y</td><td>S</td><td>A very powerful long range artillery weapon which deals 100% damage within 5 m radius and 50% damage within 10 m radius, cannot target within 30 m of its position, requires standard action to roload</td>
+		</tr>
+		<tr>
+			<td>Volcano Cannon</td><td>50 + 2d6</td><td>19-20</td><td>100</td><td>Inf</td><td>S</td><td>The most powerful laser weapon known to Man, this is a true titan killer weapon, but needs 1 standard turn to recharge; instakills all infantry/V Light/Light armour vehicles when hit</td>
+		</tr>
+		<tr>
+			<td>D-Cannon</td><td>20 + 2d8</td><td>19-20</td><td>120</td><td>Inf</td><td>S</td><td>The most powerful weapon ever carried by tanks, it creates a tear in space-time sucking all into the Warp; deals 100% damage within 5 m of target, delivers an instakill to all but titans within 5 m radius with a critical shot, ignores 50% of ALL armour, requires 2 standard actions to recharge</td>
+		</tr>
+		<tr>
+			<td>Gun Drone</td><td>10 + 1d6</td><td>20</td><td>80</td><td>Inf</td><td>A 3</td><td>A small drone that is carried by all Tau tanks and is armed with a rapid fire laser gun</td>
+		</tr>
+		<tr>
+			<td>Seeker Missile Array</td><td>25 + 2d6</td><td>19-20</td><td>120</td><td>Y</td><td>S</td><td>Shoots several missiles to deal 100% damage within 15 m radius, 50% damage within 20 m radius, all vehicles with Heavy/Super Heavy armour recieve 50% of damage, requires 1 standard action to reload</td>
+		</tr>
+		<tr>
+			<td>Drone Factory</td><td>N/A</td><td>20</td><td>N/A</td><td>Inf</td><td>S</td><td>Produces 1 gun drone per standard action (2 if critical is rolled), all have 5 armour points and are considered as NPCs, see "Friendly Creatures" section of the shop for details</td>
+		</tr>
+		<!--<tr>
+			<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>-->
+	</table>
+</div>
+
+</body>
+
+</html>

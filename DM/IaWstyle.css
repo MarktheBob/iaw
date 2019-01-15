@@ -1,0 +1,152 @@
+/*General page styling*/
+
+body{
+	
+}
+
+ul{
+	list-style-type: none;
+}
+
+.title{
+	font-size: 45px;
+}
+
+.subtitle{
+	font-size: 30px;
+}
+
+.text{
+	
+}
+
+.link{
+	
+}
+
+button{
+	
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+a.click{
+	color: black;
+}
+
+.first{
+	margin-top: 10px;
+}
+
+table{
+	font-size: medium;
+	border-collapse: collapse;
+	border: solid 1px black;
+	text-align: center;
+}
+
+#menu{
+	font-style: italic;
+}
+
+/*Character Classes pages*/
+
+.chars{
+	
+}
+
+tr, td{
+	
+	border: solid 1px black;
+	padding: 10px;
+}
+
+.allRanks{
+	text-align: left;
+}
+
+.rank{
+	font-size: 20px;
+}
+
+.class{
+	
+}
+
+moo{
+	font-size: 20px;
+}
+
+.layout{
+	display: table;
+	table-layout: fixed;
+}
+
+.layout > div{
+	display: table-cell;
+}
+
+.chars{
+	width: 50%;
+}
+
+.traits > *{
+	margin-left: 20px;
+}
+
+perk{
+	font-size: 25px;
+}
+
+ind1{
+	text-indent: 30px;
+}
+
+ind2{
+	text-indent: 60px;
+}
+
+ind3{
+	text-indent: 90px;
+}
+
+ind4{
+	text-indent: 120px;
+}
+
+ind5{
+	text-indent: 160px;
+}
+
+.enemy{
+	border: none;
+	width: 100%;
+	text-align: left;
+	table-layout: fixed;
+}
+
+.enemy tr td{
+	border: none;
+}
+
+.enemy tr{
+	border: none;
+}
+
+/*Shop pages*/
+
+.expl{
+	
+}
+
+
+
+
+
+
+
+
+
