@@ -3,174 +3,267 @@
 <head>
 
 <title>Vehicles</title>
-<script src = "jqMin.js"></script>
-<script src = "script.js"></script>
-<link rel="stylesheet" type="text/css" href="IaWstyle.css">
+<link rel="stylesheet" type="text/css" href="IAWstyle.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-
-<p id = "welcomeTitle" class = "title">Vehicles</p>
-<p class = "subtitle">All types of vehicles from bikes to Imperial Dreadnaughts can be found here</p>
-	<br>
-<div id = "menu">
-	<ul>
-		<li class = "first"><a href = "IaWhome.html">Home</a></li>
-		<li class = "first"><a href = "race.html">Races</a>
-			<ul>
-				<li><a href = "SM.html">Space Marines</a></li>
-				<li><a href = "IG.html">Imperial Guard</a></li>
-				<li><a href = "AS.html">Sisters of Battle</a></li>
-				<li><a href = "T.html">Tau</a></li>
-				<li><a href = "E.html">Eldar</a></li>
-			</ul>
-		</li>
-		<li class = "first"><a href = "shop.html">Shop</a>
-			<ul>
-				<li><a href = "cloth.html">Clothes and Armour</a></li>
-				<li><a href = "close.html">Close Combat Weapons</a></li>
-				<li><a href = "ranged.html">Ranged Combat Weapons</a></li>
-				<li><a href = "ammo.html">Ammunition and Weapon Upgrades</a></li>
-				<li><a href = "vehicles.html">Vehicles</a></li>
-				<li><a href = "vw.html">Vehicle Weapons</a></li>
-				<li><a href = "friend.html">Friendly Creatures</a></li>
-				<li><a href = "spells.html">Spells</a></li>
-				<li><a href = "other.html">Other items</a></li>
-			</ul>
-		</li>
-		<li class = "first"><a href = "create.html">Character Creation</a></li>
-		<li class = "first"><a href = "rules.html">Rules and guidelines</a></li>
-	</ul>
-</div>
-
+	<nav>
+		<a href = "index.html">Home</a>
+		<div class = "dropdown">
+			<button class="dropbtn">Races <i class="fa fa-caret-down"></i></button>
+			<div class="dropdown-content">
+				<a href = "SM.html">Adeptus Astartes</a>
+				<a href = "AS.html">Adeptus Sororitas</a>
+				<a href = "IG.html">Imperial Guard</a>
+				<a href = "T.html">Tau</a>
+				<a href = "E.html">Eldar</a>
+			</div>
+		</div>
+		<div class = "dropdown">
+			<button class="dropbtn">Shop <i class="fa fa-caret-down"></i></button>
+			<div class="dropdown-content">
+				<a href = "cloth.html">Armour and Clothes</a>
+				<a href = "close.html">Close Combat</a>
+				<a href = "ranged.html">Ranged Combat</a>
+				<a href = "ammo.html">Weapon Accesories</a>
+				<a href = "vehicles.html">Vehicle Builder</a>
+				<a href = "friend.html">Allies</a>
+				<a href = "spells.html">Spells</a>
+				<a href = "other.html">Other Things</a>
+			</div>
+		</div>
+		<a href = "create.html">Character Creation</a>
+		<a href = "rules.html">Rules and Guidelines</a>
+	</nav>
+	<header>
+		<h1>Vehicle Assembler</h1>
+	</header>
 		<br>
 
-<div id = "main">
-	<p class = "expl">Passengers count as people wearing "Medium" or worse armour. Those with Good, Epic and Legendary Armour occupy space equivalent to 2 normal passengers. XV8 cannot use small land vehicles as transportation, and in other vehicles occupies 4 seats</p>
-	<p class = "expl">Hover vehicles fly at the height of 2 m as they have anti-gravity generators. They cannot be hit by most landmines</p>
-	<p class = "expl">Land vehicles can be hit by all landmines, but they can hit enemies and friends, dealing 1d6*distance covered this turn/5 damage [think of it as 1d6*speed]</p>
-	<p class = "expl">V Fast covers 80 m per standard action and 20 m per movement action; Fast covers 65 m per standard action and 15 m per movement action; Medium covers 50 m per standard action and 10 m per movement action; Slow covers 40 m per standard action and 5 m per movement action</p>
-	<p class = "expl">P = Pilot; G = Gunner, is optional</p>
-	<p class = "expl">For vehicle weapons and ammo, see <a href = "vw.html"><u>this page</u></a>, with ST = Small Turret, MT = Medium Turret, HT = Heavy Turret and VHT = Super Heavy Turret; some vehicles have a fixed gun that cannot be replaced; unless otherwise indicated, all fixed weapons cannot be rotated and are facing forwrds to be fired by the pilot, all side weapons can be rotated</p>
-	<p class = "expl">Armour classes: V Light gives + 6 Armour bonus, Light gives + 12 Armour Bonus, Medium gives + 20 Armour Bonus, Heavy gives + 30 Armour Bonus, Super Heavy gives + 50 Armour Bonus; each small vehicle has 10 health points, each large vehicle has 30 health points</p>
-	<table class = "shop">
-		<tr>
-			<td>Name</td><td>Type</td><td>Crew</td><td>Passengers</td><td>Weapons</td><td>Speed</td><td>Armour</td><td style = "width: 50px;">Cost</td><td>Other</td>
-		</tr>
-		<tr>
-			<td colspan = 9><moo>Small Land Vehicles</moo></td>
-		</tr>
-		<tr>
-			<td>Small Land Speeder</td><td>Hover</td><td>1 P</td><td>0</td><td>Bolter</td><td>V Fast</td><td>V Light</td><td>X</td><td>This is a fast recon vehicle, not fit for any prolonged battles</td>
-		</tr>
-		<tr>
-			<td>Scout Land Speeder</td><td>Hover</td><td>2 P+G</td><td>0</td><td>2 Bolters</td><td>V Fast</td><td>V Light</td><td>X</td><td>This land speeder can survive enemy ambushes and lay its own, with the gunner controlling one turnable bolter</td>
-		</tr>
-		<tr>
-			<td>Support Land Speeder</td><td>Hover</td><td>2 P+G</td><td>0</td><td>1 Bolter, 1 ST</td><td>Fast</td><td>Light</td><td>X</td><td>This is a fast hit and run vehicleused primarily for ambushing enemy patrols, or supporting a fast assault team, with the gunner operating the turret</td>
-		</tr>
-		<tr>
-			<td>Transport Land Speeder</td><td>Hover</td><td>1 P</td><td>5</td><td>None</td><td>Fast</td><td>V Light</td><td>X</td><td>A scout transport that often goes with support land speeders for scouting missions</td>
-		</tr>
-		<tr>
-			<td>Scout Bike</td><td>Land</td><td>1 P</td><td>0</td><td>1 Bolter</td><td>V Fast</td><td>V Light</td><td>X</td><td>Scout bikes are used in areas where land speeders cannot get into like forests and city streets</td>
-		</tr>
-		<tr>
-			<td>Bike</td><td>Land</td><td>1 P</td><td>0</td><td>1 Bolter</td><td>Fast</td><td>Light</td><td>X</td><td>Slower and more armoured, this bike is perfect for city and dense forest ambush missions</td>
-		</tr>
-		<tr>
-			<td>Attack Bike</td><td>Land</td><td>2 P+G</td><td>0</td><td>1 ST, 1 Bolter</td><td>Fast</td><td>Light</td><td>X</td><td>Carries the same function as a support landspeeder, with the turnable turret operated by the gunner</td>
-		</tr>
-		<tr>
-			<td>Imperial Sentinel</td><td>Land</td><td>1 P</td><td>0</td><td>1 ST</td><td>Fast</td><td>Light</td><td>X</td><td>A walker for supporting squad missions, most useful in city battles</td>
-		</tr>
-		<tr>
-			<td>Support Sentininel</td><td>Land</td><td>1 P</td><td>0</td><td>1 MT</td><td>Medium</td><td>Light</td><td>X</td><td>A walker for larger battles with more open space</td>
-		</tr>
-		<tr>
-			<td>Rhino</td><td>Land</td><td>1</td><td>12</td><td>1 ST</td><td>Fast</td><td>Light</td><td>X</td><td>A fast troop transporter used by most Imperium Forces</td>
-		</tr>
-		<tr>
-			<td>Razorback</td><td>Land</td><td>2 P+G</td><td>10</td><td>1 ST, 1 Bolter</td><td>Fast</td><td>Light</td><td>X</td><td>A heavier version of the Rhino, the gunner controls a turnable turret from the roof of the tank</td>
-		</tr>
-		<tr>
-			<td>Jetbike</td><td>Hover</td><td>1 P</td><td>0</td><td>1 Shuriken Cannon</td><td>V Fast</td><td>V Light</td><td>X</td><td>An Eldar hovercraft for fast hit and run missions</td>
-		</tr>
-		<tr>
-			<td>Pirahna Skimmer</td><td>Hover</td><td>2 P+G</td><td>0</td><td>1 Gun Drones</td><td>V Fast</td><td>V Light</td><td>X</td><td>A Tau scout support craft, with the same function as a support land speeder, with the gunner operating the drone, which are capable of swiveling</td>
-		</tr>
-		<tr>
-			<td colspan = 9><moo>Large Land Vehicles</moo></td>
-		</tr>
-		<tr>
-			<td>Predator</td><td>Land</td><td>3 P+G+G</td><td>0</td><td>1 Heavy Lascannon, 2 Lascannons</td><td>Fast</td><td>Medium</td><td>X</td><td>An agile anti-armour tank, onegunner controls 2 lascannons on either side, while the other controls the turnable heavy lascannon on the roof</td>
-		</tr>
-		<tr>
-			<td>Stalker</td><td>Land</td><td>2 P+G</td><td>0</td><td>Icarus Stormcannon</td><td>Medium</td><td>Medium</td><td>X</td><td>This is an anti-aircraft tank with a turnable stormcannon on the roof, which cannot shoot ground troops and vehicles</td>
-		</tr>
-		<tr>
-			<td>Whirlwind</td><td>Land</td><td>2 P+G</td><td>0</td><td>Rocket Launcher</td><td>Medium</td><td>Heavy</td><td>X</td><td>This tank provides artillery fire in the middle of battle and can be used against tanks just as well as infantry</td>
-		</tr>
-		<tr>
-			<td>Land Raider</td><td>Land</td><td>2 P+G</td><td>6</td><td>1 Heavy Bolter, 2 Lascannons</td><td>Medium</td><td>Heavy</td><td>X</td><td>This large tank is primarily used to carry troops in the middle of battle, providing fire cover when necessary, with the gunner controlling both lascannons on the sides</td>
-		</tr>
-		<tr>
-			<td>Land Raider Achilles</td><td>Land</td><td>3 P+G+G</td><td>6</td><td>1 Heavy Bolter, 2 Chainguns</td><td>Medium</td><td>Medium</td><td>X</td><td>An anti-personnel tank with some armour removed to make room for more ammo; each gunner controls a chaingun on each side</td>
-		</tr>
-		<tr>
-			<td>Land Raider Ares</td><td>Land</td><td>2 P+G</td><td>0</td><td>1 Heavy Cannon, 2 Heavy Bolters</td><td>Slow</td><td>Super Heavy</td><td>X</td><td>A siedge tank for breaking walls; the gunner controls both bolters, one on each side</td>
-		</tr>
-		<tr>
-			<td>Land Raider Terminus Ultra</td><td>Land</td><td>4 P+G+G+G</td><td>0</td><td>1 Heavy Lascannon, 4 Lascannons</td><td>Slow</td><td>Heavy</td><td>X</td><td>This tank is an anti-armour tank, and has the heavy lascannon at the front and 2 normal lascannons on each side, with 1 gunner controlling either 1 heavy or both normal lascannons. This is one of the mightiest tanks on any field of battle</td>
-		</tr>
-		<tr>
-			<td>Land Raider Helios</td><td>Land</td><td>3 P+G+G</td><td>0</td><td>1 Heavy Rocket Launcher, 2 Heavy Bolters</td><td>Medium</td><td>Heavy</td><td>X</td><td>A missile launcher capable of defending itself which can shoot without direct visibility provied that scouts give directions; one gunner controls the turnable rocket launcher, the other controls 2 bolters on the sides</td>
-		</tr>
-		<tr>
-			<td>Leman Russ</td><td>Land</td><td>2 P+G</td><td>0</td><td>1 HT, 2 Heavy Bolters</td><td>Fast</td><td>Medium</td><td>X</td><td>A common tank in the Imperial Guard, the gunner controls both bolters on the sides</td>
-		</tr>
-		<tr>
-			<td>Leman Russ Executioner</td><td>Land</td><td>2 P+G</td><td>0</td><td>1 Plasma Cannon, 2 Heavy Bolters</td><td>Fast</td><td>Medium</td><td>X</td><td>A fast and agile tank killer that reduces armour on every hit; the gunner controls the 2 bolters on the sides</td>
-		</tr>
-		<tr>
-			<td>Basilisk</td><td>Land</td><td>2 P+G</td><td>0</td><td>1 Earthshaker Cannon</td><td>Slow</td><td>Light</td><td>X</td><td>A heavy artillery unit capapbe of providing cover fire at very long distances, given the co-ordinates; both pilot and gunner load and fire the gun</td>
-		</tr>
-		<tr>
-			<td>Baneblade</td><td>Land</td><td>3 P+G+G</td><td>0</td><td>1 VHT, 2 HT</td><td>Slow</td><td>Super Heavy</td><td>X</td><td>The most powerful tank in Imperium, this tank has 2 side heavy turret, each operated by a gunner, and a fixed super heavy turret, alltogether giving rise to immense firepower</td>
-		</tr>
-		<tr>
-			<td>Shadowsword</td><td>Land</td><td>3 P+G+G</td><td>0</td><td>1 Volcano Cannon, 2 Heavy Bolters</td><td>Slow</td><td>Heavy</td><td>X</td><td>This is a titan killer, so it carries the most powerful weapon available to tanks, but the recharge is very slow, requiring full attention of a gunner, while the other one operates both side bolters. Should be used with lighter vehicles for best defence</td>
-		</tr>
-		<tr>
-			<td>Aspid</td><td>Hover</td><td>2 P+G</td><td>0</td><td>1 Small Rocket Launcher, 1 Shuriken Cannon</td><td>Fast</td><td>Light</td><td>X</td><td>An Eldar tank destroyer, with the gunner operating the rocket launcher on a turnable turret</td>
-		</tr>
-		<tr>
-			<td>Falcon</td><td>Hover</td><td>2 P+G</td><td>8</td><td>1 Heavy Shuriken Cannon, 1 Shuriken Cannon</td><td>Fast</td><td>Light</td><td>X</td><td>The fast and agile transport is capable of delivering troops rapidly to the center of battle and disappearing again without the chance of enemy retaliation, with the gunner operating a turnable heavy shuriken cannon to provide cover fire</td>
-		</tr>
-		<tr>
-			<td>Fire Prism</td><td>Hover</td><td>2 P+G</td><td>0</td><td>1 Prism Cannon, 1 Shuriken Cannon</td><td>Fast</td><td>Medium</td><td>X</td><td>A multipurpose tank with large firepower, the prism is on a turnable turret with the gunner operating it</td>
-		</tr>
-		<tr>
-			<td>Night Spinner</td><td>Hover</td><td>2 P+G</td><td>0</td><td>1 Doomweaver, 1 Shuriken Cannon</td><td>Fast</td><td>Medium</td><td>X</td><td>The perfect anti-infantry tank, supporting a turnable doomweaver operated by a gunner</td>
-		</tr>
-		<tr>
-			<td>Warp Hunter</td><td>Hover</td><td>2 P+G</td><td>0</td><td>1 D-Cannon, 1 Shuriken Cannon</td><td>Fast</td><td>Medium</td><td>X</td><td>The Eldar version of the shadowsword, with a turnable d-cannon operated by a gunner</td>
-		</tr>
-		<tr>
-			<td>Hammerhead</td><td>Hover</td><td>2 P+G</td><td>0</td><td>1 Railgun, 1 Gun Drone</td><td>Fast</td><td>Medium</td><td>X</td><td>The main battletank of the Tau, the gunner operates the turnable drone</td>
-		</tr>
-		<tr>
-			<td>Skyray</td><td>Hover</td><td>3 P+G+G</td><td>0</td><td>1 Seeker Missile Array, 1 Gun Drone</td><td>Fast</td><td>Medium</td><td>X</td><td>The missile array covers large areas with explosions and is operated by one gunner, while the other controls the turnable gun drone</td>
-		</tr>
-		<tr>
-			<td>Drone Harbringer</td><td>Hover</td><td>2 P+G</td><td>0</td><td>Drone Factory, 1 Gun Drone</td><td>Slow</td><td>Heavy</td><td>X</td><td>This is a mobile drone factory, providing cheap firepower on the field of battle, but requires defence from other vehicles; the gunner operates the turnable gun drone</td>
-		</tr>
-		<!--<tr>
-			<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>X</td><td></td>
-		</tr>-->
-	</table>
-</div>
-
+	<main>
+		<p>There are three parts to this page, the chassis selection which defines what weapons you can use and what armour you have, the amarment selection, and the vehicle upgrades that boost certain aspects of the vehicle.</p>
+		<p>Each vehicle needs a pilot and some gunners, depending on the choice of weapons installed. These can be hired from the Allies tab, as players are not encouraged to pilot vehicles or operate their weaponry</p>
+		<p>There are four classes of armour in the game for vehicles, each having its own armour rating detailed below. Note that infantry with armour rating of 9 or less is considered unarmoured, armour ratings from 10 to 19 are light armour and 20+ is med armour</p>
+		<ul>
+			<li>Light Armour: armour rating = 15, health = 10</li>
+			<li>Medium Armour: armour rating = 25, health = 15</li>
+			<li>Heavy Armour: armour rating = 35, health = 15</li>
+			<li>Super Heavy Armour: armour rating = 40, health = 25</li>
+		</ul>
+		<p>Walkers and Track based vehicles are all in direct contact with the ground, Hover tanks are floating 2m off the ground</p>
+		<br>
+		<h3>Chassis</h3>
+		<table>
+			<tr>
+				<td>Name</td><td>Armour</td><td>Passengers</td><td>Weapons</td><td>Speed</td><td>Cost</td><td>Notes</td>
+			</tr>
+			<tr>
+				<td>Sentinel</td><td>Light</td><td>0</td><td>1 Small Front</td><td>30</td><td>700</td><td>Walker, generally used for close infantry support and scouting</td>
+			</tr>
+			<tr>
+				<td>Land Speeder</td><td>Light</td><td>3</td><td>1 Small Front</td><td>50</td><td>900</td><td>Hover, small marine speeder that is used for recon purposes, if weapon is installed -1 Passenger</td>
+			</tr>
+			<tr>
+				<td>Vyper</td><td>Light</td><td>0</td><td>1 Medium Front</td><td>45</td><td>800</td><td>Hover, a fast eldar tank that harasses enemies with suppressive fire</td>
+			</tr>
+			<tr>
+				<td>Pirahna</td><td>Light</td><td>1</td><td>1 Light Front</td><td>60</td><td>750</td><td>Hover, very fast Tau scout vehicle</td>
+			</tr>
+			<tr>
+				<td>Chimera</td><td>Medium</td><td>0/0/12</td><td>1 Super Top / 1 Medium Top + 2 Medium Side / 1 Small Top</td><td>30</td><td>900</td><td>Track, is a common Imperial chassis that a lot of tanks use</td>
+			</tr>
+			<tr>
+				<td>Falcon</td><td>Medium</td><td>8/0</td><td>1 Small Front / 1 Large Top + 1 Small Front</td><td>40</td><td>1000</td><td>Hover, the most common chassis used by the Eldar</td>
+			</tr>
+			<tr>
+				<td>Devilfish</td><td>Medium</td><td>10/0/0</td><td>2 Small Front / 1 Large Top + 2 Small Front / Drone Facility</td><td>30</td><td>950</td><td>Hover, the only known Tau chassis for tanks</td>
+			</tr>
+			<tr>
+				<td>Rhino</td><td>Heavy</td><td>10/0</td><td>2 Small Side / 1 Large Top + 2 Medium Side</td><td>30</td><td>1100</td><td>Track, a common Space Marine vehicle chassis</td>
+			</tr>
+			<tr>
+				<td>Leman Russ</td><td>Heavy</td><td>0</td><td>1 Large Top + 2 Small Side</td><td>30</td><td>1200</td><td>Track, the main cavalry of the Imperial forces</td>
+			</tr>
+			<tr>
+				<td>Engine of Vaul</td><td>Heavy</td><td>0</td><td>! Super Top + 1 Small front</td><td>25</td><td>1500</td><td>Hover, the only known Eldar tank to be able to fit super guns</td>
+			</tr>
+			<tr>
+				<td>Land Raider</td><td>Super</td><td>20/14</td><td>1 Medium Top / 1 Medium Top + 2 Medium Side</td><td>25</td><td>1600</td><td>Track, a very armoured troop transport, rarely used by the Space Marines, few forgeworlds can produce these</td>
+			</tr>
+			<tr>
+				<td>Bane Blade</td><td>Super</td><td>0</td><td>1 Large Top + 2 Medium Side + 2 Small Side / 1 Super Top + 2 Medium Side</td><td>20</td><td>1800</td><td>Track, the heaviest tank in the Imperial forces</td>
+			</tr>
+		</table>
+		<br>
+		<h3>Weapons</h3>
+		<p>Range for some weapons exceeds line of sight, in shich case a spotter team is recommended to coordinate fire. Some weapons cannot target close targets, so be careful with those tanks as they sometimes have no defence against nearby enemies</p>
+		<p>Critical rolls: only if Nat 20, deal double damage</p>
+		<p>Unless otherwise stated, each gun requires 1 gunner to operate, apart from front guns which are operated by the pilot</p>
+		<p>The Drone facility produces 1 combat drone every 2 turns, drones last 6 turns</p>
+		<p>There are four types of tank weapons in the game, it is assumed that tanks have infinite ammo. It is possible to downgrade weapons:</p>
+		<ul>
+			<li>Small (S): lowest damage dealing weapons, mainly used against infantry</li>
+			<li>Medium (M): most common weapons, can be tank and infantry oriented</li>
+			<li>Large (L): either deal damage in a large area or deal a lot of damage against tanks</li>
+			<li>Super Large (U): few tanks can even hold these massive weapons, they are mostly tank killers, some even packing the punch to attack titans</li>
+		</ul>
+		<table>
+			<tr>
+				<td>Name</td><td>Type</td><td>Damage</td><td>Range</td><td>Cost</td><td>Notes</td>
+			</tr>
+			<!--Small Weapons-->
+			<tr>
+				<td>Gun Drone</td><td>S</td><td>1d6</td><td>100</td><td>150</td><td>Does not require a gunner, shoots bursts of 3 bullets, ranged accuracy +3</td>
+			</tr>
+			<tr>
+				<td>Assault Cannon</td><td>S</td><td>1d6</td><td>80</td><td>100</td><td>Shoots bursts of 5 bullets</td>
+			</tr>
+			<tr>
+				<td>Heavy Flamer</td><td>S</td><td>2d8</td><td>30</td><td>130</td><td>Deals burning damage of 1d4 for 1d4 turns, targets with armour rating 10+ take 50% damage</td>
+			</tr>
+			<tr>
+				<td>Heavy Bolter</td><td>S</td><td>2d6</td><td>80</td><td>140</td><td>Shoots bursts of 3 bullets</td>
+			</tr>
+			<tr>
+				<td>Multilaser</td><td>S</td><td>1d6</td><td>100</td><td>120</td><td>Shoots 3 lasers, ignores 25% armour</td>
+			</tr>
+			<tr>
+				<td>Shuriken Cannon</td><td>S</td><td>2d4</td><td>80</td><td>130</td><td>Shoots bursts of 5 shurikens</td>
+			</tr>
+			<!--Medium Weapons-->
+			<tr>
+				<td>Ion Blaster</td><td>M</td><td>2d8</td><td>50</td><td>200</td><td>Shoots focused radiation that ignores 75% armour, deals 50% damage to tanks, 1 turn cooldown every 3 turns</td>
+			</tr>
+			<tr>
+				<td>Lascannon</td><td>M</td><td>2d6</td><td>120</td><td>180</td><td>Shots bursts of 3 lasers, ignores 25% armour</td>
+			</tr>
+			<tr>
+				<td>Twin Linked Bolter</td><td>M</td><td>2d6</td><td>80</td><td>220</td><td>Shoots bursts of 6 bullets, can spread in 10x10 area with 2 bullets per 5x5 with -3 accuracy penalty</td>
+			</tr>
+			<tr>
+				<td>Twin Linked Flamer</td><td>M</td><td>3d8</td><td>40</td><td>210</td><td>Deals burning damage of 1d6 for 1d4 turns, targets with armour rating 10+ take 50% damage, can spread in 10x10 area with 2d6 damage to each 5x5 with -3 accuracy penalty</td>
+			</tr>
+			<tr>
+				<td>Twin Linked Shuriken Cannon</td><td>M</td><td>2d4</td><td>80</td><td>210</td><td>Fires bursts of 10 shurikens, can spread in 10x10 area with 3 shurikens to each 5x5 with -3 accuracy penalty</td>
+			</tr>
+			<tr>
+				<td>Missile Launcher</td><td>M</td><td>-</td><td>50-400</td><td>200</td><td>Fires 1 type of missile from the Ammo tab, 1 turn needed for reload</td>
+			</tr>
+			<!--Large Weapons-->
+			<tr>
+				<td>Tempest Launcher</td><td>L</td><td>-</td><td>50-500</td><td>500</td><td>Fires 1 type of missile from Ammo Tab, can either fire 3 missiles into 3 ajacent 10x10, or 1 missile per turn for 3 turns, 1 turn to reload all</td>
+			</tr>
+			<tr>
+				<td>Hunter-Killer Launcher</td><td>L</td><td>3d8+20</td><td>70-750</td><td>700</td><td>A specialised tank hunter missile that deals damage in 10x10. 2 turns per reload, requires 1 extra gunner</td>
+			</tr>
+			<tr>
+				<td>Autocannon</td><td>L</td><td>3d6</td><td>150</td><td>400</td><td>Fires 3 rounds, can target 10x10 area with 1 round per 5x5 with -3 accuracy penalty</td>
+			</tr>
+			<tr>
+				<td>Battle Cannon</td><td>L</td><td>2d6+20</td><td>250</td><td>400</td><td>Fires 1 shell, 1 turn reload time</td>
+			</tr>
+			<tr>
+				<td>Plasma Destructor</td><td>L</td><td>3d6+20</td><td>300</td><td>600</td><td>Ignores 25% armour, 1 turn cooldown after every shot</td>
+			</tr>
+			<tr>
+				<td>Plasma Cannon</td><td>L</td><td>3d6+10</td><td>300</td><td>550</td><td>Ignores 25% armour, deals damage in 10x10, 1 turn cooldown after every shot</td>
+			</tr>
+			<tr>
+				<td>Brightlance</td><td>L</td><td>3d8</td><td>400</td><td>600</td><td>Ignores 50% armour, 1 turn cooldown after every shot</td>
+			</tr>
+			<tr>
+				<td>Fire Prism</td><td>L</td><td>3d6</td><td>300</td><td>500</td><td>Deals damage in 15x15 area, 1 turn cooldown after every 2 shots</td>
+			</tr>
+			<tr>
+				<td>Death Spinner</td><td>L</td><td>2d8</td><td>250</td><td>600</td><td>Deals damage in 20x20 area, targets with armour rating 9 or less take 25% more damage</td>
+			</tr>
+			<tr>
+				<td>Rail Gun</td><td>L</td><td>2d6+10</td><td>500</td><td>500</td><td>Ignores 25% armour</td>
+			</tr>
+			<tr>
+				<td>Sky Ray Platform</td><td>L</td><td>2d6+5</td><td>300</td><td>600</td><td>Fires rockets that cover 10x10 area, requires 1 turn cooldown after every volley</td>
+			</tr>
+			<!--Super Weapons-->
+			<tr>
+				<td>Earth Shaker Cannon</td><td>U</td><td>2d6+15</td><td>150-1500</td><td>800</td><td>Deals damage in 15x15 area, requires 2 turns to reload, requires 2 extra gunners</td>
+			</tr>
+			<tr>
+				<td>Plasma Blast Gun</td><td>U</td><td>3d6+25</td><td>350</td><td>1000</td><td>Deals damage in 10x10 area, ignores 25% armour, requires 2 turns cooldown after every shot</td>
+			</tr>
+			<tr>
+				<td>Baneblade Cannon</td><td>U</td><td>2d6+20</td><td>300</td><td>900</td><td>Deals damage in 10x10 area, requires 1 turn to reload</td>
+			</tr>
+			<tr>
+				<td>Distortion Cannon</td><td>U</td><td>2d8</td><td>400</td><td>1500</td><td>Ignores all armour, deals damage in 15x15 area, requires 2 turns cooldown</td>
+			</tr>
+			<tr>
+				<td>Twin Brightlance</td><td>U</td><td>3d8+10</td><td>400</td><td>1000</td><td>Ignores 50% armour, 2 turns cooldown after every shot</td>
+			</tr>
+		</table>
+		<br>
+		<h3>Vehicle Upgrades</h3>
+		<p>Only 1 upgrade of each type per vehicle, unless explicitly stated</p>
+		<table>
+			<tr>
+				<td>Name</td><td>Type</td><td>Cost</td><td>Notes</td>
+			</tr>
+			<tr>
+				<td>Light Plating</td><td>Armour</td><td>150</td><td>+2 armour rating</td>
+			</tr>
+			<tr>
+				<td>Heavy Plating</td><td>Armour</td><td>300</td><td>+5 armour rating, -5m movement range, land vehicles only</td>
+			</tr>
+			<tr>
+				<td>Void Shielding</td><td>Armour</td><td>500</td><td>Absorb 25% damage (reduction of incoming damage by 25%), can absorb 30 points per battle before shutting down, -5m range while active</td>
+			</tr>
+			<tr>
+				<td>Holo Field</td><td>Armour</td><td>350</td><td>-4 ranged accuracy to targeting weapons, -2 accuracy on area weapons</td>
+			</tr>
+			<tr>
+				<td>Light Inner Shielding</td><td>Armour</td><td>150</td><td>+2 vehicle health</td>
+			</tr>
+			<tr>
+				<td>Heavy Inner Shielding</td><td>Armour</td><td>300</td><td>+5 vehicle health, -5m range, land vehicles only</td>
+			</tr>
+			<tr>
+				<td>Basic Sights</td><td>Sight</td><td>100</td><td>+2 ranged accuracy to all gunners</td>
+			</tr>
+			<tr>
+				<td>Advanced Sights</td><td>Sight</td><td>200</td><td>+4 ranged accuracy to all gunners</td>
+			</tr>
+			<tr>
+				<td>Targeting Comp</td><td>Sight</td><td>300</td><td>+6 ranged accuracy to all gunners, Nat 1 rolls do not deal damage to allies</td>
+			</tr>
+			<tr>
+				<td>Ballistics Comp</td><td>Sight</td><td>200</td><td>+20m range to all weapons except flamers</td>
+			</tr>
+			<tr>
+				<td>Advanced Ballistics Comp</td><td>Sight</td><td>300</td><td>+50m range to all weapons except flamers</td>
+			</tr>
+			<tr>
+				<td>Night Sight</td><td>Sight</td><td>150</td><td>Allows to see at night perfectly</td>
+			</tr>
+			<tr>
+				<td>Radar</td><td>Sight</td><td>200</td><td>Allows to see enemies up to 1000m away</td>
+			</tr>
+			<tr>
+				<td>Cooling System</td><td>Sight</td><td>200</td><td>Increases the number of shots that can be made before cooldown by 1</td>
+			</tr>
+			<tr>
+				<td>Autoloader</td><td>Sight</td><td>400</td><td>Decreases the reload time by half</td>
+			</tr>
+			<tr>
+				<td>Jump Jets</td><td>Engine</td><td>300</td><td>Hover only, allows vehicle to jump 100m, 1 turn cooldown</td>
+			</tr>
+			<tr>
+				<td>Boosted Jets</td><td>Engine</td><td>200</td><td>+10m range on hover vehicles</td>
+			</tr>
+			<tr>
+				<td>Enhanced Engine</td><td>Engine</td><td>200</td><td>+5m range on walker/track vehicles</td>
+			</tr>
+		</table>
+	</main>
 </body>
 
 </html>

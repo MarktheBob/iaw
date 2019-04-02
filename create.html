@@ -2,53 +2,46 @@
 
 <head>
 
-<title></title>
+<title>Creator</title>
 <script src = "jqMin.js"></script>
 <script src = "script.js"></script>
-<link rel="stylesheet" type="text/css" href="IaWstyle.css">
+<link rel="stylesheet" type="text/css" href="IAWstyle.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-
-<p id = "welcomeTitle" class = "title"></p>
-<p class = "subtitle"></p>
-	<br>
-<div id = "menu">
-	<ul>
-		<li class = "first"><a href = "IaWhome.html">Home</a></li>
-		<li class = "first"><a href = "race.html">Races</a>
-			<ul>
-				<li><a href = "SM.html">Space Marines</a></li>
-				<li><a href = "IG.html">Imperial Guard</a></li>
-				<li><a href = "AS.html">Sisters of Battle</a></li>
-				<li><a href = "T.html">Tau</a></li>
-				<li><a href = "E.html">Eldar</a></li>
-			</ul>
-		</li>
-		<li class = "first"><a href = "shop.html">Shop</a>
-			<ul>
-				<li><a href = "cloth.html">Clothes and Armour</a></li>
-				<li><a href = "close.html">Close Combat Weapons</a></li>
-				<li><a href = "ranged.html">Ranged Combat Weapons</a></li>
-				<li><a href = "ammo.html">Ammunition and Weapon Upgrades</a></li>
-				<li><a href = "vehicles.html">Vehicles</a></li>
-				<li><a href = "vw.html">Vehicle Weapons</a></li>
-				<li><a href = "friend.html">Friendly Creatures</a></li>
-				<li><a href = "spells.html">Spells</a></li>
-				<li><a href = "other.html">Other items</a></li>
-			</ul>
-		</li>
-		<li class = "first"><a href = "create.html">Character Creation</a></li>
-		<li class = "first"><a href = "rules.html">Rules and guidelines</a></li>
-	</ul>
-</div>
-
-		<br>
-
-<div id = "main">
-	Nothing to see here yet, Sorry :(
-</div>
-
+	<nav>
+		<a href = "index.html">Home</a>
+		<div class = "dropdown">
+			<button class="dropbtn">Races <i class="fa fa-caret-down"></i></button>
+			<div class="dropdown-content">
+				<a href = "SM.html">Adeptus Astartes</a>
+				<a href = "AS.html">Adeptus Sororitas</a>
+				<a href = "IG.html">Imperial Guard</a>
+				<a href = "T.html">Tau</a>
+				<a href = "E.html">Eldar</a>
+			</div>
+		</div>
+		<div class = "dropdown">
+			<button class="dropbtn">Shop <i class="fa fa-caret-down"></i></button>
+			<div class="dropdown-content">
+				<a href = "cloth.html">Armour and Clothes</a>
+				<a href = "close.html">Close Combat</a>
+				<a href = "ranged.html">Ranged Combat</a>
+				<a href = "ammo.html">Weapon Accesories</a>
+				<a href = "vehicles.html">Vehicle Builder</a>
+				<a href = "friend.html">Allies</a>
+				<a href = "spells.html">Spells</a>
+				<a href = "other.html">Other Things</a>
+			</div>
+		</div>
+		<a href = "create.html">Character Creation</a>
+		<a href = "rules.html">Rules and Guidelines</a>
+	</nav>
+	<header>
+		<h1>Character Creator</h1>
+		<h2>Custom character creator with save feature</h2>
+	</header>
 </body>
 
 </html>

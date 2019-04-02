@@ -3,90 +3,205 @@
 <head>
 
 <title>Friendies</title>
-<script src = "jqMin.js"></script>
-<script src = "script.js"></script>
-<link rel="stylesheet" type="text/css" href="IaWstyle.css">
+<link rel="stylesheet" type="text/css" href="IAWstyle.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-
-<p id = "welcomeTitle" class = "title">Helpers and Guards</p>
-<p class = "subtitle">Guards, pilots, gunners and helpers can be hired here</p>
-	<br>
-<div id = "menu">
-	<ul>
-		<li class = "first"><a href = "IaWhome.html">Home</a></li>
-		<li class = "first"><a href = "race.html">Races</a>
-			<ul>
-				<li><a href = "SM.html">Space Marines</a></li>
-				<li><a href = "IG.html">Imperial Guard</a></li>
-				<li><a href = "AS.html">Sisters of Battle</a></li>
-				<li><a href = "T.html">Tau</a></li>
-				<li><a href = "E.html">Eldar</a></li>
-			</ul>
-		</li>
-		<li class = "first"><a href = "shop.html">Shop</a>
-			<ul>
-				<li><a href = "cloth.html">Clothes and Armour</a></li>
-				<li><a href = "close.html">Close Combat Weapons</a></li>
-				<li><a href = "ranged.html">Ranged Combat Weapons</a></li>
-				<li><a href = "ammo.html">Ammunition and Weapon Upgrades</a></li>
-				<li><a href = "vehicles.html">Vehicles</a></li>
-				<li><a href = "vw.html">Vehicle Weapons</a></li>
-				<li><a href = "friend.html">Friendly Creatures</a></li>
-				<li><a href = "spells.html">Spells</a></li>
-				<li><a href = "other.html">Other items</a></li>
-			</ul>
-		</li>
-		<li class = "first"><a href = "create.html">Character Creation</a></li>
-		<li class = "first"><a href = "rules.html">Rules and guidelines</a></li>
-	</ul>
-</div>
-	
+	<nav>
+		<a href = "index.html">Home</a>
+		<div class = "dropdown">
+			<button class="dropbtn">Races <i class="fa fa-caret-down"></i></button>
+			<div class="dropdown-content">
+				<a href = "SM.html">Adeptus Astartes</a>
+				<a href = "AS.html">Adeptus Sororitas</a>
+				<a href = "IG.html">Imperial Guard</a>
+				<a href = "T.html">Tau</a>
+				<a href = "E.html">Eldar</a>
+			</div>
+		</div>
+		<div class = "dropdown">
+			<button class="dropbtn">Shop <i class="fa fa-caret-down"></i></button>
+			<div class="dropdown-content">
+				<a href = "cloth.html">Armour and Clothes</a>
+				<a href = "close.html">Close Combat</a>
+				<a href = "ranged.html">Ranged Combat</a>
+				<a href = "ammo.html">Weapon Accesories</a>
+				<a href = "vehicles.html">Vehicle Builder</a>
+				<a href = "friend.html">Allies</a>
+				<a href = "spells.html">Spells</a>
+				<a href = "other.html">Other Things</a>
+			</div>
+		</div>
+		<a href = "create.html">Character Creation</a>
+		<a href = "rules.html">Rules and Guidelines</a>
+	</nav>
+	<header>
+		<h1>Recruitable Allies</h1>
+	</header>
 		<br>
 
-<div id = "main">
-	<table class = "shop">
-		<p class = "expl">All hired people / creatures are hired for the duration of one quest</p>
-		<tr>
-			<td>Employee</td><td style = "width: 50px;">Cost</td><td>Details</td>
-		</tr>
-		<tr>
-			<td>Soldier</td><td>5 GU</td><td>Wears Flak Jacket, is equipped with Steel Knife and Lasgun; has stats of IG Sergeant</td>
-		</tr>
-		<tr>
-			<td>Kasrkin</td><td>15 GU</td><td>Wears Caparace Armour, is equipped with Catachan Knife and Hotshot Lasgun; has stats of IG Leutenant</td>
-		</tr>
-		<tr>
-			<td>Gun Drone</td><td>15 GU</td><td>Has 4 armour points and 4 health, is equipped with Pulse Rifle, floats above ground</td>
-		</tr>
-		<tr>
-			<td>Shield Drone</td><td>30 GU</td><td>Has 4 armour points and 4 health, is equipped with Small Shield Generator</td>
-		</tr>
-		<tr>
-			<td>Target Marker Drone</td><td>25 GU</td><td>Has 4 Armour points and 4 health, is equipped with Advanced Target Markers</td>
-		</tr>
-		<tr>
-			<td>Small Vehicle Pilot</td><td>1 GU</td><td>Can pilot small vehicles</td>
-		</tr>
-		<tr>
-			<td>Large Vehicle Pilot</td><td>5 GU</td><td>Can pilot large vehicles</td>
-		</tr>
-		<tr>
-			<td>Aircraft Pilot</td><td>15 GU</td><td>Can pilot aircrafts</td>
-		</tr>
-		<tr>
-			<td>Apprentice Gunner</td><td>3 GU</td><td>Capable of operating small turrets</td>
-		</tr>
-		<tr>
-			<td>Gunner</td><td>8 GU</td><td>Capable of operating small, medium and heavy turrets</td>
-		</tr>
-		<tr>
-			<td>Senior Gunner</td><td>15 GU</td><td>Capable of operating all turrets</td>
-		</tr>
-	</table>
-</div>
-
+	<main>
+		<p>All allies will stay with the players until they are either killed or dismissed</p>
+		<p>Squads behave as a single entiry and occupy a 10x10 spot. They have a number of people that all need to be equipped with armour and weapons. Ammo is considered unlimited unless it is rockets or grenades. After every mission squads can be refilled at 50% cost.</p>
+		<p>Each character has a health value, when squads take damage it is distributed down the line, e.g. a Kasrkin squad taked 10 damage and each man has 3 HP - 3 guardsmen die and the 4th one now has 2 HP left. When squads attack only 1 roll is needed, damage = roll outcome * 0.5 * number of people</p>
+		<p>NPCs can be upgraded after a certain number of missions given that an upgrade exists and the squad is full, you pay half the hire price to upgrade the squad. Hired NPCs must be at a lower rank than the players</p>
+		<ul>
+			<li>Common = C</li>
+			<li>Uncommon = U</li>
+			<li>Rare = R</li>
+			<li>Legendary = L</li>
+			<li>Unique = Q</li>
+		</ul>
+		<p>Close Combat: One Handed = Daggers (D) + Swords (W), Two handed = Spears (R) + Hammers (M) + Staves (S)</p>
+		<p>Ranged Combat: One Handed = Daggers (T) + Pistols (P), Two handed = Assault Rifles (A) + Sniper Rifles (N) + Heavy Weapons (H)</p>
+		<table>
+			<tr>
+				<td>Employee</td><td>Equipment</td><td>Health</td><td>Number</td><td>Rank</td><td>Cost</td><td>Details</td>
+			</tr>
+			<!--Imperial Guard-->
+			<tr>
+				<td>Guardsman Squad</td><td>C, D+P+A</td><td>1</td><td>15</td><td>1</td><td>50</td><td>Ranged accuracy + 1, can carry 2 grenades, strength = 2</td>
+			</tr>
+			<tr>
+				<td>Cadian Shock Troops</td><td>U, D+P+A</td><td>2</td><td>15</td><td>2</td><td>100</td><td>Ranged accuracy + 3, can carry 4 grenades, strength = 4, upg from guardsman squad</td>
+			</tr>
+			<tr>
+				<td>Kasrkin Guard</td><td>R, D+P+A+H</td><td>4</td><td>10</td><td>3</td><td>200</td><td>Ranged accuracy + 5, can carry 6 grenades, strength = 6, upg from guardsman squad</td>
+			</tr>
+			<tr>
+				<td>Comissar</td><td>L, D+W+P+A</td><td>15</td><td>1</td><td>4</td><td>300</td><td>Ranged accuracy + 6, warp resistance = 6, strength = 8, if routing squad in range, shoots 1 member to return squad to combat</td>
+			</tr>
+			<tr>
+				<td>Sanctionite Choir</td><td>C, P+S</td><td>1</td><td>8</td><td>2</td><td>70</td><td>Intelligence = 4, learn spells (1 spell purchase per squad)</td>
+			</tr>
+			<tr>
+				<td>Aspirant Choir</td><td>U, P+S</td><td>2</td><td>8</td><td>3</td><td>140</td><td>Intelligence = 8, learn spells (1 spell purchase per squad), upg from Sanctionite Choir</td>
+			</tr>
+			<tr>
+				<td>Savant Choir</td><td>R, P+S</td><td>3</td><td>8</td><td>4</td><td>250</td><td>Intelligence = 12, learn spells (1 spell purchase per squad), upg from Aspirant Choir</td>
+			</tr>
+			<tr>
+				<td>Assasin</td><td>U, D+P</td><td>8</td><td>1</td><td>2</td><td>60</td><td>Agility = 4, Strength = 3</td>
+			</tr>
+			<tr>
+				<td>Master Assasin</td><td>R, D+W+P</td><td>10</td><td>1</td><td>3</td><td>120</td><td>Agility = 8, Strength = 6, upg from assasin</td>
+			</tr>
+			<!--Eldar-->
+			<tr>
+				<td>Dire Avenger Squad</td><td>U, D+P+A</td><td>1</td><td>10</td><td>1</td><td>60</td><td>Ranged accuracy + 2, can carry 3 grenades, strength = 2</td>
+			</tr>
+			<tr>
+				<td>Howling Banchee Squad</td><td>U, D+W+R+P</td><td>2</td><td>10</td><td>2</td><td>120</td><td>Agility = 3, Strength = 3</td>
+			</tr>
+			<tr>
+				<td>Ranger Squad</td><td>U, D+P+N</td><td>3</td><td>4</td><td>2</td><td>120</td><td>Ranged accuracy + 5</td>
+			</tr>
+			<tr>
+				<td>Dark Reaper Squad</td><td>R, D+H</td><td>3</td><td>10</td><td>3</td><td>250</td><td>Ranged accuracy + 4</td>
+			</tr>
+			<tr>
+				<td>Warp Spider Squad</td><td>R, D+P+A</td><td>2</td><td>8</td><td>3</td><td>270</td><td>Ranged accuracy + 4, can carry 4 grenades, strength = 3</td>
+			</tr>
+			<tr>
+				<td>Exarch Squad</td><td>+1</td><td>+1</td><td>+0</td><td>+1</td><td>400</td><td>Upg to Dire Avenger / Howling Banshee / Dark Reaper / Warp Spider / Ranger squads. Accuracy and strength extra +2</td>
+			</tr>
+			<tr>
+				<td>Seer Initiate Squad</td><td>U, S+R+P</td><td>1</td><td>6</td><td>2</td><td>150</td><td>Intelligence = 6, learn spells (1 spell purchase per squad)</td>
+			</tr>
+			<tr>
+				<td>Seer Squad</td><td>R, S+R+P</td><td>2</td><td>6</td><td>3</td><td>300</td><td>Intelligence = 10, learn spells (1 spell purchase per squad), upg toinitiate seer squad</td>
+			</tr>
+			<tr>
+				<td>Farseer Squad</td><td>L, S+R+P</td><td>3</td><td>6</td><td>4</td><td>500</td><td>Intelligence = 14, learn spells (1 spell purchase per squad), upg to seer squad</td>
+			</tr>
+			<tr>
+				<td>Harlequin Troupe</td><td>R, D+W+P</td><td>3</td><td>8</td><td>3</td><td>300</td><td>Agility = 5, Strength = 5</td>
+			</tr>
+			<!--Space Marines-->
+			<tr>
+				<td>Space Marine Squad</td><td>U, D+W+A</td><td>3</td><td>8</td><td>2</td><td>200</td><td>Ranged accuracy + 4, can carry 2 grenades, strength = 4</td>
+			</tr>
+			<tr>
+				<td>Veteran Marine Squad</td><td>R, D+W+A</td><td>4</td><td>8</td><td>3</td><td>400</td><td>Ranged accuracy + 6, can carry 3 grenades, strength = 6, upg to space marine squad</td>
+			</tr>
+			<tr>
+				<td>Terminator Squad</td><td>L, M+H</td><td>5</td><td>8</td><td>4</td><td>600</td><td>Ranged accuracy + 8, can carry 4 grenades, strength = 8, upg to veteran marine squad</td>
+			</tr>
+			<!--Sororitas-->
+			<tr>
+				<td>Battle Sister Squad</td><td>U</td><td>2</td><td>10</td><td>2</td><td>180</td><td>Ranged Accuracy + 2, Strength = 2, can carry 3 grenades</td>
+			</tr>
+			<tr>
+				<td>Dominion Squad</td><td>R, D+H</td><td>3</td><td>8</td><td>3</td><td>350</td><td>Ranged accuracy + 4, upg to battle sister squad</td>
+			</tr>
+			<tr>
+				<td>Seraphim Squad</td><td>R, D+W+P</td><td>3</td><td>8</td><td>3</td><td>360</td><td>Jetpack Proficiency, Strength = 4, upg to battle sister squad</td>
+			</tr>
+			<!--Tau-->
+			<tr>
+				<td>Fire Warrior Squad</td><td>C, D+P+A</td><td>1</td><td>8</td><td>1</td><td>60</td><td>Ranged accuracy + 2, can carry 1 grenade, strength = 1</td>
+			</tr>
+			<tr>
+				<td>Veteran Warrior Squad</td><td>U, D+P+A</td><td>2</td><td>8</td><td>2</td><td>120</td><td>Ranged accuracy + 4, can carry 2 grenades, strength = 2, upg to fore warriors</td>
+			</tr>
+			<tr>
+				<td>Hero Warrior Squad</td><td>R, D+P+A</td><td>3</td><td>8</td><td>3</td><td>250</td><td>Ranged accuracy + 6, can carry 3 grenades, strength = 3, upg to veteran warriors</td>
+			</tr>
+			<tr>
+				<td>Knight Warrior Squad</td><td>L, D+P+A</td><td>4</td><td>8</td><td>3</td><td>500</td><td>Ranged accuracy + 8, can carry 4 grenades, strength = 4, upg to hero warriors</td>
+			</tr>
+			<tr>
+				<td>XV8 Crisis Pilot</td><td>Q, H</td><td>14</td><td>1</td><td>5</td><td>500</td><td>Ranged accuracy + 8, must wear crisis suit, can be employed by rank 5 players</td>
+			</tr>
+			<tr>
+				<td>Scout Squad</td><td>U, D+P+N</td><td>2</td><td>4</td><td>2</td><td>250</td><td>Ranged accuracy + 6, upg to fire warriors</td>
+			</tr>
+			<tr>
+				<td>Veteran Scout Squad</td><td>R, D+P+N</td><td>3</td><td>4</td><td>3</td><td>400</td><td>Ranged accuracy + 8, upg to scout squad</td>
+			</tr>
+			<tr>
+				<td>XV15 Squad</td><td>L, D+P+N</td><td>4</td><td>4</td><td>4</td><td>500</td><td>Ranged accuracy + 10, upg to veteran scouts</td>
+			</tr>
+			<tr>
+				<td>XV25 Squad</td><td>Q, D+P+N</td><td>5</td><td>4</td><td>5</td><td>600</td><td>Ranged accuracy + 10, can be employed by Rank 5 players, upg to XV15 squad</td>
+			</tr>
+			<tr>
+				<td>Shield Drone</td><td>-</td><td>4</td><td>1</td><td>1</td><td>100</td><td>Up to 2 drones per player, occupy the same space as player, puts up a shield that absorbs 20 damage before needing to cooldown for 3 turns, can be targeted by emeny instead of player, has no armour</td>
+			</tr>
+			<tr>
+				<td>Targeting Drone</td><td>-</td><td>4</td><td>1</td><td>1</td><td>100</td><td>Up to 2 drones per player, occupy the same space as player, grants player +4 and other drone to marksmanship, can be targeted by emeny instead of player, has no armour</td>
+			</tr>
+			<tr>
+				<td>Combat Drone</td><td>R, A+S</td><td>4</td><td>1</td><td>1</td><td>100</td><td>Up to 2 drones per player, occupy the same space as player, ranged accuracy + 6, can be targeted by emeny instead of player, has no armour</td>
+			</tr>
+			<!--Vehicle-->
+			<tr>
+				<td>Novice Pilot</td><td>-</td><td>-</td><td>1</td><td>1</td><td>50</td><td>+1 ranged accuracy when shooting front gun</td>
+			</tr>
+			<tr>
+				<td>Experienced Pilot</td><td>-</td><td>-</td><td>1</td><td>2</td><td>100</td><td>+2 ranged accuracy, -2 ranged accuracy to those aiming at vehicle while it is in motion</td>
+			</tr>
+			<tr>
+				<td>Veteran Pilot</td><td>-</td><td>-</td><td>1</td><td>3</td><td>200</td><td>+3 ranged accuracy, -2 enemy accuracy, +5m vehicle speed</td>
+			</tr>
+			<tr>
+				<td>Master Pilot</td><td>-</td><td>-</td><td>1</td><td>4</td><td>400</td><td>+4 ranged accuracy, -4 enemy accuacy, +5m vehicle speed</td>
+			</tr>
+			<tr>
+				<td>Novice Gunner</td><td>-</td><td>-</td><td>1</td><td>1</td><td>50</td><td>+2 ranged accuracy</td>
+			</tr>
+			<tr>
+				<td>Experienced Gunner</td><td>-</td><td>-</td><td>1</td><td>2</td><td>100</td><td>+4 ranged accuracy, +20m range to all non flamer guns</td>
+			</tr>
+			<tr>
+				<td>Veteran Gunner</td><td>-</td><td>-</td><td>1</td><td>3</td><td>200</td><td>+6 ranged accuracy, +40m range to all non flamer guns</td>
+			</tr>
+			<tr>
+				<td>Master Gunner</td><td>-</td><td>-</td><td>1</td><td>4</td><td>400</td><td>+8 ranged accuracy, +50m range to all non flamer guns, decrease loading speed by half</td>
+			</tr>
+		</table>
+	</main>
 </body>
 
 </html>

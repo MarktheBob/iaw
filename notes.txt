@@ -1,0 +1,83 @@
+Basic Stats
+Strength - affect hand-to-hand combat + carry weight
+Constitution - physical resistances
+Marksmanship - accuracy of hitting opponent
+Agility - climbing, jumping, hand-combat dodge
+Intelligence - knowledge, spell casting, perception
+Charisma - interaction with NPCs (intimidation / persuasion)
+Warp resistance - resisting the forces of the warp and the chaos gods, temptation resistance
+
+                    AS      SM      E       IG      T
+Strength            3       4       1       1       0
+Constitution        3       4       1       1       0
+Marksmanship        2       2       3       1       4
+Agility             0       0       3       2       2
+Intelligence        1       0       2       0       0
+Charisma            1       0       1       4       2
+Warp resistance     1       1       0       0       3
+Total               11      11      11      9       11
+
+Secondary skills
+Corruption - affected by Warp resistance
+Knowledge: xenos, warp, history, geography
+Perception - ability to notice things, affected by Intelligence
+Melee accuracy - ability to hit a target at close combat, affected by Strength + Agility
+Ranged accuracy - ability to hit a ranged target, affected by Marksmanship + Intelligence
+Dodge - ability to evade from a blow, affected by Agility
+Elemental resist - lower penalty from environment and enviromental spells, affected by Constitution
+Stealth - ability to evade detection, affected by Agility
+Diplomacy - ability to persuade others to your cause, affected by Charisma
+Leadership - ability to insipre subordinates and improve morale, affected by Charisma + Intelligence
+
+Weapons
+One handed melee: dagger, sword, hammer
+Two handed melee: spear, staff, hammer
+One handed ranged: pistol, dagger
+Two handed ranged: assault rifle, heavy weapons, sniper rifle
+
+Secondary Stat Courses
+Corrupted Studies = +2 Corruption - beginner - many times
+Soul Cleansing = -2 Corruption - Adept - many times
+Library visit = knowledge of chosen topic +1 - Beginner Course - many times
+Paid tutor = knowledge of chosen topic +2 = Adept Course - many times
+Neuro implants = knowledge of chosen topic +3 = paid - Master Course - many times
+Eye augments B/A/M = raise perception by +2/+4/+6 - single time
+Training Arena = raise melee/ranged accuracy by +1 - Beginner - many times, up to a ceiling
+Personal Trainer = raise melee/ranged accuracy by +2 - Adept - many times to a ceiling
+Battle Sim = raise melee/ranged accuracy by +3 - Master - many times to a ceiling
+Dance Course B/A/M = raise dodge by +1/+2/+3 - many times
+Stealth Training B/A/M = raise stealth by +1/+2/+3 - many times
+Oratory Lesson B/A/M = raise diplomacy and leadership by +1/+2/+3 - tie cost to stat. Can be taken several times
+Leadership course B/A/M = raise leadership by +1/+2/+3
+
+Perks
+Dagger Storm - able to dual wield two Daggers
+    Blade Storm - able to dual wield swords
+Pistol Master - able to dual wield pistols
+Spear Mastery - single handed wielding of spear, use pistol in other hand
+Hammer Mastery - single handed wielding of hammer, use pistol in other hand
+Staff Mastery - single handed wielding of staff, use pistol in other hand
+Nimble Hands - reload in half the time
+    Double Tap - able to fire twice per turn
+    Ease of Access - swap weapons in half the time
+Fast Reflexes - gain +2 dodge
+    Inhuman Reflexes - gain +2 dodge
+        Godly Reflexes - can dodge ranged shots, use half of dodge stat when rolling for evasion
+Warp Fury - +2 damage on flame spells, +2 fire resist
+    Flames of Hell - +2 damage on flame spells, +2 fire resist
+Chilling Presence - +2 damage on frost spells, +2 frost resist
+    Icy Purgatory - +2 damage on frost spells, +2 frost resist
+Sparkling Personality - +2 damage on lightning spells, +2 lightning resist
+    Thunderous Gaze - +2 damage on lightning spells, +2 lightning resist
+        Elemental Master - +2 damage for all elemental spells, +2 elemental resist (requires Flames of Hell, Icy Purgatory)
+Mind Specialist - +2 damage on Mind spells
+    Mind Expert - +2 damage on Mind spells
+Divination Specialist - +2 Intelligence when attempting divination spells
+    Divination Master - +2 Intelligence when attempting divination spells
+        Master of the Mind - +2 Intelligence (requires Mind Expert)
+            Discerner of the Transmundane - +2 Intelligence
+Jetpack Specialisation - gain proficiency in jetpacks
+Long Range Combatant - lose 1 ranged accuracy per 20 m
+    Long Range Specialist - lose 1 ranged accuracy per 30 m
+        Long Range Expert - lose 1 ranged accuracy per 40 m
+            Long Range Master - lose 1 ranged accuracy per 50 m

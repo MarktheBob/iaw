@@ -3,254 +3,226 @@
 <head>
 
 <title>Armour</title>
-<script src = "jqMin.js"></script>
-<script src = "script.js"></script>
-<link rel="stylesheet" type="text/css" href="IaWstyle.css">
+<link rel="stylesheet" type="text/css" href="IAWstyle.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+	<nav>
+		<a href = "index.html">Home</a>
+		<div class = "dropdown">
+			<button class="dropbtn">Races <i class="fa fa-caret-down"></i></button>
+			<div class="dropdown-content">
+				<a href = "SM.html">Adeptus Astartes</a>
+				<a href = "AS.html">Adeptus Sororitas</a>
+				<a href = "IG.html">Imperial Guard</a>
+				<a href = "T.html">Tau</a>
+				<a href = "E.html">Eldar</a>
+			</div>
+		</div>
+		<div class = "dropdown">
+			<button class="dropbtn">Shop <i class="fa fa-caret-down"></i></button>
+			<div class="dropdown-content">
+				<a href = "cloth.html">Armour and Clothes</a>
+				<a href = "close.html">Close Combat</a>
+				<a href = "ranged.html">Ranged Combat</a>
+				<a href = "ammo.html">Weapon Accesories</a>
+				<a href = "vehicles.html">Vehicle Builder</a>
+				<a href = "friend.html">Allies</a>
+				<a href = "spells.html">Spells</a>
+				<a href = "other.html">Other Things</a>
+			</div>
+		</div>
+		<a href = "create.html">Character Creation</a>
+		<a href = "rules.html">Rules and Guidelines</a>
+	</nav>
+	<header>
+		<h1>Clothes and Armours</h1>
+	</header>
 
-<p id = "welcomeTitle" class = "title">Armours and Backpacks</p>
-<p class = "subtitle">A range of protective clothing for all scenarios</p>
-	<br>
-<div id = "menu">
-	<ul>
-		<li class = "first"><a href = "IaWhome.html">Home</a></li>
-		<li class = "first"><a href = "race.html">Races</a>
-			<ul>
-				<li><a href = "SM.html">Space Marines</a></li>
-				<li><a href = "IG.html">Imperial Guard</a></li>
-				<li><a href = "AS.html">Sisters of Battle</a></li>
-				<li><a href = "T.html">Tau</a></li>
-				<li><a href = "E.html">Eldar</a></li>
-			</ul>
-		</li>
-		<li class = "first"><a href = "shop.html">Shop</a>
-			<ul>
-				<li><a href = "cloth.html">Clothes and Armour</a></li>
-				<li><a href = "close.html">Close Combat Weapons</a></li>
-				<li><a href = "ranged.html">Ranged Combat Weapons</a></li>
-				<li><a href = "ammo.html">Ammunition and Weapon Upgrades</a></li>
-				<li><a href = "vehicles.html">Vehicles</a></li>
-				<li><a href = "vw.html">Vehicle Weapons</a></li>
-				<li><a href = "friend.html">Friendly Creatures</a></li>
-				<li><a href = "spells.html">Spells</a></li>
-				<li><a href = "other.html">Other items</a></li>
-			</ul>
-		</li>
-		<li class = "first"><a href = "create.html">Character Creation</a></li>
-		<li class = "first"><a href = "rules.html">Rules and guidelines</a></li>
-	</ul>
-</div>
-
+	<main>
+		<p>Armour bonus: damage reduction when hit</p>
+		<ul>
+			<li>Common = C</li>
+			<li>Uncommon = U</li>
+			<li>Rare = R</li>
+			<li>Legendary = L</li>
+			<li>Unique = Q</li>
+		</ul>
+		<table>
+			<tr>
+				<td>Name</td><td>Armour Bonus</td><td>Rarity</td><td>Speed Effect (m)</td><td>Cost</td><td>Notes</td>
+			</tr>
+			<!--Commons-->
+			<tr>
+				<td>Simple Robe</td><td>0</td><td>C</td><td>0</td><td>5</td><td>A simple robe usually worn by psykers</td>
+			</tr>
+			<tr>
+				<td>Suit</td><td>0</td><td>C</td><td>0</td><td>5</td><td>A reasonably fashionable suit for formal occasions</td>
+			</tr>
+			<tr>
+				<td>Flak Jacket</td><td>3</td><td>C</td><td>0</td><td>10</td><td>The most basic armour for the lowliest of soldiers, offers at least some protection</td>
+			</tr>
+			<tr>
+				<td>Dancer Clothes</td><td>0</td><td>C</td><td>+5</td><td>15</td><td>A decently fitting outfit that does not get in the way and even miraculously boosts movement speed slightly</td>
+			</tr>
+			<tr>
+				<td>Wraithbone Armour</td><td>2</td><td>C</td><td>0</td><td>30</td><td>Although it is quite expensive it can be outfitted with a single common enchantment rune, carved into it by a Bonesinger</td>
+			</tr>
+			<tr>
+				<td>Combat Uniform</td><td>2</td><td>C</td><td>0</td><td>20</td><td>Usually the standard uniform of Tau cadets and basic warriors, can be equiped with MK1 upgrade</td>
+			</tr>
+			<!--Uncommons-->
+			<tr>
+				<td>Woven Robe</td><td>1</td><td>U</td><td>0</td><td>50</td><td>A slightly sturdier robe for psykers, it can be enchanted with a single common rune and increases all spell resistances by 1</td>
+			</tr>
+			<tr>
+				<td>Tailored Suit</td><td>0</td><td>U</td><td>0</td><td>40</td><td>A more stylish suit that increases Charisma by 1</td>
+			</tr>
+			<tr>
+				<td>Combat Vest</td><td>6</td><td>U</td><td>0</td><td>70</td><td>A more protective combat outfit for NCOs</td>
+			</tr>
+			<tr>
+				<td>Acrobat Clothes</td><td>1</td><td>U</td><td>+5</td><td>60</td><td>A light and tight fitting outfit that makes fighting easier by increasing Agility by 1</td>
+			</tr>
+			<tr>
+				<td>Aspect Armour</td><td>4</td><td>U</td><td>0</td><td>80</td><td>A more protective armour sung out of wraithbone, can be outfitted with a single uncommon rune</td>
+			</tr>
+			<tr>
+				<td>Combat Suit</td><td>4</td><td>U</td><td>0</td><td>70</td><td>More advanced Tau combat armour that improves Marksmanship by 1 and can be equipped with Mk1 upgrade</td>
+			</tr>
+			<!--Rares-->
+			<tr>
+				<td>Runic Robe</td><td>2</td><td>R</td><td>0</td><td>100</td><td>Only worn by experienced psykers, this robe enhances spell damage by +2 and can be enchanted with a single uncommon rune</td>
+			</tr>
+			<tr>
+				<td>Armoured Suit</td><td>4</td><td>R</td><td>0</td><td>130</td><td>A suit for serious Business with armoured plating sewn into the fabric. Improves Charisma by 2, can be enchanted with a common rune</td>
+			</tr>
+			<tr>
+				<td>Caparace Armour</td><td>9</td><td>R</td><td>-5</td><td>150</td><td>Standard officer armour, offers a good ammount of protection while only reducing the movement speed slightly. Can be outfitted with Mk1 upgrade</td>
+			</tr>
+			<tr>
+				<td>Harlequin Outfit</td><td>2</td><td>R</td><td>+10</td><td>130</td><td>Troupe members generally are seen in this outfit as it increases Agility by 2. Enchantable with 1 common rune</td>
+			</tr>
+			<tr>
+				<td>Exarch Armour</td><td>6</td><td>R</td><td>0</td><td>170</td><td>Powerful Eldar armour that can be enchanted with 1 rare rune and may be enhanced with 1 Mk1 upgrade</td>
+			</tr>
+			<tr>
+				<td>XV15 / XV15 Stealth Suit</td><td>6/5</td><td>R</td><td>0/+5</td><td>170</td><td>A technological masterpiece this suit can be refitted for extra stealth (+2) in exchange for protection. Can be equipped with Mk2 upgrade</td>
+			</tr>
+			<!--Legendaries-->
+			<tr>
+				<td>Master Robe</td><td>4</td><td>L</td><td>0</td><td>200</td><td>Favoured by strong psykers for its ability to enhance both spell resistance and damage by 3, can be enchanted with rare rune</td>
+			</tr>
+			<tr>
+				<td>Shielded Suit</td><td>6</td><td>L</td><td>-5</td><td>250</td><td>A very serious suit that comes with its own shield generator, enchantable with one uncommon rune</td>
+			</tr>
+			<tr>
+				<td>Power Armour</td><td>12</td><td>L</td><td>-5</td><td>300</td><td>Few power armoures are ever given out as each is a masterwork of ceramite artisanship. Increases Strength by 1, enchantable with one common rune, can be equipped with Mk2 upgrade. Jetpack compatibility</td>
+			</tr>
+			<tr>
+				<td>Holo Suit</td><td>3</td><td>L</td><td>+10</td><td>300</td><td>A more complex Harlequin suit with its own smal holo field, improves agility by 2 and is enchantable with 1 uncommon rune</td>
+			</tr>
+			<tr>
+				<td>Shrine Master Armour</td><td>8</td><td>L</td><td>-5</td><td>350</td><td>Few Bonesingers can craft these complex suits as they can be enchanted with a single legendary rune, can be outfitted with one Mk1 upgrade. Jetpack compatibility</td>
+			</tr>
+			<tr>
+				<td>XV22 / XV22 Stealth Suit</td><td>8/6</td><td>L</td><td>+5</td><td>300</td><td>A technological marvel of Tau technology, these suits can give +4 stealth in the stealthsuit configuration, can be equipped with Mk3 upgrade, enchantable with one common rune. Jetpack compatibility</td>
+			</tr>
+			<!--Uniques-->
+			<tr>
+				<td>Psyker Armour</td><td>6</td><td>Q</td><td>-5</td><td>400</td><td>Only the strongest psykers of the imperium deserve the honour to wear this, it boosts intelligence by 2 and spell damage by 3. Enchantable with a single legendary rune, can be fitted with one MK1 uppgrade</td>
+			</tr>
+			<tr>
+				<td>Terminator Armour</td><td>15</td><td>Q</td><td>-10</td><td>700</td><td>Almost no new terminator suits are made, as the technology to produce these is held only by a select few Mechanicus worlds as it boosts strength by 2. Equippable with a Mk3 upgrade and enchantable with one uncommon rune. Jetpack compatibility</td>
+			</tr>
+			<tr>
+				<td>Centurion Armour</td><td>20</td><td>Q</td><td>-15</td><td>1500</td><td>Essentially a walking tank, this is the most powerful suit to be fielded. Can be equipped with two Mk3 upgrades and a single uncommon rune. Can dual wield heavy weapons and assault rifles</td>
+			</tr>
+			<tr>
+				<td>Relic Harlequin Suit</td><td>5</td><td>Q</td><td>+15</td><td>600</td><td>Ancient Harlequin clothes that enhance agility by 3 and can be enchanted with a rare rune.</td>
+			</tr>
+			<tr>
+				<td>Aspect Lord Armour</td><td>10</td><td>Q</td><td>-5</td><td>700</td><td>Only a single one is made for each aspect on each crftworld, it is unclear how this suit ended up on Unity. can be enchanted with two legendary runes and be outfitted with one Mk2 upgrade. Jetpack compatibility</td>
+			</tr>
+			<tr>
+				<td>XV25 / XV25 Stealth Suit</td><td>10/7</td><td>Q</td><td>+5/+10</td><td>700</td><td>Recently developed by the Tau race, this suit can give 6 bonus stealth in the stealth configuration, can be equipped with two Mk3 upgrades and one uncommon rune. Jetpack compatibility</td>
+			</tr>
+			<tr>
+				<td>XV8 Crisis Suit</td><td>12</td><td>Q</td><td>-5</td><td>1200</td><td>Exclusive to XV8 pilots, this suit is capable of dual wielding two heavy weapons, can be equipped with two Mk3 upgrades and is enchantable with 1 uncommon rune</td>
+			</tr>
+		</table>
 		<br>
-
-<div id = "main">
-	<table class = "shop">
-		<tr>
-			<td>Name</td><td>Armour Bonus</td><td>Weight (kg)</td><td>Speed Effect (m)</td><td style = "width: 50px;">Cost</td><td>Notes</td>
-		</tr>
-		<tr>
-			<td colspan = 6><moo>Clothes</moo></td>
-		</tr>
-		<tr>
-			<td>Simple Robe</td><td>0</td><td>0.1</td><td>0</td><td>1 CU</td><td>Basic clothes</td>
-		</tr>
-		<tr>
-			<td>Woven Robe</td><td>0</td><td>0.2</td><td>0</td><td>3 CU</td><td>Warmer than a simple robe</td>
-		</tr>
-		<tr>
-			<td>Suit</td><td>0</td><td>0.1</td><td>0</td><td>10 CU</td><td>Looks cool</td>
-		</tr>
-		<tr>
-			<td>Tailored Suit</td><td>0</td><td>0.1</td><td>0</td><td>25 CU</td><td>Supreme coolness</td>
-		</tr>
-		<tr>
-			<td>Dancer Clothes</td><td>0</td><td>0.1</td><td>+ 2</td><td>25 CU</td><td>Specially made clothes give + 1 to acrobatics</td>
-		</tr>
-		<tr>
-			<td>Runic Robes</td><td>+ 1</td><td>0.2</td><td>0</td><td>50 CU</td><td>Psykers gain + 1 to damage and attack</td>
-		</tr>
-		<tr>
-			<td>Serious Busness Suit</td><td>+ 2</td><td>0.5</td><td>- 2</td><td>50 CU</td><td>A suit for Business</td>
-		</tr>
-		<tr>
-			<td colspan = 6><moo>Basic Armour</moo></td>	
-		</tr>
-		<tr>
-			<td>Flak Jacket</td><td>+ 3</td><td>1</td><td>0</td><td>30 CU</td><td>Basic bulletproof vest</td>
-		</tr>
-		<tr>
-			<td>Combat Vest</td><td>+ 4</td><td>1.5</td><td>- 2</td><td>35 CU</td><td>Slightly more advanced vest</td>
-		</tr>
-		<tr>
-			<td>Armoured Assasin's Clothes</td><td>+ 2</td><td>0.7</td><td>0</td><td>40 CU</td><td>Specially made clothes give + 1 to acrobatics</td>
-		</tr>
-		<tr>
-			<td>Basic Holo Suit</td><td>+ 3</td><td>1.5</td><td>0</td><td>50 CU</td><td>A suit that distorts the shape of the wearer, making them harder to hit (+ 2 extra armour for ranged attacks), Harlequins only</td>
-		</tr>
-		<tr>
-			<td>Armoured Runic Robes</td><td>+ 2</td><td>1</td><td>- 2</td><td>50 CU</td><td>Psykers gain + 2 to damage and attack</td>
-		</tr>
-		<tr>
-			<td colspan = 6><moo>Medium Armour</moo></td>
-		</tr>
-		<tr>
-			<td>Caparace Armour</td><td>+ 6</td><td>2</td><td>- 4</td><td>50 CU</td><td>Full body armoured suit for general combat</td>
-		</tr>
-		<tr>
-			<td>Power Armour</td><td>+ 10</td><td>5</td><td>- 4</td><td>70 CU</td><td>Full body combat armour only used by Space Marines and Sisters of Battle due to its rarity</td>
-		</tr>
-		<tr>
-			<td>Assasin Armour</td><td>+ 4</td><td>1</td><td>0</td><td>70 CU</td><td>Flexible armour that blends in with the surroundings giving + 2 stealth and acrobatics</td>
-		</tr>
-		<tr>
-			<td>Basic XV25</td><td>+ 5</td><td>3</td><td>0</td><td>50 CU</td><td>A stealth suit only used by Tau Scouts gives + 3 to stealth</td>
-		</tr>
-		<tr>
-			<td>Advanced Holo Suit</td><td>+ 6</td><td>2</td><td>0</td><td>70 CU</td><td>A suit that distorts the shape of the wearer, making them harder to hit (+ 4 extra armour for ranged attacks), Harlequins only</td>
-		</tr>
-		<tr>
-			<td>Protective Runic Robe</td><td>+ 4</td><td>1.5</td><td>- 2</td><td>80 CU</td><td>Psykers gain + 3 to damage and attack</td>
-		</tr>
-		<tr>
-			<td colspan = 6><moo>Good Armour</moo></td>
-		</tr>
-		<tr>
-			<td>Augmented Caparice Armour</td><td>+ 8</td><td>3</td><td>- 4</td><td>80 CU</td><td>Thicker plates and better materials makes this armour suitable for officers on the battlefield</td>
-		</tr>
-		<tr>
-			<td>Artificer Armour</td><td>+ 14</td><td>10</td><td>- 6</td><td>1 SU</td><td>Heavier version of power armour, only for Space Marines and Sisters of Battle</td>
-		</tr>
-		<tr>
-			<td>Ancient Holo Suit</td><td>+ 10</td><td>3</td><td>0</td><td>1 SU</td><td>A suit that distorts the shape of the wearer, making them harder to hit (+ 6 extra armour for ranged attacks), Harlequin only</td>
-		</tr>
-		<tr>
-			<td>Basic Commander Suit (T)</td><td>+ 10</td><td>3</td><td>0</td><td>1.5 SU</td><td>Can have basic jetpack</td>
-		</tr>
-		<tr>
-			<td>Medium XV25</td><td>+ 7</td><td>5</td><td>- 2</td><td>1 SU</td><td>A stealth suit only used by Tau Scouts gives + 6 to stealth</td>
-		</tr>
-		<tr>
-			<td>Runic Armour</td><td>+ 6</td><td>5</td><td>- 4</td><td>1.5 SU</td><td>Psykers gain + 5 to damage and attack</td>
-		</tr>
-		<tr>
-			<td>Aspect Armour (E)</td><td>+ 10</td><td>4</td><td>- 2</td><td>1.5 SU</td><td>Can put two great daggers on arms alongside main weapon, (while holding main weapon - 6 attack),</td>
-		</tr>
-		<tr>
-			<td colspan = 6><moo>Epic Armour</moo></td>
-		</tr>
-		<tr>
-			<td>Modified Power Armour</td><td>+ 12</td><td>5</td><td>- 4</td><td>1.5 SU</td><td>Power armour that can be worn by all classes, access to basic jetpack</td>
-		</tr>
-		<tr>
-			<td>Terminator Armour</td><td>+ 18</td><td>15</td><td>- 6</td><td>2 SU</td><td>Nearly indestructable armour for Space Marines and Sisters of Battle, can equip basic teleporter</td>
-		</tr>
-		<tr>
-			<td>Good Commander Suit (T)</td><td>+ 14</td><td>6</td><td>- 2</td><td>2.5 SU</td><td>Can have 1 basic turret on shoulder, can have advanced jetpack</td>
-		</tr>
-		<tr>
-			<td>Good XV25</td><td>+ 10</td><td>6</td><td>- 2</td><td>2 SU</td><td>A stealth suit only used by Tau Scouts gives + 9 to stealth, can have advanced jetpack</td>
-		</tr>
-		<tr>
-			<td>Augmented Aspect Armour (E)</td><td>+ 12</td><td>5</td><td>- 2</td><td>2.5 SU</td><td>Can put two Epic Daggers on arms alongside main weapon (while holding main weapon - 4 attack)</td>
-		</tr>
-		<tr>
-			<td>Combat Psyker Armour</td><td>+ 8</td><td>5</td><td>- 4</td><td>2 SU</td><td>Psykers gain + 7 to damage and attack</td>
-		</tr>
-		<tr>
-			<td>Culexus Armour</td><td>+ 14</td><td>5</td><td>0</td><td>3 SU</td><td>Mount Etherium Cannon as turret on shoulder, Culexus Assasins only</td>
-		</tr>
-		<tr>
-			<td colspan = 6><moo>Legendary Armour</moo></td>
-		</tr>
-		<tr>
-			<td>Modified Terminator Armour</td><td>+ 16</td><td>10</td><td>- 6</td><td>2.5 SU</td><td>Terminator armour that can be worn by all classes, can equip basic teleporter or advanced jetpack</td>
-		</tr>
-		<tr>
-			<td>Centurion Armour</td><td>+ 25</td><td>20</td><td>- 12</td><td>5 SU</td><td>Toughest armour on the market, can equip advanced teleporter, only for Space Marines and Sisters of Battle</td>
-		</tr>
-		<tr>
-			<td>Ancient Aspect Armour (E)</td><td>+ 14</td><td>5</td><td>- 2</td><td>3</td><td>Can put two Legendary Daggers on arms alongside main weapon (while holding main weapon - 2 attack)</td>
-		</tr>
-		<tr>
-			<td>Aegis Armour</td><td>+ 12</td><td>7</td><td>- 4</td><td>3 SU</td><td>Psykers gain + 10 to damage and attack, Grey Knight only</td>
-		</tr>
-		<tr>
-			<td>XV8 Battlesuit</td><td>+ 20</td><td>20</td><td>- 4</td><td>4.5 SU</td><td>Only available to XV8 pilots, Advanced Servos automatically equipped, can have 1 basic turret weapon on shoulder, has advanced jetpack</td>
-		</tr>
-		<tr>
-			<td colspan = 6><moo>Auxillary items</moo></td>
-		</tr>
-		<tr>
-			<td colspan = 6>Movement</td>
-		</tr>
-		<tr>
-			<td>Basic Jetpack</td><td>0</td><td>5</td><td>30</td><td>1.5 SU</td><td>Used as a main action: charge (adds half of damage on successful hit, target within new range) or move</td>
-		</tr>
-		<tr>
-			<td>Advanced Jetpack</td><td>0</td><td>10</td><td>60</td><td>3 SU</td><td>Used as a main action: charge (adds half of damage on successful hit, target within new range) or move</td>
-		</tr>
-		<tr>
-			<td>Basic Teleporter</td><td>0</td><td>5</td><td>40</td><td>2 SU</td><td>Used as a move action, can teleport to beacon if within double range</td>
-		</tr>
-		<tr>
-			<td>Advanced Teleporter</td><td>0</td><td>10</td><td>80</td><td>4 SU</td><td>Used as a move action, can teleport to beacon if within double range</td>
-		</tr>
-		<tr>
-			<td>Teleport Beacon</td><td>0</td><td>1</td><td>0</td><td>1 SU</td><td>Can be placed / held by allies</td>
-		</tr>
-		<tr>
-			<td colspan = 6>Armour Enhancement</td>
-		</tr>
-		<tr>
-			<td>Basic Servos</td><td>0</td><td>1</td><td>+ 5</td><td>50 CU</td><td>Increase carrying capacity by 5 kg, equippable from Medium Armour</td>
-		</tr>
-		<tr>
-			<td>Advanced Servos</td><td>0</td><td>1</td><td>+ 10</td><td>1 SU</td><td>Increase carrying capacity by 10 kg, equippable from Good Armour</td>
-		</tr>
-		<tr>
-			<td>Legendary Servos</td><td>0</td><td>1</td><td>+ 15</td><td>1.5 SU</td><td>Increase carrying capacity by 15 kg, equippable from Epic Armour</td>
-		</tr>
-		<tr>
-			<td>Turret Holder</td><td>0</td><td>0.5</td><td>0</td><td>1 SU</td><td>First can be installed on Epic Armour, second on Legendary Armour</td>
-		</tr>
-		<tr>
-			<td>Basic Scanner Array</td><td>0</td><td>0.1</td><td>0</td><td>10 CU</td><td>Installed in Basic Armour, gives 30 m of night vision</td>
-		</tr>
-		<tr>
-			<td>Medium Scanner Array</td><td>0</td><td>0.1</td><td>0</td><td>30 CU</td><td>Installed in Medium Armour, gives 50 m of night vision and + 1 to Perception</td>
-		</tr>
-		<tr>
-			<td>Good Scanner Array</td><td>0</td><td>0.1</td><td>0</td><td>60 CU</td><td>Installed in Good Armour, gives 70 m of night vision and + 2 to Perception</td>
-		</tr>
-		<tr>
-			<td>Epic Scanner Array</td><td>0</td><td>0.1</td><td>0</td><td>1 SU</td><td>Installed in Epic Armour, gives 80 m of night vision and + 4 to Perception and + 2 to accuracy</td>
-		</tr>
-		<tr>
-			<td>Legendary Scanner Array</td><td>0</td><td>0.1</td><td>0</td><td>2 SU</td><td>Installed in Legendary Armour, gives 100 m of night vision and + 6 to Perception and + 4 to accuracy</td>
-		</tr>
-		<tr>
-			<td colspan = 6>Extras</td>
-		</tr>
-		<tr>
-			<td>Basic Weapon Harness</td><td>0</td><td>0.5</td><td>0</td><td>20 CU</td><td>Can carry primary weapon, pistol and dagger / sword, and 10 mags total</td>
-		</tr>
-		<tr>
-			<td>Advanced Weapon Harness</td><td>0</td><td>0.5</td><td>0</td><td>50 CU</td><td>Can carry primary weapon and two daggers / swords, and 15 mags total</td>
-		</tr>
-		<tr>
-			<td>Small Backpack</td><td>0</td><td>0.5</td><td>0</td><td>20 CU</td><td>Can hold up to 10 kg of things</td>
-		</tr>
-		<tr>
-			<td>Medium Backpack</td><td>0</td><td>0.5</td><td>0</td><td>40 CU</td><td>Can hold up to 20 kg of things, incompatible with jetpack</td>
-		</tr>
-		<tr>
-			<td>Large Backpack</td><td>0</td><td>1</td><td>- 2</td><td>60 CU</td><td>Can hold up to 30 kg of things, incompatible with teleporter and jetpack</td>
-		</tr>
-	</table>
-</div>
-
+		<h3>Runes</h3>
+		<p>Runes function as weapon enchantments and are backwards compatible - meaning if the armour can hold one rare rune, you can put in a common or uncommon one instead. Be warned, runes are permanent and can only be improved (common -> uncommon, etc), not interchanged with other runes. Same type runes may be inscribed into an armour</p>
+		<table>
+			<tr>
+				<td>Rune Name</td><td>Stat Affected</td><td>Common</td><td>Uncommon</td><td>Rare</td><td>Legendary</td><td>Cost</td>
+			</tr>
+			<tr>
+				<td>Fire Abatement</td><td>Fire Resistance</td><td>+1</td><td>+2</td><td>+3</td><td>+4</td><td>25/50/100/200</td>
+			</tr>
+			<tr>
+				<td>Frost Abatement</td><td>Frost Resistance</td><td>+1</td><td>+2</td><td>+3</td><td>+4</td><td>25/50/100/200</td>
+			</tr>
+			<tr>
+				<td>Lightning Dampener</td><td>Lightning Resistance</td><td>+1</td><td>+2</td><td>+3</td><td>+4</td><td>25/50/100/200</td>
+			</tr>
+			<tr>
+				<td>Mind Assistance</td><td>Accuracy for Mind Spells</td><td>+1</td><td>+2</td><td>+3</td><td>+4</td><td>25/50/100/200</td>
+			</tr>
+			<tr>
+				<td>Divinator</td><td>Intelligence for Divine Spells</td><td>+1</td><td>+2</td><td>+3</td><td>+4</td><td>30/60/120/250</td>
+			</tr>
+			<tr>
+				<td>Vision Distruptor</td><td>Enemy Accuracy</td><td>-1</td><td>-2</td><td>-3</td><td>-4</td><td>40/80/150/300</td>
+			</tr>
+			<tr>
+				<td>Charmer</td><td>Charisma</td><td>+1</td><td>+2</td><td>+3</td><td>+4</td><td>40/80/150/300</td>
+			</tr>
+			<tr>
+				<td>Bull Rune</td><td>Strength</td><td>+1</td><td>+2</td><td>+3</td><td>+4</td><td>50/100/200/400</td>
+			</tr>
+			<tr>
+				<td>Gravity Dampener</td><td>Movement Range</td><td>+5</td><td>+10</td><td>+15</td><td>+20</td><td>50/100/200/400</td>
+			</tr>
+			<tr>
+				<td>Cleanser</td><td>Corruption Resistance</td><td>+2</td><td>+4</td><td>+6</td><td>+8</td><td>40/80/150/300</td>
+			</tr>
+			<tr>
+				<td>Corruptor</td><td>Corruption Resistance</td><td>-2</td><td>-4</td><td>-6</td><td>-8</td><td>40/80/150/300</td>
+			</tr>
+			<tr>
+				<td>Focus Rune</td><td>Spell Damage</td><td>+1</td><td>+2</td><td>+3</td><td>+4</td><td>100/200/400/800</td>
+			</tr>
+		</table>
+		<br>
+		<h3>Armour Upgrades</h3>
+		<p>These are technological upgrades for the armoures. Jetpacks can only be installed on compatible armoures and do not require an upgrade slot. Only a single type of upgrade can be installed per armour. These upgrades are interchangeable</p>
+		<table>
+			<tr>
+				<td>Name</td><td>Stat Affected</td><td>Mk1</td><td>Mk2</td><td>Mk3</td><td>Cost</td><td>Notes</td>
+			</tr>
+			<tr>
+				<td>Target Identifier</td><td>Ranged Accuracy</td><td>+1</td><td>+2</td><td>+3</td><td>30/60/100</td><td></td>
+			</tr>
+			<tr>
+				<td>Range Sensor</td><td>Effective Range</td><td>+10</td><td>+20</td><td>+30</td><td>30/60/100</td><td></td>
+			</tr>
+			<tr>
+				<td>Servos</td><td>Movement Range</td><td>+5</td><td>+10</td><td>+15</td><td>50/100/200</td><td></td>
+			</tr>
+			<tr>
+				<td>Jetpack</td><td>Movement Range</td><td>+30</td><td>+40</td><td>+50</td><td>150/300/500</td><td>Cooldown of 1 turn, cannot be worn without perk</td>
+			</tr>
+			<tr>
+				<td>Teleporter</td><td>Movement Range</td><td>+100</td><td>+150</td><td>+200</td><td>700/1400/2000</td><td>Equivalent to jetpack, 3 turn cooldown, cannot be worn without perk</td>
+			</tr>
+			<tr>
+				<td>Climate Control</td><td>Elemental Resistance</td><td>+1</td><td>+2</td><td>+3</td><td>50/100/200</td><td></td>
+			</tr>
+		</table>
+	</main>
 </body>
 
 </html>

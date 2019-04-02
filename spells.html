@@ -3,206 +3,386 @@
 <head>
 
 <title>Spells</title>
-<script src = "jqMin.js"></script>
-<script src = "script.js"></script>
-<link rel="stylesheet" type="text/css" href="IaWstyle.css">
+<link rel="stylesheet" type="text/css" href="IAWstyle.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-
-<p id = "welcomeTitle" class = "title">Spells and Enchantments</p>
-<p class = "subtitle">Mages and psykers can learn new things here, as well as replenish their supplies</p>
-	<br>
-<div id = "menu">
-	<ul>
-		<li class = "first"><a href = "IaWhome.html">Home</a></li>
-		<li class = "first"><a href = "race.html">Races</a>
-			<ul>
-				<li><a href = "SM.html">Space Marines</a></li>
-				<li><a href = "IG.html">Imperial Guard</a></li>
-				<li><a href = "AS.html">Sisters of Battle</a></li>
-				<li><a href = "T.html">Tau</a></li>
-				<li><a href = "E.html">Eldar</a></li>
-			</ul>
-		</li>
-		<li class = "first"><a href = "shop.html">Shop</a>
-			<ul>
-				<li><a href = "cloth.html">Clothes and Armour</a></li>
-				<li><a href = "close.html">Close Combat Weapons</a></li>
-				<li><a href = "ranged.html">Ranged Combat Weapons</a></li>
-				<li><a href = "ammo.html">Ammunition and Weapon Upgrades</a></li>
-				<li><a href = "vehicles.html">Vehicles</a></li>
-				<li><a href = "vw.html">Vehicle Weapons</a></li>
-				<li><a href = "friend.html">Friendly Creatures</a></li>
-				<li><a href = "spells.html">Spells</a></li>
-				<li><a href = "other.html">Other items</a></li>
-			</ul>
-		</li>
-		<li class = "first"><a href = "create.html">Character Creation</a></li>
-		<li class = "first"><a href = "rules.html">Rules and guidelines</a></li>
-	</ul>
-</div>
-
+	<nav>
+		<a href = "index.html">Home</a>
+		<div class = "dropdown">
+			<button class="dropbtn">Races <i class="fa fa-caret-down"></i></button>
+			<div class="dropdown-content">
+				<a href = "SM.html">Adeptus Astartes</a>
+				<a href = "AS.html">Adeptus Sororitas</a>
+				<a href = "IG.html">Imperial Guard</a>
+				<a href = "T.html">Tau</a>
+				<a href = "E.html">Eldar</a>
+			</div>
+		</div>
+		<div class = "dropdown">
+			<button class="dropbtn">Shop <i class="fa fa-caret-down"></i></button>
+			<div class="dropdown-content">
+				<a href = "cloth.html">Armour and Clothes</a>
+				<a href = "close.html">Close Combat</a>
+				<a href = "ranged.html">Ranged Combat</a>
+				<a href = "ammo.html">Weapon Accesories</a>
+				<a href = "vehicles.html">Vehicle Builder</a>
+				<a href = "friend.html">Allies</a>
+				<a href = "spells.html">Spells</a>
+				<a href = "other.html">Other Things</a>
+			</div>
+		</div>
+		<a href = "create.html">Character Creation</a>
+		<a href = "rules.html">Rules and Guidelines</a>
+	</nav>
+	<header>
+		<h1>Spells and Enchantments</h1>
+	</header>
 		<br>
 
-<div id = "main">
-	<p class = "expl">Spell Tomes allow psykers to learn new spells of the same level or below their indicated level. Once the spell is learned the Tome becomes blank and cannot be used again or sold</p>
-	<p class = "expl">Scrolls contain spells that can only be used once per scroll. All Rank 3 and above characters can use Level 1 scrolls. 1 standard action to cast scroll, doubletap perk does not apply. Scrolls cost 1/3 of the indicated cost, up to level and including lvl 3 spells</p>
-	<p class = "expl">Each spell requires a certain time before casting ("Charge" section), so the psyker can absorb the required energy for the spell. You can change your mind after the required ammount of energy is absorbed and either cast a different spell or carry on absorbing to cast higher level spells</p>
-	<p class = "expl">When entering combat, a psyker has enough energy to cast a spell that requires Charge 1</p>
-	<p class = "expl">A movement action counts as 0.5 of a standard action when absorbing energy to cast a spell</p>
-	<p class = "expl">Enchantments can only be placed on items that can be enchanted (Wraithbone items normally). One enchantment per item, cannot disenchant</p>
-	<table class = "shop">
-		<tr>
-			<td>Name</td><td>Charge</td><td>Range</td><td>Type</td><td style = "width: 50px;">Cost</td><td>Effect</td>
-		</tr>
-		<tr>
-			<td colspan = 6><moo>Spells Level 1</moo></td>
-		</tr>
-		<tr>
-			<td>Scratch Healer</td><td>0</td><td>10</td><td>Water</td><td>X</td><td>Returns 1d6 health to target</td>
-		</tr>
-		<tr>
-			<td>Clear Mind</td><td>0.5</td><td>10</td><td>Air</td><td>X</td><td>Clears all spells up to rank of caster from target</td>
-		</tr>
-		<tr>
-			<td>Psychic Arrow</td><td>0.5</td><td>60</td><td>Air</td><td>X</td><td>Deals 1d6 damage to target, ignores 75% armour</td>
-		</tr>
-		<tr>
-			<td>Confused Mind</td><td>0.5</td><td>40</td><td>Air</td><td>X</td><td>Target receives -2 attack while spell is maintained</td>
-		</tr>
-		<tr>
-			<td colspan = 6><moo>Spells Level 2</moo></td>
-		</tr>
-		<tr>
-			<td>Wound Closure</td><td>0.5</td><td>10</td><td>Water</td><td>X</td><td>Heals 2d6 health to target</td>
-		</tr>
-		<tr>
-			<td>Single Element Shield</td><td>1</td><td>10</td><td>N/A</td><td>X</td><td>No spells of this element can pass through area of radius 3 m</td>
-		</tr>
-		<tr>
-			<td>Meadow</td><td>1</td><td>40</td><td>Earth</td><td>X</td><td>Creates a meadow, giving +2/+5 m movement per movement/standard action turns</td>
-		</tr>
-		<tr>
-			<td>Lightning Bolt</td><td>1</td><td>50</td><td>Lightning</td><td>X</td><td>Deals 2d6 damage to target</td>
-		</tr>
-		<tr>
-			<td>Marsh</td><td>1</td><td>40</td><td>Earth</td><td>X</td><td>Creats a marsh, giving -2/-5 m movement per movement/standard actions</td>
-		</tr>
-		<tr>
-			<td colspan = 6><moo>Spells Level 3</moo></td>
-		</tr>
-		<tr>
-			<td>Eye Opener</td><td>1</td><td>20</td><td>Air</td><td>X</td><td>Clears all spells up to rank of caster for a group within 2 m radius</td>
-		</tr>
-		<tr>
-			<td>Personal Inspiration</td><td>1.5</td><td>10</td><td>Air</td><td>X</td><td>Inspires target to move +2/+6 m faster on movement/standard actions and gives +4 attack while maintained</td>
-		</tr>
-		<tr>
-			<td>Wall of Earth</td><td>1</td><td>25</td><td>Earth</td><td>X</td><td>Creates a wall of earth 2 m tall and 3 m wide, decreasing attack and damage to those nehind it by 5</td>
-		</tr>
-		<tr>
-			<td>Gaze Aversion</td><td>0.5</td><td>10</td><td>Air</td><td>X</td><td>Gives +5 stealth to target while maintained</td>
-		</tr>
-		<tr>
-			<td>Fireball</td><td>1</td><td>40</td><td>Fire</td><td>X</td><td>Deals 2d8 damage within 2 m radius and 50% damage within 5 m radius; deals 75% damage to tanks</td>
-		</tr>
-		<tr>
-			<td>Ring of Frost</td><td>1</td><td>40</td><td>Water</td><td>X</td><td>Deals 1d8 damage and reduces speed by 2/5 m per movement/standard actions to all within 5 m radius</td>
-		</tr>
-		<tr>
-			<td>Bloodlust</td><td>0.5</td><td>30</td><td>Fire</td><td>X</td><td>Gives +5 to attack but -4 to defence to target</td>
-		</tr>
-		<tr>
-			<td>Crowd Confusion</td><td>1.5</td><td>40</td><td>Air</td><td>X</td><td>Gives -5 attack to all within 2 m radius</td>
-		</tr>
-		<tr>
-			<td>Blind</td><td>1</td><td>60</td><td>Lightning</td><td>X</td><td>Blinds target for one turn, giving -10 attack</td>
-		</tr>
-		<tr>
-			<td>Disease</td><td>1.5</td><td>40</td><td>Water</td><td>X</td><td>Poisons the target, dealing 1d4 damage per turn until cured, ignores all armour</td>
-		</tr>
-		<tr>
-			<td colspan = 6><moo>Spells Level 4</moo></td>
-		</tr>
-		<tr>
-			<td>Limb Repair</td><td>1</td><td>10</td><td>Water</td><td>X</td><td>Target is healed for 3d6 health</td>
-		</tr>
-		<tr>
-			<td>Divine Shield</td><td>2</td><td>10</td><td>Earth</td><td>X</td><td>Gives target 6 + 1d6 additional armour while maintained</td>
-		</tr>
-		<tr>
-			<td>Path</td><td>2</td><td>40</td><td>Earth</td><td>X</td><td>Creates an even path giving +4/+10 m speed on movement/standard actions</td>
-		</tr>
-		<tr>
-			<td>Squad Concealer</td><td>1</td><td>10</td><td>Air</td><td>X</td><td>Gives + 10 stealth to all within 5 m radius</td>
-		</tr>
-		<tr>
-			<td>Emperor's Word</td><td>2</td><td>20</td><td>Air</td><td>X</td><td>Inspires all within 5 m to gain +8 attack and +3/+8 m speed on movement/standard actions while maintained</td>
-		</tr>
-		<tr>
-			<td>Chain Lightning</td><td>2</td><td>60</td><td>Lightning</td><td>X</td><td>Deals 2d8 damage to target then moves to a target within 2 m, up to 10 targets</td>
-		</tr>
-		<tr>
-			<td>Implosion</td><td>2</td><td>70</td><td>Fire</td><td>X</td><td>Deals 3d8 damage to target and 50% damage within 3 m radius, can deal 100% damage to tanks</td>
-		</tr>
-		<tr>
-			<td>Earthquake</td><td>2.5</td><td>60</td><td>Earth</td><td>X</td><td>All within 15 m lose a movement action, fortifications receive damage</td>
-		</tr>
-		<tr>
-			<td>Bog</td><td>2</td><td>40</td><td>Earth</td><td>X</td><td>Creates a bog giving -4/-10 m speed on movement/standard actions</td>
-		</tr>
-		<tr>
-			<td>Battle Frenzy</td><td>1.5</td><td>60</td><td>Air</td><td>X</td><td>Causes target at or below caster's rank to attack closest entity</td>
-		</tr>
-		<tr>
-			<td colspan = 6><moo>Spells Level 5</moo></td>
-		</tr>
-		<tr>
-			<td>Healer's Prayer</td><td>2</td><td>0</td><td>Water</td><td>X</td><td>Heals all within 15 m of caster by 2d6 per turn spent maintained</td>
-		</tr>
-		<tr>
-			<td>Emperor's Shield</td><td>2.5</td><td>10</td><td>Earth</td><td>X</td><td>Gives all within 5 m radius 12 + 1d8 additional armour while maintained</td>
-		</tr>
-		<tr>
-			<td>Road</td><td>3</td><td>60</td><td>Earth</td><td>X</td><td>Creates a perfect road giving +5/+15 m speed in movement/standard actions</td>
-		</tr>
-		<tr>
-			<td>Magic Mirror</td><td>3</td><td>20</td><td>Air</td><td>X</td><td>Reflects a maximum of 2 spells per turn while maintained</td>
-		</tr>
-		<tr>
-			<td>Emperor's Mind</td><td>3</td><td>20</td><td>Air</td><td>X</td><td>Clears all spells from all within 10 m radius</td>
-		</tr>
-		<tr>
-			<td>Heavenly Meteor Decent</td><td>4</td><td>80</td><td>Earth</td><td>X</td><td>Summons a meteor to deal 4d6 damage to all entities within 10 m radius and 50% damage to all within 15 m radius</td>
-		</tr>
-		<tr>
-			<td>Sea of Fire</td><td>3</td><td>50</td><td>Fire</td><td>X</td><td>Creates a sea of flames, dealing 3d6 damage to all within 10 m radius while maintained</td>
-		</tr>
-		<tr>
-			<td>Mystic Wave</td><td>3</td><td>0</td><td>Lightning</td><td>X</td><td>All entities recieve 2d8 damage in front of caster for 30 m, ignores 75% armour</td>
-		</tr>
-		<tr>
-			<td>Puppeteer</td><td>4</td><td>60</td><td>Air</td><td>X</td><td>Gives caster control of a living target, they becoming an ally until spell is broken or target is killed</td>
-		</tr>
-		<tr>
-			<td>Swamp</td><td>3</td><td>60</td><td>Earth</td><td>X</td><td>Creates a swamp giving -5/-15 m speed in movement/standard actions</td>
-		</tr>
-		<tr>
-			<td>Great Interference</td><td>3</td><td>60</td><td>Air</td><td>X</td><td>All entities within 10 m radius recieve -8 attack while maintained</td>
-		</tr>
-		<tr>
-			<td>Plague</td><td>3</td><td>60</td><td>Water</td><td>X</td><td>All within 5 m become infected, receiving 1d6 damage per turn until cured, ignores all armour</td>
-		</tr>
-		<tr>
-			<td colspan = 6><moo>Enchantments</moo></td>
-		</tr>
-		<tr>
-			<td></td><td></td><td></td><td></td><td></td><td></td>
-		</tr>
-	</table>
-</div>
-
+	<main>
+		<p>Spells have a minimum Intelligence stat, so if your stat is below that value, you cannot learn the spell</p>
+		<p>A Nat 1 on a spell will deal corruption damage equivalent to the damage output of the spell, or if the spell is non-damaging, deals Intelligence threshold/3 corruption. A Nat 20 spell can either deal 50% more damage or remove caster corruption equal to 50% of dealt damage (Intelligence threshold/3). Non-psykers cannot learn any spells, except for Eldar, who have the racial ability to cast spells. A psyker may cast Intelligence number of spells per day, with the Eldar having a bonus number of spells. A spell can be prepared as a rune instead that can be instacast at any time, but it costs 2 spell slots instead.</p>
+		<p>Psykers can only learn 1 Elemental and 1 Mental discipline</p>
+		<p>All spells ignore armour, max range of spells is 200m unless stated otherwise</p>
+			<br>
+		<h3>Pyromancy (Elemental)</h3>
+		<p>Fire based spells that can deal lasting fire damage. Failed flame resistance check of 10+damage dealt causes 1 fire damage for 1d4 turns. Flames continue to burn in that area for 1d4 turns</p>
+		<table>
+			<tr>
+				<td>Name</td><td>Intelligence</td><td>Damage</td><td>Cost</td><td>Effect</td>
+			</tr>
+			<tr>
+				<td>Torch</td><td>3</td><td>0</td><td>30</td><td>Needs 1 free hand, see for 30m around as if it is normal conditions</td>
+			</tr>
+			<tr>
+				<td>Burning Fist</td><td>3</td><td>1d4</td><td>30</td><td>Caster can attack with flame fist in close combat, lasts 4 turns</td>
+			</tr>
+			<tr>
+				<td>Flaming Weapon</td><td>4</td><td>+1d4</td><td>40</td><td>Boosts damage of single close combat weapon for 4 turns</td>
+			</tr>
+			<tr>
+				<td>Fire Bolt</td><td>4</td><td>1d4</td><td>40</td><td>Single target spell</td>
+			</tr>
+			<tr>
+				<td>Douse Flames</td><td>4</td><td>0</td><td>40</td><td>No fire in 10x10 area for 1d2 turns</td>
+			</tr>
+			<tr>
+				<td>Lesser Flame Sculpt</td><td>5</td><td>0/+2</td><td>50</td><td>Spread a flame to adjacent 5x5 square and reset flame burn out timer OR boost damage for flame attack for 1d2 turns - Nat 1 destroys weapon or deals damage to caster</td>
+			</tr>
+			<tr>
+				<td>Wyrdlight</td><td>6</td><td>0</td><td>60</td><td>Needs 1 free hand, see 60m around as if it is normal conditions</td>
+			</tr>
+			<tr>
+				<td>Fireball</td><td>6</td><td>1d4</td><td>60</td><td>Targets within 10x10 area take damage</td>
+			</tr>
+			<tr>
+				<td>Extinguish Flames</td><td>6</td><td>0</td><td>60</td><td>No fire in 15x15 area for 1d4 turns</td>
+			</tr>
+			<tr>
+				<td>Greater Flame Scuplt</td><td>7</td><td>0/+4</td><td>70</td><td>Generate smoke in all adjacent squares to flame and reset flame burn out timer OR boost damage for flame attack for 1d4 turns - Nat 1 destroys weapon or deals damage to caster</td>
+			</tr>
+			<tr>
+				<td>Incinirate</td><td>8</td><td>1d8</td><td>80</td><td>Pinpoint attack to one target</td>
+			</tr>
+			<tr>
+				<td>Exterminate Flames</td><td>8</td><td>0</td><td>80</td><td>No fire within 20x20 area for 1d6 turns</td>
+			</tr>
+			<tr>
+				<td>Flare</td><td>9</td><td>0</td><td>90</td><td>Needs 1 free hand, see 90m around as if it is normal conditions</td>
+			</tr>
+			<tr>
+				<td>Fire Storm</td><td>10</td><td>1d8</td><td>100</td><td>Targets within 10x10 area take damage</td>
+			</tr>
+			<tr>
+				<td>Supreme Flame Sculpt</td><td>10</td><td>0/+6</td><td>100</td><td>Spread fire to all adjacent squares and reset flame burn out timer OR boost damage for flame attack for 1d4 - Nat 1 destroys weapon or deals damage to caster</td>
+			</tr>
+			<tr>
+				<td>Sunburst</td><td>12</td><td>2d6</td><td>120</td><td>Everybody takes damage within 15m of the caster</td>
+			</tr>
+		</table>
+			<br>
+		<h3>Cryomancy (Elemental)</h3>
+		<p>Frost based spells that slow or freeze enemies. Deal same damage as fire spells. Hit targets slowed to half speed for 1d4 turns if failed 10+damage frost resist check</p>
+		<table>
+			<tr>
+				<td>Name</td><td>Intelligence</td><td>Damage</td><td>Cost</td><td>Effect</td>
+			</tr>
+			<tr>
+				<td>Frost Touch</td><td>3</td><td>1d4</td><td>30</td><td>Caster can attack with frost fist in close combat, lasts 4 turns</td>
+			</tr>
+			<tr>
+				<td>Cryocharge</td><td>4</td><td>+1d4</td><td>40</td><td>Boosts damage of single close combat weapon for 4 turns</td>
+			</tr>
+			<tr>
+				<td>Frost Spike</td><td>4</td><td>1d4</td><td>40</td><td>Single target spell</td>
+			</tr>
+			<tr>
+				<td>Frost Armour</td><td>4</td><td>-2</td><td>40</td><td>Target gains armour for 1d4 turns</td>
+			</tr>
+			<tr>
+				<td>Snowfall</td><td>5</td><td>0</td><td>50</td><td>-2 ranged accuracy to all in 10x10 area, lasts 1d4 turns</td>
+			</tr>
+			<tr>
+				<td>Frost Sphere</td><td>6</td><td>1d4</td><td>60</td><td>Targets within 10x10 area take damage</td>
+			</tr>
+			<tr>
+				<td>Frozen Armour</td><td>6</td><td>-4</td><td>60</td><td>Target gains armour for 1d4 turns</td>
+			</tr>
+			<tr>
+				<td>Ice Rink</td><td>6</td><td>0</td><td>60</td><td>All targets in 15x15 area stop when they pass through. Movement tor targets on rink is halved. Lasts 1d4 turns</td>
+			</tr>
+			<tr>
+				<td>Snow Storm</td><td>7</td><td>0</td><td>70</td><td>-4 ranged accuracy to all in 15x15 area, lasts 1d4 turns</td>
+			</tr>
+			<tr>
+				<td>Permafrost Armour</td><td>8</td><td>-6</td><td>80</td><td>Target gains armour for 1d6 turns</td>
+			</tr>
+			<tr>
+				<td>Permafrost Spike</td><td>8</td><td>1d8</td><td>80</td><td>Single target spell</td>
+			</tr>
+			<tr>
+				<td>Blizzard</td><td>9</td><td>0</td><td>90</td><td>-4 ranged accuracy to all in 20x20 area, lasts 1d6 turns</td>
+			</tr>
+			<tr>
+				<td>Frozen Shards</td><td>10</td><td>1d8</td><td>100</td><td>Targets within 10x10 area take damage</td>
+			</tr>
+			<tr>
+				<td>Frozen Tempest</td><td>10</td><td>1</td><td>100</td><td>-6 ranged accuracy to all in 20x20 area, lasts 1d6 turns</td>
+			</tr>
+			<tr>
+				<td>Frozen Sarcophagus</td><td>11</td><td>1d2</td><td>110</td><td>Target is frozen fully for 1d4 turns, taking damage every turn</td>
+			</tr>
+			<tr>
+				<td>Frozen Nova</td><td>12</td><td>2d6</td><td>120</td><td>Everybody takes damage within 15m of caster</td>
+			</tr>
+		</table>
+			<br>
+		<h3>Fulmination (Elemental)</h3>
+		<p>Lightning based spells that deal larger damage than other elemental spells but have slightly higher requirements. Targets that fail 5+damage dealt lightning resist check are paralysed for next turn</p>
+		<table>
+			<tr>
+				<td>Name</td><td>Intelligence</td><td>Damage</td><td>Cost</td><td>Effect</td>
+			</tr>
+			<tr>
+				<td>Flash</td><td>3</td><td>0</td><td>30</td><td>Targets in 10x10 area blind (-5 accuracy total) for 1d2 turns</td>
+			</tr>
+			<tr>
+				<td>Lightning Fist</td><td>3</td><td>1d6</td><td>30</td><td>Caster can attack enemies in close combat with fist for 1d4 turns</td>
+			</tr>
+			<tr>
+				<td>Shocking Weapon</td><td>4</td><td>+1d6</td><td>40</td><td>Boosts single melee weapon for 4 turns</td>
+			</tr>
+			<tr>
+				<td>Magnetokinesis</td><td>5</td><td>0</td><td>50</td><td>Move targets within 10x10 by 50m</td>
+			</tr>
+			<tr>
+				<td>Charge</td><td>5</td><td>+3</td><td>50</td><td>Plasma weapon (hand held) gets damage boost, Nat 1 destroys weapon</td>
+			</tr>
+			<tr>
+				<td>Flashbang</td><td>6</td><td>0</td><td>60</td><td>Targets in 15x15 area blind (-5 accuracy total) for 1d4 turns</td>
+			</tr>
+			<tr>
+				<td>Lightning Bolt</td><td>6</td><td>1d6</td><td>60</td><td>Single target spell</td>
+			</tr>
+			<tr>
+				<td>Electric Surge</td><td>6</td><td>1d6</td><td>60</td><td>Affects all in 10x10 area</td>
+			</tr>
+			<tr>
+				<td>Overload</td><td>6</td><td>0</td><td>60</td><td>All electronics do not work in 10x10 for 1d4 turns - electronics carry on failing after leaving area</td>
+			</tr>
+			<tr>
+				<td>Surcharge</td><td>7</td><td>+6/+3</td><td>70</td><td>Plasma weapon (hand held/tank) gets damage boost, Nat 1 destroys weapon</td>
+			</tr>
+			<tr>
+				<td>Lightning Arc</td><td>8</td><td>2d6</td><td>80</td><td>Single target spell</td>
+			</tr>
+			<tr>
+				<td>Critical Failiure</td><td>8</td><td>1</td><td>80</td><td>All electronics do not work in 15x15 area for 1d4 turns - electronics carry on failing after leaving area</td>
+			</tr>
+			<tr>
+				<td>Lightning Storm</td><td>10</td><td>2d6</td><td>100</td><td>Affects all in 10x10 area</td>
+			</tr>
+			<tr>
+				<td>Overcharge</td><td>10</td><td>+6</td><td>100</td><td>Plasma weapon (tank) gets damage boost, Nat 1 destroys weapon</td>
+			</tr>
+			<tr>
+				<td>Electrodisplacement</td><td>11</td><td>0</td><td>110</td><td>Caster swaps places with target in range, both invunerable during transition</td>
+			</tr>
+			<tr>
+				<td>Raging Tempest</td><td>12</td><td>3d6</td><td>120</td><td>Affects all within 15m of caster</td>
+			</tr>
+		</table>
+			<br>
+		<h3>Telekinesis (Mental)</h3>
+		<p>Application of the mind onto the physical world. Covers aspects of healing, moving objects and abjuration</p>
+		<table>
+			<tr>
+				<td>Name</td><td>Intelligence</td><td>Cost</td><td>Effect</td>
+			</tr>
+			<tr>
+				<td>Call Lesser Item</td><td>3</td><td>30</td><td>Summon a small, pre-enspelled item to hand - dagger/grenade/ammo item</td>
+			</tr>
+			<tr>
+				<td>Lesser Heal</td><td>3</td><td>30</td><td>+3 health to target</td>
+			</tr>
+			<tr>
+				<td>Psychic Blades</td><td>4</td><td>40</td><td>Cast on both arms, needs both free, deals 2d4 damage, ignores all armour</td>
+			</tr>
+			<tr>
+				<td>Lesser Distortion</td><td>4</td><td>40</td><td>Humanoid target appears 10m away, lasts 1d4 turns</td>
+			</tr>
+			<tr>
+				<td>Lesser Chameleon</td><td>4</td><td>40</td><td>+2 stealth to humanoid target</td>
+			</tr>
+			<tr>
+				<td>Call Greater Item</td><td>6</td><td>60</td><td>Summon any pre-enspelled item to hand</td>
+			</tr>
+			<tr>
+				<td>Greater Chameleon</td><td>6</td><td>60</td><td>+4 stealth to humanoid target</td>
+			</tr>
+			<tr>
+				<td>Greater Heal</td><td>6</td><td>60</td><td>+6 health to target</td>
+			</tr>
+			<tr>
+				<td>Greater Distortion</td><td>7</td><td>70</td><td>Humanoid target appears 20m away or tank appears 10m away, lasts 2d2</td>
+			</tr>
+			<tr>
+				<td>Supreme Chameleon</td><td>8</td><td>80</td><td>+6 stealth to humanoid target</td>
+			</tr>
+			<tr>
+				<td>Catch Projectile</td><td>8</td><td>80</td><td>Stop any 1 physical projectile within 5m</td>
+			</tr>
+			<tr>
+				<td>Supeme Heal</td><td>9</td><td>90</td><td>+9 Health to target</td>
+			</tr>
+			<tr>
+				<td>Teleport</td><td>9</td><td>90</td><td>Teleports the caster up to 60m away</td>
+			</tr>
+			<tr>
+				<td>Supreme Distortion</td><td>10</td><td>100</td><td>Any target appears 30m away, lasts 4 turns</td>
+			</tr>
+			<tr>
+				<td>Mend Metal</td><td>10</td><td>100</td><td>+5 health to tank</td>
+			</tr>
+			<tr>
+				<td>Projectile Shield</td><td>10</td><td>100</td><td>Stop all physical projectiles within 5m for 1d2 turns</td>
+			</tr>
+			<tr>
+				<td>Greater Projectile Shield</td><td>12</td><td>120</td><td>Stop all physical projectiles within 10m for 2 turns</td>
+			</tr>
+			<tr>
+				<td>Gaze of Infinity</td><td>16</td><td>160</td><td>Creates a portal to a different planet, every turn it is open consumes a spell slot, closes after caster is through</td>
+			</tr>
+		</table>
+			<br>
+		<h3>Telepathy (Mental)</h3>
+		<p>Application of the mind onto the mental landscape of enemies and friends. Covers aspects of mind-talk, illusion and astropathy</p>
+		<table>
+			<tr>
+				<td>Name</td><td>Intelligence</td><td>Cost</td><td>Effect</td>
+			</tr>
+			<tr>
+				<td>Dull Pain</td><td>3</td><td>30</td><td>+2 health for 1d4 turns, target dies if after spell wears off it has 0 or less health</td>
+			</tr>
+			<tr>
+				<td>Inspiring Presence</td><td>3</td><td>30</td><td>Allies within 10m get +3 leadership for 1d4 turns</td>
+			</tr>
+			<tr>
+				<td>Aura of Fear</td><td>4</td><td>40</td><td>Enemies within 10m of caster pass 15+ routing check</td>
+			</tr>
+			<tr>
+				<td>Telepathy</td><td>4</td><td>40</td><td>Communicate with someone up to 200m away for 1 turn</td>
+			</tr>
+			<tr>
+				<td>Aura of Horror</td><td>6</td><td>60</td><td>Enemies within 15m of caster pass 20+ routing check</td>
+			</tr>
+			<tr>
+				<td>Inspirational Aura</td><td>6</td><td>60</td><td>Allies within 15m get +5 leadership for 1d6 turns</td>
+			</tr>
+			<tr>
+				<td>Greater Telepathy</td><td>6</td><td>60</td><td>Communicate with target up to 700m away for 1 turn</td>
+			</tr>
+			<tr>
+				<td>Aura of Terror</td><td>8</td><td>80</td><td>Enemies within 20m of caster pass 25+ routing check</td>
+			</tr>
+			<tr>
+				<td>Dominate</td><td>8</td><td>80</td><td>Control 1 target for 1d4 turns, caster cannot act during posession time</td>
+			</tr>
+			<tr>
+				<td>Supreme Telepathy</td><td>8</td><td>80</td><td>Communicate with any known target on same planet</td>
+			</tr>
+			<tr>
+				<td>Emperor's Word</td><td>9</td><td>90</td><td>Alliws within 30m get +6 leadership for 2d4 turns</td>
+			</tr>
+			<tr>
+				<td>Abominable Aura</td><td>10</td><td>100</td><td>Enemies within 30m of caster pass 25+ routing check</td>
+			</tr>
+			<tr>
+				<td>See Me Not</td><td>10</td><td>100</td><td>Caster is fully invisible until they cast another spell or attack someone</td>
+			</tr>
+			<tr>
+				<td>Astropathy</td><td>10</td><td>100</td><td>Communicate with any known target within the same stellar system</td>
+			</tr>
+			<tr>
+				<td>Might of the Ancients</td><td>11</td><td>110</td><td>Doubles the Strength OR Marskmanship stats of a target for 1d4 turns</td>
+			</tr>
+			<tr>
+				<td>Greater Astropathy</td><td>12</td><td>120</td><td>Communicate with any known target, regardless of their position</td>
+			</tr>
+			<tr>
+				<td>Avenger</td><td>16</td><td>160</td><td>Caster summons their race's specters that charge at the enemy, dealing 3d4 damage to all in their path - 10m wide</td>
+			</tr>
+		</table>
+			<br>
+		<h3>Divination (Mental)</h3>
+		<p>A diviner reads and interprets the warp to try to glean information about the future. Psykers cannot form divination spell runes but they have enhancment items available</p>
+		<table>
+			<tr>
+				<td>Name</td><td>Intelligence</td><td>Cost</td><td>Effect</td>
+			</tr>
+			<tr>
+				<td>Precognition</td><td>3</td><td>30</td><td>Attempt to sense future 2 turns away for 1 target</td>
+			</tr>
+			<tr>
+				<td>Sense Object</td><td>4</td><td>40</td><td>Find described object within 100m</td>
+			</tr>
+			<tr>
+				<td>Far Sight</td><td>4</td><td>40</td><td>See up to 2000m in a given direction for 2 turns</td>
+			</tr>
+			<tr>
+				<td>Divine Aim</td><td>5</td><td>50</td><td>+3 anged accuracy to single target for 2 turns</td>
+			</tr>
+			<tr>
+				<td>Divine Object</td><td>6</td><td>60</td><td>Find described object within 300m</td>
+			</tr>
+			<tr>
+				<td>Sense Near Future</td><td>6</td><td>60</td><td>Sense future for 2 turns ahead</td>
+			</tr>
+			<tr>
+				<td>Divine Shot</td><td>7</td><td>70</td><td>+6 ranged accuracy to single target for 2 turns</td>
+			</tr>
+			<tr>
+				<td>Sense Person</td><td>8</td><td>80</td><td>Find described person within 200m</td>
+			</tr>
+			<tr>
+				<td>Sense Far Future</td><td>8</td><td>80</td><td>Sense mission details</td>
+			</tr>
+			<tr>
+				<td>Wipe Memory</td><td>8</td><td>80</td><td>Target forgets caster</td>
+			</tr>
+			<tr>
+				<td>Possibility shield</td><td>9</td><td>90</td><td>All enemy fire -2 ranged accuracy when targeting target, for 3 turns</td>
+			</tr>
+			<tr>
+				<td>Divine Person</td><td>10</td><td>100</td><td>Find described person within 500m</td>
+			</tr>
+			<tr>
+				<td>Personal Augury</td><td>12</td><td>120</td><td>Ask 1 question to DM</td>
+			</tr>
+		</table>
+	</main>
 </body>
 
 </html>

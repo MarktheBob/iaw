@@ -3,59 +3,284 @@
 <head>
 
 <title>Other Items</title>
-<script src = "jqMin.js"></script>
-<script src = "script.js"></script>
-<link rel="stylesheet" type="text/css" href="IaWstyle.css">
+<link rel="stylesheet" type="text/css" href="IAWstyle.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-
-<p id = "welcomeTitle" class = "title">Other Items</p>
-<p class = "subtitle">Survival kits, food and misc items may be purchased here</p>
-	<br>
-<div id = "menu">
-	<ul>
-		<li class = "first"><a href = "IaWhome.html">Home</a></li>
-		<li class = "first"><a href = "race.html">Races</a>
-			<ul>
-				<li><a href = "SM.html">Space Marines</a></li>
-				<li><a href = "IG.html">Imperial Guard</a></li>
-				<li><a href = "AS.html">Sisters of Battle</a></li>
-				<li><a href = "T.html">Tau</a></li>
-				<li><a href = "E.html">Eldar</a></li>
-			</ul>
-		</li>
-		<li class = "first"><a href = "shop.html">Shop</a>
-			<ul>
-				<li><a href = "cloth.html">Clothes and Armour</a></li>
-				<li><a href = "close.html">Close Combat Weapons</a></li>
-				<li><a href = "ranged.html">Ranged Combat Weapons</a></li>
-				<li><a href = "ammo.html">Ammunition and Weapon Upgrades</a></li>
-				<li><a href = "vehicles.html">Vehicles</a></li>
-				<li><a href = "vw.html">Vehicle Weapons</a></li>
-				<li><a href = "friend.html">Friendly Creatures</a></li>
-				<li><a href = "spells.html">Spells</a></li>
-				<li><a href = "other.html">Other items</a></li>
-			</ul>
-		</li>
-		<li class = "first"><a href = "create.html">Character Creation</a></li>
-		<li class = "first"><a href = "rules.html">Rules and guidelines</a></li>
-	</ul>
-</div>
-
+	<nav>
+		<a href = "index.html">Home</a>
+		<div class = "dropdown">
+			<button class="dropbtn">Races <i class="fa fa-caret-down"></i></button>
+			<div class="dropdown-content">
+				<a href = "SM.html">Adeptus Astartes</a>
+				<a href = "AS.html">Adeptus Sororitas</a>
+				<a href = "IG.html">Imperial Guard</a>
+				<a href = "T.html">Tau</a>
+				<a href = "E.html">Eldar</a>
+			</div>
+		</div>
+		<div class = "dropdown">
+			<button class="dropbtn">Shop <i class="fa fa-caret-down"></i></button>
+			<div class="dropdown-content">
+				<a href = "cloth.html">Armour and Clothes</a>
+				<a href = "close.html">Close Combat</a>
+				<a href = "ranged.html">Ranged Combat</a>
+				<a href = "ammo.html">Weapon Accesories</a>
+				<a href = "vehicles.html">Vehicle Builder</a>
+				<a href = "friend.html">Allies</a>
+				<a href = "spells.html">Spells</a>
+				<a href = "other.html">Other Things</a>
+			</div>
+		</div>
+		<a href = "create.html">Character Creation</a>
+		<a href = "rules.html">Rules and Guidelines</a>
+	</nav>
+	<header>
+		<h1>Training and Other Things</h1>
+	</header>
 		<br>
 
-<div id = "main">
-	<table class = "shop">
-		<tr>
-			<td>Name</td><td style = "width: 50px;">Cost</td><td>Effect</td>
-		</tr>
-		<tr>
-			<td></td><td></td><td></td>
-		</tr>
-	</table>
-</div>
-
+	<main>
+		<h3>Extra Items</h3>
+		<p>Extra equippable items that are not really armours. Only 1 item per category can be equipped</p>
+		<table>
+			<tr>
+				<td>Name</td><td>Rarity</td><td>Category</td><td>Cost</td><td>Effect</td>
+			</tr>
+			<tr>
+				<td>Glasses</td><td>C</td><td>Head</td><td>20</td><td>Make you look more intelligent: Intelligence + 1</td>
+			</tr>
+			<tr>
+				<td>Night Vision Glasses</td><td>U</td><td>Head</td><td>50</td><td>Grant night vision</td>
+			</tr>
+			<tr>
+				<td>Monocle</td><td>U</td><td>Head</td><td>60</td><td>Somehow increases Intelligence by 2</td>
+			</tr>
+			<tr>
+				<td>Hologlasses</td><td>R</td><td>Head</td><td>130</td><td>Able to see better, ranged accuracy +2, night vision</td>
+			</tr>
+			<tr>
+				<td>Runic Hood</td><td>R</td><td>Head</td><td>140</td><td>Focuses your mind, improving Intelligence by 3</td>
+			</tr>
+			<tr>
+				<td>Officer's Eyes</td><td>L</td><td>Head</td><td>C</td><td>A pair of teched out glasses that grant perfect vision in all environments and ranged accuracy +4</td>
+			</tr>
+			<tr>
+				<td>Psychic Hood</td><td>L</td><td>Head</td><td>300</td><td>Few are left in the galaxy, these focus the mind to an extreme degree, granting Intelligence +4</td>
+			</tr>
+			<tr>
+				<td>Boosted Psyker's Hood</td><td>Q</td><td>Head</td><td>1000</td><td>After some heretical modding by the Eldar, this hood now grants +6 to Intellinegce</td>
+			</tr>
+			<tr>
+				<td>Basic Vox box</td><td>C</td><td>Comm</td><td>5</td><td>Allows communications for up to 100m away</td>
+			</tr>
+			<tr>
+				<td>Vox Caster</td><td>U</td><td>Comm</td><td>20</td><td>Allows communication for up to 300m away</td>
+			</tr>
+			<tr>
+				<td>Vox bead</td><td>R</td><td>Comm</td><td>60</td><td>Allows communication for up to 1000m away</td>
+			</tr>
+			<tr>
+				<td>Small Pack</td><td>C</td><td>Bag</td><td>3</td><td>Can fit one one-handed weapon or 3 ammo items into the bag</td>
+			</tr>
+			<tr>
+				<td>Medium Bag</td><td>U</td><td>Bag</td><td>15</td><td>Can fit two one-handed or one two-handed weapon, or 6 ammo items</td>
+			</tr>
+			<tr>
+				<td>Large Bag</td><td>R</td><td>Bag</td><td>40</td><td>Can fit any two weapons in or 10 ammo items</td>
+			</tr>
+			<tr>
+				<td>Basic Harness</td><td>C</td><td>Harness</td><td>3</td><td>Can fit 4 ammo items</td>
+			</tr>
+			<tr>
+				<td>Combat Harness</td><td>U</td><td>Harness</td><td>15</td><td>Can fit 8 ammo items and 1 one-handed weapon for intantaneous swap</td>
+			</tr>
+			<tr>
+				<td>Advanced Harness</td><td>R</td><td>Harness+Bag</td><td>40</td><td>Can fit 12 ammo items and 1 weapon for intantaneous swap</td>
+			</tr>
+			<tr>
+				<td>Combat Shield</td><td>R</td><td>Shield</td><td>150</td><td>Generally paired with a hammer, absorbs 10 damage before needing a 2 turn recharge, cannot be fired through, does not require Hammer Mastery</td>
+			</tr>
+			<tr>
+				<td>Power Shield</td><td>L</td><td>Shield</td><td>300</td><td>Generally paired with a hammer, absorbs 20 damage before needing a 3 turn recharge, cannot be fired through, does not require Hammer Mastery</td>
+			</tr>
+			<tr>
+				<td>Storm Shield</td><td>Q</td><td>Shield</td><td>600</td><td>Generally paired with a hammer, absorbs 30 damage before needing a 2 turn recharge, cannot be fired through, does not require Hammer Mastery</td>
+			</tr>
+			<tr>
+				<td>Warp Infused Crystal</td><td>R</td><td>Divine</td><td>100</td><td>+1 Intelligence when casting divination spells</td>
+			</tr>
+			<tr>
+				<td>Emperor's Tarot</td><td>L</td><td>Divine</td><td>250</td><td>+3 Intelligence when casting divination spells</td>
+			</tr>
+			<tr>
+				<td>Chronometron</td><td>Q</td><td>Divine</td><td>100</td><td>+5 Intelligence when casting divination spells</td>
+			</tr>
+		</table>
+			<br>
+		<h3>Training Courses</h3>
+		<p>These can be taken multiple times up to a certain skill stat threshold. Each course can be either taken fully, or at a discount with a stat check requirement to gain the bonus to skill</p>
+		<p>Beginner/Advanced/Master</p>
+		<table>
+			<tr>
+				<td>Name</td><td>Stat</td><td>Increase</td><td>Theshold</td><td>Cost</td><td>Notes</td>
+			</tr>
+			<tr>
+				<td>Chaos Studies</td><td>Corruption</td><td>2</td><td>100</td><td>3</td><td>Only found in the darkest corner of the library, these tomes are considered heretical by most. Need 5 corruption to find, beginner level</td>
+			</tr>
+			<tr>
+				<td>Cleansing</td><td>Corruption</td><td>-3</td><td>0</td><td>15</td><td>Purifying the taint of chaos is a nodle but difficult task, beginner level</td>
+			</tr>
+			<tr>
+				<td>Library visit</td><td>Knowledge</td><td>+1</td><td>7</td><td>2</td><td>Each visit can only increase one of the four branches of knowledge, beginner level</td>
+			</tr>
+			<tr>
+				<td>Specialised Class</td><td>Knowledge</td><td>+2</td><td>14</td><td>10</td><td>Each visit can only increase one of the four branches of knowledge, advanced level</td>
+			</tr>
+			<tr>
+				<td>Neural trainer</td><td>Knowledge</td><td>+3</td><td>20</td><td>50</td><td>Each visit can only increase one of the four branches of knowledge, master level</td>
+			</tr>
+			<tr>
+				<td>Eye Augments</td><td>Perception</td><td>+2/+4/+6</td><td>-</td><td>20/60/100</td><td>One time only for each level, this operation installs special tech into the eyes to boost their effectiveness</td>
+			</tr>
+			<tr>
+				<td>Training Arena</td><td>Melee Accuracy</td><td>+1/+2/+3</td><td>10/20/30</td><td>20/40/60</td><td>By visiting the arena and practicing with the fighters you can learn much from them</td>
+			</tr>
+			<tr>
+				<td>Target Practice</td><td>Ranged Accuracy</td><td>+1/+2/+3</td><td>10/20/30</td><td>20/40/60</td><td>Weapon practice is important, so visit the range often to hone your skills in shooting things</td>
+			</tr>
+			<tr>
+				<td>Dance and Acrobatics Course</td><td>Dodge</td><td>+1/+2/+3</td><td>10/20/30</td><td>20/40/60</td><td>Taking dance lessons is sometimes necessary to learn how to use your body better in combat</td>
+			</tr>
+			<tr>
+				<td>Stealth Course</td><td>Stealth</td><td>+1/+2/+3</td><td>10/20/30</td><td>25/50/75</td><td>Requires 3/6/9 perception to discover these courses</td>
+			</tr>
+			<tr>
+				<td>Debating Sosciety</td><td>Diplomacy</td><td>+1/+2/+3</td><td>10/20/30</td><td>20/40/60</td><td>Debating with others raises your skill of diplomacy, roll charisma check instead of intelligence check when applying for discounts</td>
+			</tr>
+			<tr>
+				<td>Leadership courses</td><td>Leadership</td><td>+1/+2/+3</td><td>10/20/30</td><td>30/60/90</td><td>Management courses that improve your inspirational skills, roll charisma check instead of intelligence check when applying for discounts</td>
+			</tr>
+		</table>
+			<br>
+		<h3>Perk Courses</h3>
+		<p>These are one time courses that you can take to gain certain perks</p>
+		<p>Roll 20+ intelligence check to get 50% off. Failed check just means deduction of money</p>
+		<table>
+			<tr>
+				<td>Name</td><td>Cost</td><td>Notes</td>
+			</tr>
+			<tr>
+				<td>Ambidexterous</td><td>10</td><td>Can hold a sword/dagger in one hand and a pistol in the other, req Agility 5+</td>
+			</tr>
+			<tr>
+				<td>Dagger Mastery</td><td>50</td><td>Able to dual wield daggers, req Ambidexterous and Strength 10+</td>
+			</tr>
+			<tr>
+				<td>Blade Storm</td><td>150</td><td>Able to dual wield swords, req Dagger Matery and Strength 15+</td>
+			</tr>
+			<tr>
+				<td>Hammer/Spear/Staff Mastery</td><td>100</td><td>Able to wield a pistol and hammer/spear/staff at the same time, req Ambidexterous and Strength 10/10/5+</td>
+			</tr>
+			<tr>
+				<td>Walk and Fire</td><td>20</td><td>During the turn you can move half your max distance and fire at -4 ranged accuracy</td>
+			</tr>
+			<tr>
+				<td>Nimble Hands</td><td>40</td><td>Reload in half the time, req Walk and Fire, and Agility 5+</td>
+			</tr>
+			<tr>
+				<td>Double Tap</td><td>70</td><td>Fire twice per turn, req Nimble Hand and Marksmanship 10+ and Agility 5+</td>
+			</tr>
+			<tr>
+				<td>Ease of Access</td><td>50</td><td>Take items from backpack in half the time, req Nimble Hands and Agility 10+</td>
+			</tr>
+			<tr>
+				<td>Jetpack Training</td><td>50</td><td>Allows you to wear a jetpack, req Agility 10+</td>
+			</tr>
+			<tr>
+				<td>Speed Burst</td><td>20</td><td>+5m movement range, req Constitution 5+</td>
+			</tr>
+			<tr>
+				<td>Speedster</td><td>50</td><td>+10m movement range, req Speed Burst and Constitution 10+</td>
+			</tr>
+			<tr>
+				<td>Speed Demon</td><td>80</td><td>+15m movement range, req Speedster and Constitution 15+</td>
+			</tr>
+			<tr>
+				<td>Inhuman Speed</td><td>130</td><td>+20m movement range, req Speed Demon and Constitution 20+</td>
+			</tr>
+			<tr>
+				<td>Fast Reflexes</td><td>30</td><td>Agility +2, req Agility 5+</td>
+			</tr>
+			<tr>
+				<td>Inhuman Reflexes</td><td>70</td><td>Agility +4, req Fast Reflexes and Agility 10+</td>
+			</tr>
+			<tr>
+				<td>Bullet Time</td><td>150</td><td>Can dodge bullets, agility check 20+incoming ranged acc with half of agility bonus, req Inhuman Relflexes and Agility 15+</td>
+			</tr>
+			<tr>
+				<td>Warp Fury</td><td>30</td><td>+2 Flame spell damage, req Intelligence 5+</td>
+			</tr>
+			<tr>
+				<td>Flames of Hell</td><td>60</td><td>+4 Flame spell damage, req Warp Fury and Intelligence 10+</td>
+			</tr>
+			<tr>
+				<td>Infernal Blaze</td><td>90</td><td>+6 Flame spell damage, req Flames of Hell and Intelligence 15+</td>
+			</tr>
+			<tr>
+				<td>Chilling Presence</td><td>30</td><td>+2 Frost spell damage, req Intelligence 5+</td>
+			</tr>
+			<tr>
+				<td>Icy Purgatory</td><td>60</td><td>+4 Frost spell damage, req Chilling Presence and Intelligence 10+</td>
+			</tr>
+			<tr>
+				<td>Frozen End Domain</td><td>90</td><td>+6 Frost spell damage, req Icy Purgatory and Intelligence 15+</td>
+			</tr>
+			<tr>
+				<td>Sparkling Personality</td><td>30</td><td>+2 Lightning spell damage, req Intelligence 5+</td>
+			</tr>
+			<tr>
+				<td>Thunderous Gaze</td><td>60</td><td>+4 Lightning spell damage, req Sparkling Personality and Intelligence 10+</td>
+			</tr>
+			<tr>
+				<td>Heaven's Wrath</td><td>90</td><td>+6 Lightning spell damage, req Thunderous Gaze and Intelligence 15+</td>
+			</tr>
+			<tr>
+				<td>Mental Discipline</td><td>30</td><td>+2 Intelligence when casting Mental spells, req Intelligence 5+</td>
+			</tr>
+			<tr>
+				<td>Mind Games</td><td>60</td><td>+4 Intelligence when casting Mental spells, req Mental Discipline and Intelligence 10+</td>
+			</tr>
+			<tr>
+				<td>Iron Will</td><td>90</td><td>+4 Intelligence when casting Mental spells, req Mind Games and Intelligence 10+</td>
+			</tr>
+			<tr>
+				<td>Master of the Warp</td><td>150</td><td>+3 Intelligence, req Iron will and Infernal Blaze/Frozen End Domain/Heaven's Wrath</td>
+			</tr>
+			<tr>
+				<td>Elementary Resistance</td><td>50</td><td>All elemental resistances +2, req Warp Resistance 5+ OR Constitution 5+</td>
+			</tr>
+			<tr>
+				<td>Friend of the Elements</td><td>100</td><td>All elemental resistances +4, req Elementary Resistance, and Warp Resistance 10+ OR Constitution 10+</td>
+			</tr>
+			<tr>
+				<td>One with Nature</td><td>150</td><td>All elemental resistances +6, req Friend of the Elements, and Warp Resistance 10+ OR Constitution 10+</td>
+			</tr>
+			<tr>
+				<td>Long Range Combatant</td><td>20</td><td>-1 ranged accuracy every 10m after effective range, req Marksmanship 5+</td>
+			</tr>
+			<tr>
+				<td>Long Ranged Specialist</td><td>50</td><td>-1 ranged accuracy every 15m after effective range, req LR Combatant and Marksmanship 10+</td>
+			</tr>
+			<tr>
+				<td>Sniper Disciplne</td><td>80</td><td>-1 ranged accuracy every 20m after effective range, req LR Specialist and Marksmanship 15+</td>
+			</tr>
+			<tr>
+				<td>Distance Mastery</td><td>200</td><td>-1 ranged accuracy every 30m after effective range, req Sniper Discipline and Marksmanship 20+</td>
+			</tr>
+		</table>
+	</main>
 </body>
 
 </html>
