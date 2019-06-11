@@ -4,7 +4,7 @@
 
 <title>Creator</title>
 <script src = "jqMin.js"></script>
-<script src = "script.js"></script>
+<script src = "creator.js"></script>
 <link rel="stylesheet" type="text/css" href="IAWstyle.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -42,6 +42,776 @@
 		<h1>Character Creator</h1>
 		<h2>Custom character creator with save feature</h2>
 	</header>
+
+	<main id = "create">
+		<div id = "0">
+			<button id = "createnew">Create new character</button>
+			<button id = "loadcharacter">Load saved character</button>
+		</div>
+		<div id = "1">
+			<p>Name</p>
+			<textarea class = "small" id = "name"></textarea><br>
+			<button id = "nameSelect">Next</button>
+		</div>
+		<div id = "2">
+			<p>Race</p>
+			<select id = "race">
+				<option value = "sm">Adeptus Astartes</option>
+				<option value = "as">Adeptus Sororitas</option>
+				<option value = "ig">Imperial Guard</option>
+				<option value = "t">Tau</option>
+				<option value = "e">Eldar</option>
+			</select>
+			<button id = "raceSelect">Next</button>
+		</div>
+		<div id = "3">
+			<p>Chapter</p>
+			<select id = "chapter">
+				<option value = "ult">Ultramarines</option>
+				<option value = "wolf">Space Wolves</option>
+				<option value = "scar">White Scars</option>
+				<option value = "sal">Salamanders</option>
+				<option value = "ang">Dark Angels</option>
+			</select>
+			<button id = "chapterSelect">Next</button>
+		</div>
+		<div id = "4">
+			<p>Sex</p>
+			<select id = "sex">
+				<option value = "m" class = "male">Male</option>
+				<option value = "f" class = "female">Female</option>
+			</select>
+			<button id = "genSelect">Next</button>
+		</div>
+		<div class = "out">
+			<h3>Character Description</h3>
+			<p>You (<b id = "namechar">Name</b>) are a <b id = "genchar">Gender</b> <b id = "racechar">Race</b><b id = "modifier">.</b></p>
+			<p>You are currently a Level <b id = "level">1</b> <b id = "rank">Rank Name</b> with a max HP of <b id = "maxhp">0</b>.</p>
+			<p>You are proficient in <i id = "prof">N/A</i>. You take reduced penalty in <i id = "red">N/A</i>.</p>
+			<p class = "psykerPath">You are a Psyker and can cast spells. You specialise in the <b id = "schoolE">SCH</b> and the <b id = "schoolM">SCH</b> schools of spells</p>
+			<p class = "pariahGene">You have the Pariah Gene.</p>
+			<p>Currently you Rank up every <b id = "rankup">5</b> levels. <button id = "incRank">+</button> / <button id = "decRank">-</button>.</p>
+			<button id = "levelup">Level Up!</button>
+			<h3>Stats</h3>
+			<table>
+				<tr>
+					<td>Stat Points Available</td>
+					<td id = "free">0</td>
+				</tr>
+				<tr>
+					<td>Strength</td>
+					<td id = "strength">0</td>
+					<td class = "increase"><button id = "incStr">+</button></td>
+				</tr>
+				<tr>
+					<td>Constitution</td>
+					<td id = "constitution">0</td>
+					<td class = "increase"><button id = "incCon">+</button></td>
+				</tr>
+				<tr>
+					<td>Marksmanship</td>
+					<td id = "marksman">0</td>
+					<td class = "increase"><button id = "incMark">+</button></td>
+				</tr>
+				<tr>
+					<td>Agility</td>
+					<td id = "agility">0</td>
+					<td class = "increase"><button id = "incAgi">+</button></td>
+				</tr>
+				<tr>
+					<td>Intelligence</td>
+					<td id = "intelligence">0</td>
+					<td class = "increase"><button id = "incInt">+</button></td>
+				</tr>
+				<tr>
+					<td>Charisma</td>
+					<td id = "charisma">0</td>
+					<td class = "increase"><button id = "incChar">+</button></td>
+				</tr>
+				<tr>
+					<td>Warp Resistance</td>
+					<td id = "warpres">0</td>
+					<td class = "increase"><button id = "incWR">+</button></td>
+				</tr>
+				<tr>
+					<td>Movement</td>
+					<td id = "movement">0</td>
+				</tr>
+				<tr>
+					<td>Racial Bonus</td>
+					<td id = "racebon">N/A</td>
+				</tr>
+			</table>
+			<h3>Skills</h3>
+			<table>
+				<tr>
+					<td>Corruption</td>
+					<td id = "corruption">0</td>
+				</tr>
+				<tr>
+					<td rowspan = "4">Knowledge</td>
+					<td id = "xenos">Xenos: 0</td>
+				</tr>
+				<tr>
+					<td id = "warp">Warp: 0</td>
+				</tr>
+				<tr>
+					<td id = "history">History: 0</td>
+				</tr>
+				<tr>
+					<td id = "geography">Geography: 0</td>
+				</tr>
+				<tr>
+					<td>Perception</td>
+					<td id = "perception">0</td>
+				</tr>
+				<tr>
+					<td>Melee Accuracy</td>
+					<td id = "macc">0</td>
+				</tr>
+				<tr>
+					<td>Ranged Accuracy</td>
+					<td id = "racc">0</td>
+				</tr>
+				<tr>
+					<td>Dodge</td>
+					<td id = "dodge">0</td>
+				</tr>
+				<tr>
+					<td rowspan = "3">Elemental Resistance</td>
+					<td id = "fire">Fire: 0</td>
+				</tr>
+				<tr>
+					<td id = "frost">Frost: 0</td>
+				</tr>
+				<tr>
+					<td id = "shock">Lightning: 0</td>
+				</tr>
+				<tr>
+					<td>Stealth</td>
+					<td id = "stealth">0</td>
+				</tr>
+				<tr>
+					<td>Diplomacy</td>
+					<td id = "diplomacy">0</td>
+				</tr>
+				<tr>
+					<td>Leadership</td>
+					<td id = "leadership">0</td>
+				</tr>
+			</table>
+		</div>
+		<div class = "out">
+			<h3>Current Equips</h3>
+			<p>Right Hand: <b id = "rightHand">None</b></p>
+			<ul id = "weaponUpg">
+				<li>Ammo: <b id = "currentBullet">0</b> of <b id = "maxBullet">0</b></li>
+				<li>Extra ammo effects: <b id = "ammoEffect">None</b></li>
+				<li class = "regran">Sight: <b id = "sight">None</b></li>
+				<li class = "regran">Suppressor: <b id = "supp">None</b></li>
+				<li class = "regran">Accessory: <b id = "accessory">None</b></li>
+				<li id = "venom">Venom: <b id = "venomUsed">None</b></li>
+			</ul>
+			<p>Weapon details: <b id = "weapnote">None</b></p>
+			<p>Left Hand: <b id = "leftHand">None</b></p>
+			<ul id = "weaponUpgLeft">
+				<li>Damage: <b id = "damageleft">0</b></li>
+				<li>Crit: <b id = "leftcrit">20</b></li>
+				<li>Ammo: <b id = "currentBulletLeft">0</b> of <b id = "maxBulletLeft">0</b></li>
+				<li>Extra ammo effects: <b id = "ammoEffectLeft">None</b></li>
+				<li>Effective Range: <b id = "effrangeleft">0</b>m</li>
+				<li>Weapon details: <b id = "leftnote">None</b></li>
+			</ul>
+			<p>Wearing: <b id = "clothes">None</b></p>
+			<ul>
+				<li id = "cro">Common Runes: <b id = "cr">None</b></li>
+				<li id = "uro">Uncommon Runes: <b id = "ur">None</b></li>
+				<li id = "rro">Rare Runes: <b id = "rr">None</b></li>
+				<li id = "lro">Legendary Runes: <b id = "lr">None</b></li>
+				<li id = "mk1o">MK1 Upgrades: <b id = "mk1">None</b></li>
+				<li id = "mk2o">MK2 Upgrades: <b id = "mk2">None</b></li>
+				<li id = "mk3o">MK3 Upgrades: <b id = "mk3">None</b></li>
+				<li class = "jetpacko">Jetpack: <b id = "jetpack">None</b></li>
+			</ul>
+			<p>Head gear: <b id = "helmet">None</b></p>
+			<p>Comm gear: <b id = "comm">None</b> - can talk up to <b id = "commRange">30</b>m</p>
+			<p class = "divineItem">Divine item held: <b id = "divineHeld">None</b> - boosts Intelligence by <b id = "divineboost">0</b> for divine spells</p>
+			<p class = "back">Backpack: <b id = "bagName">None</b> - can hold <b id = "ammoBag">0</b> ammo items, <b id = "oneBag">0</b> one handed weapons, <b id = "twoBag">0</b> two handed weapons</p>
+			<select id = "backpack" class = "back"></select>
+			<p class = "har">Harness: <b id = "harnessName">None</b> - can hold <b id = "ammoHar">0</b> ammo items, <b id = "oneHar">0</b> one handed weapons, <b id = "twoHar">0</b> two handed weapons</p>
+			<select id = "harness" class = "har"></select>
+			<p>Inventory: </p>
+			<select id = "inventory"></select>
+			<p>Additional Stats</p>
+			<ul>
+				<li>Armour Rating: <b id = "armourRate">0</b></li>
+				<li>Damage: <b id = "damage">0</b> + <b id = "bonDam">0 (Melee Bonus)</b></li>
+				<li>Crit roll: <b id = "crit">20</b></li>
+				<li>Effective range: <b id = "effectiveRange">0</b>m</li>
+				<li>Throwing Range: <b id = "throw">0</b>m</li>
+				<li class = "psykerPath">Spell casts available: <b id = "spellAvail">0</b></li>
+				<li>Union Cridits in possesion: <b id = "gold">50</b></li>
+			</ul>
+			<p class = "psykerPath">Known Spells</p>
+			<ul id = "spellsKnown" class = "psykerPath"></ul>
+			<p>Status Effects</p>
+			<ul id = "statusEff">
+				<li id = "closeno">Close Combat Non-Proficiency: If below Nat 5 is rolled on accuracy, hit closest ally for normal damage</li>
+				<li id = "closered">Close Combat Reduced Proficiency: If below Nat 5 is rolled, hit closest ally for half damage</li>
+				<li id = "rangedno">Ranged Combat Non-Proficiency: If below Nat 5 is rolled on accuracy, hit furthest ally in range for regular damage</li>
+				<li id = "rangedred">Ranged Combat Reduced Proficiency: If below Nat 5 is rolled on accuracy, hit furthest ally in range for half damage</li>
+				<!--Environmental-->
+				<li id = "fogyay">Beneficial fog: Enemy accuracy decreased by 2 when targeting you</li>
+				<li id = "smokeyay">Beneficial smoke: Enemy accuracy decreased by 4 when targeting you</li>
+				<li id = "fognay">Harmful Fog: Your accuracy decreased by 2 (already implemented)</li>
+				<li id = "smokenay">Harmful Smoke: Your accuracy decreased by 4 (already implemented)</li>
+				<li id = "corr">Corruptible: every time you earn corruption gain 2 extra corruption points</li>
+				<li id = "calm">Calm: every time you lose corruption points, lose 2 extra corruption points</li>
+				<li id = "aimassist">Careful Aim: gain <b id = "aimbon">0</b> accuracy when behind cover</li>
+				<!--Man Made-->
+				<li id = "fogvar">Vision Distruptor: Enemy accuracy decreased by <b id = "fogbon">0</b> when targeting you</li>
+				<li id = "spellboost">Intelligence bonus <b id = "intelbon">0</b> for <b id = "inteltype">None</b> spells</li>
+				<li id = "mancalm">Cleanser: every time you lose corruption lose <b id = "calmbon">0</b> extra corruption points</li>
+				<li id = "mancorr">Corruptor: every time you earn corruption gain <b id = "corrbon">0</b> extra corruption points</li>
+				<li id = "bonspell">Focus Rune: deal <b id = "spellbon">0</b> extra damage with spells</li>
+				<li id = "jtpk">Jetpack bonus to movement range: <b id = "jetbon">0</b>m. Cooldown: <b id = "jetcool">0</b> turns</li>
+				<li id = "noff">Expert Marksman: Cannot target or hit friendly targets</li>
+				<li id = "nightvis">Night Vision: Darkness can no longer obscure your sight</li>
+				<li id = "fullvis">Enhanced Vision: Fog and smoke can no longer obscure your sight</li>
+				<li id = "suppeff">Suppressed Shots: Reduce discovery range by <b id = "supprange">0</b>m</li>
+				<li id = "lightsource">Lightsource: Visibility at night increased by <b id = "lighteff">0</b>m</li>
+				<li class = "fire">Pyromancy: 1 damage for 1d4 turns to target, flames burn for 1d4 turns in area. Fire Resistance check 10+ required</li>
+				<li class = "frost">Cryomancy: 50% movement 1d4 turns to target. Frost Resistance check 10+ required</li>
+				<li class = "shock">Fulmination: 1 turn paralysis. Lightning Resistance check 5+ required</li>
+				<li id = "shielded">Shielded: The shield in front of you absorbs <b id = "shielddam">0</b> damage. After being broken it needs <b id = "sheildwait">0</b> turns to repair</li>
+				<!--Perk Related-->
+				<li id = "elementalperk">Increase Intelligence by <b id = "elementalboost">0</b> when casting <b id = "elementalschool">None</b> spells</li>
+				<li id = "mentalperk">Increase Intelligence by <b id = "mentalboost">0</b> when casting <b id = "mentalschool">None</b> spells</li>
+				<li id = "rangedperk">Ranged accuracy decreases by 1 every <b id = "rangedec">0</b>m after effective range</li>
+			</ul>
+			<p>Perks Known</p>
+			<ul id = "perklist"></ul>
+		</div>
+		<div class = "out">
+			<h3>Campaign Actions</h3>
+			<button id = "addGold">Add Union Credits</button>
+			<button id = "addspecial">Add Special Item</button>
+			<h3>Equipment Actions</h3>
+			<button id = "invEquip">Equip from Inventory</button>
+			<button id = "invSell">Sell from Inventory</button>
+			<button id = "invLose">Lose from Inventory</button>
+			<br>
+			<button id = "armUnequip">Unequip Armour</button>
+			<button id = "upgUnequip">Unequip Armour Upgrade</button>
+				<br>
+			<button id = "rightUnequip">Unequip Right Hand Weapon</button>
+			<button id = "leftUnequip">Unequip Left Hand Weapon</button>
+			<button id = "wuUnequip">Unequip Weapon Upgrade</button>
+				<br>
+			<button id = "commmUnequip">Unequip Comm Equipment</button>
+			<button id = "headUnequip">Unequip Head Gear</button>
+			<button class = "jetpacko" id = "jetunequip">Unequip Jetpack</button>
+				<br>
+			<button class = "psykerPath" id = "forgetSpell">Forget Spell</button>
+			<button class = "divineItem" id = "divineUnequip">Unequip Divine Item</button>
+				<br class = "back">
+			<button class = "back" id = "bagunequip">Unequip Backpack</button>
+			<button class = "back" id = "addbag">Add to Backpack</button>
+			<button class = "back" id = "removebag">Remove from Backpack</button>
+				<br class = "back">
+			<button class = "back" id = "equipbag">Equip from Backpack</button>
+			<button class = "back" id = "movehar">Move from Backpack to Harness</button>
+				<br class = "har">
+			<button class = "har" id = "harunequip">Unequip Harness</button>
+			<button class = "har" id = "addhar">Add to Harness</button>
+			<button class = "har" id = "removehar">Remove from Harness</button>
+				<br class = "har">
+			<button class = "har" id = "grenthrow">Throw Grenade</button>
+			<button class = "har" id = "equiphar">Equip from Harness</button>
+			<button class = "har" id = "movebag">Move from Harness to Backpack</button>
+			<h3>Player Actions</h3>
+			<button id = "fireNormal">Regular Fire</button>
+			<button id = "fireBurst">Burst Fire</button>
+			<button id = "fireleft">Regular Fire Left</button>
+			<button id = "fireleftBurst">Burst Fire Left</button>
+			<h3>Shop</h3>
+			<select id = "armourShop">
+				<option disabled>Commons</option>
+				<option value = "0">Simple Robe</option>
+				<option value = "1">Suit</option>
+				<option value = "2">Flak Jacket</option>
+				<option value = "3">Dancer Clothes</option>
+				<option value = "4">Wraithbone Armour</option>
+				<option value = "5">Combat Uniform</option>
+				<option disabled>Uncommons</option>
+				<option value = "6">Woven Robe</option>
+				<option value = "7">Tailored Suit</option>
+				<option value = "8">Combat Vest</option>
+				<option value = "9">Acrobat Clothes</option>
+				<option value = "10">Aspect Armour</option>
+				<option value = "11">Combat Suit</option>
+				<option disabled>Rares</option>
+				<option value = "12">Runic Robe</option>
+				<option value = "13">Armoured Suit</option>
+				<option value = "14">Caparace Armour</option>
+				<option value = "15">Harlequin Outfit</option>
+				<option value = "16">Exarch Armour</option>
+				<option value = "17">XV15 Suit</option>
+				<option value = "18">XV15 Stealth Suit</option>
+				<option disabled>Legendaries</option>
+				<option value = "19">Master Robe</option>
+				<option value = "20">Shielded Suit</option>
+				<option value = "21">Power Armour</option>
+				<option value = "22">Holo Suit</option>
+				<option value = "23">Shrine Master Armour</option>
+				<option value = "24">XV22 Suit</option>
+				<option value = "25">XV22 Stealth Suit</option>
+				<option disabled>Uniques</option>
+				<option value = "26">Psyker Armour</option>
+				<option value = "27">Terminator Armour</option>
+				<option value = "28">Centurion Armour</option>
+				<option value = "29">Relic Harlequin Suit</option>
+				<option value = "30">Aspect Lord Armour</option>
+				<option value = "31">XV25 Suit</option>
+				<option value = "32">XV25 Stealth Suit</option>
+				<option value = "33">XV8 Crisis Suit</option>
+			</select>
+			<button id = "buyArmour">Buy Selected Armour</button>
+				<br>
+			<select id = "closeShop">
+				<option disabled>Commons</option>
+				<option value = "0">Steel Dagger</option>
+				<option value = "1">Wraithbone Dagger</option>
+				<option value = "2">Steel Blade</option>
+				<option value = "3">Wraithbone Sword</option>
+				<option value = "4">Steel Spear</option>
+				<option value = "5">Wraithspear</option>
+				<option value = "6">Sanctionite Staff</option>
+				<option value = "7">Wraith Staff</option>
+				<option disabled>Uncommons</option>
+				<option value = "8">Catachan Dagger</option>
+				<option value = "9">Dire Dagger</option>
+				<option value = "10">Catachan Blade</option>
+				<option value = "11">Diresword</option>
+				<option value = "12">Steel Hammer</option>
+				<option value = "13">Catachan Spear</option>
+				<option value = "14">Glaive</option>
+				<option value = "15">Aspirant Staff</option>
+				<option value = "16">Seer Staff</option>
+				<option disabled>Rares</option>
+				<option value = "17">Admantium Dagger</option>
+				<option value = "18">Mirror Dagger</option>
+				<option value = "19">Admantium Blade</option>
+				<option value = "20">Chainsword</option>
+				<option value = "21">Mirrorsword</option>
+				<option value = "22">Admantium Hammer</option>
+				<option value = "23">Power Spear</option>
+				<option value = "24">Power Glaive</option>
+				<option value = "25">Savant Staff</option>
+				<option value = "26">Farseer Staff</option>
+				<option disabled>Legendaries</option>
+				<option value = "27">Power Dagger</option>
+				<option value = "28">Powerwraith Dagger</option>
+				<option value = "29">Power Sword</option>
+				<option value = "30">Powerwraith Sword</option>
+				<option value = "31">Power Hammer</option>
+				<option value = "32">Power Glove</option>
+				<option value = "33">Crosius</option>
+				<option value = "34">Nemesis Halberd</option>
+				<option value = "35">Executioner</option>
+				<option value = "36">Perceptor Staff</option>
+				<option value = "37">Councillor's Staff</option>
+				<option disabled>Uniques</option>
+				<option value = "38">C'Tan Phase Knife</option>
+				<option value = "39">Harlequin's Kiss</option>
+				<option value = "40">Hyperphase Sword</option>
+				<option value = "41">Thunder Hammer</option>
+				<option value = "42">Crosius Arcanum</option>
+				<option value = "43">Warscythe</option>
+				<option value = "44">Force Rod</option>
+				<option value = "45">Staff of Light</option>
+			</select>
+			<button id = "buyClose">Buy Selected Close Combat Weapon</button>
+				<br>
+			<select id = "rangedShop">
+				<option disabled>Commons</option>
+				<option value = "46">Throwing Spike</option>
+				<option value = "47">Las Pistol</option>
+				<option value = "48">Pulse Pistol</option>
+				<option value = "49">Shuriken Pistol</option>
+				<option value = "50">Lasgun</option>
+				<option value = "51">Pulse Carabine</option>
+				<option value = "52">Shiriken Rifle</option>
+				<option value = "53">Long Las</option>
+				<option value = "54">Pulse Sniper</option>
+				<option value = "55">Ranger Rifle</option>
+				<option value = "56">Flamer</option>
+				<option value = "57">Autogun</option>
+				<option value = "58">Grendade Launcher</option>
+				<option disabled>Uncommons</option>
+				<option value = "59">Throwing Dagger</option>
+				<option value = "60">Hell Pistol</option>
+				<option value = "61">Pulsar</option>
+				<option value = "62">Avenger Pistol</option>
+				<option value = "63">Hellgun</option>
+				<option value = "64">Pulse Rifle</option>
+				<option value = "65">Avenger Rifle</option>
+				<option value = "66">Long Hellgun</option>
+				<option value = "67">Longshot Rifle</option>
+				<option value = "68">Pathfinder Rifle</option>
+				<option value = "69">Heavy Flamer</option>
+				<option value = "70">Aussault Cannon</option>
+				<option value = "71">Rocket Launcher</option>
+				<option disabled>Rares</option>
+				<option value = "72">Triskele</option>
+				<option value = "73">Bolt Pistol</option>
+				<option value = "74">Submunitions Pistol</option>
+				<option value = "75">Gatekeeper Pistol</option>
+				<option value = "76">Bolter</option>
+				<option value = "77">Submunitions Rifle</option>
+				<option value = "78">Gatekeeper Rifle</option>
+				<option value = "79">Bolt Sniper</option>
+				<option value = "80">Submunitions Sniper</option>
+				<option value = "81">Outcast Rifle</option>
+				<option value = "82">Incinerator</option>
+				<option value = "83">Heavy Bolter</option>
+				<option value = "84">Shuriken Catapult</option>
+				<option value = "85">Reaper Launcher</option>
+				<option disabled>Legendaries</option>
+				<option value = "86">Power Triskele</option>
+				<option value = "87">Plasma Pistol</option>
+				<option value = "88">Pulse Bomb Pistol</option>
+				<option value = "89">Shrieker Pistol</option>
+				<option value = "90">Storm Bolter</option>
+				<option value = "91">Plasma Gun</option>
+				<option value = "92">Pulse Bomb Rifle</option>
+				<option value = "93">Shrieker Rifle</option>
+				<option value = "94">Exitus Rifle</option>
+				<option value = "95">Rail Rifle</option>
+				<option value = "96">Wanderer Rifle</option>
+				<option value = "97">Plasma Cannon</option>
+				<option value = "98">Heavy Storm Bolter</option>
+				<option value = "99">Shuriken Cannon</option>
+				<option value = "100">Tempest Launcher</option>
+				<option disabled>Uniques</option>
+				<option value = "101">Barrage Plasma Pistol</option>
+				<option value = "102">Needle Pistol</option>
+				<option value = "103">Barrage Plasma Gun</option>
+				<option value = "104">Ion Rifle</option>
+				<option value = "105">Death Spinner</option>
+				<option value = "106">Needler</option>
+				<option value = "107">Ion Sniper</option>
+				<option value = "108">Multimelta</option>
+				<option value = "109">Spinarette Gun</option>
+				<option value = "110">Missile Pod</option>
+			</select>
+			<button id = "buyRanged">Buy Selected Ranged Combat Weapon</button>
+				<br>
+			<select id = "ammoShop">
+				<option value = "1">Small Battery</option>
+				<option value = "2">Medium Battery</option>
+				<option value = "3">Large Battery</option>
+				<option value = "4">Supreme Battery</option>
+				<option value = "5">Small Bolt Mag</option>
+				<option value = "6">Small Explosive Bolt Mag</option>
+				<option value = "7">Medium Bolt Mag</option>
+				<option value = "8">Medium Explosive Bolt Mag</option>
+				<option value = "9">Large Bolt Mag</option>
+				<option value = "10">Large Explosive Bolt Mag</option>
+				<option value = "11">Supreme Bolt Mag</option>
+				<option value = "12">Supreme Explosive Bolt Mag</option>
+				<option value = "13">Small Shuriken Disk</option>
+				<option value = "14">Medium Shuriken Disk</option>
+				<option value = "15">Large Shuriken Disk</option>
+				<option value = "16">Small Needle Stack</option>
+				<option value = "17">Large Needle Stack</option>
+				<option value = "18">Small Fuel Can</option>
+				<option value = "19">Medium Fuel Can</option>
+				<option value = "20">Large Fuel Can</option>
+				<option value = "21">Supreme Fuel Can</option>
+				<option value = "22">Small Filament Holder</option>
+				<option value = "23">Medium Filament Holder</option>
+				<option value = "24">Large Filament Holder</option>
+				<option value = "25">Frag Grenade</option>
+				<option value = "26">Krak Grenade</option>
+				<option value = "27">Vortex Grenade</option>
+				<option value = "28">Psyk-out Grenade</option>
+				<option value = "29">Plasma Grenade</option>
+				<option value = "30">Photon Grenade</option>
+				<option value = "31">Smoke Grenade</option>
+				<option value = "32">Frag Missile</option>
+				<option value = "33">Incendiary Missile</option>
+				<option value = "34">Krak Missile</option>
+				<option value = "35">Plasma Missile</option>
+				<option value = "36">Vortex Missile</option>
+				<option value = "37">Psyk-out Missile</option>
+				<option value = "38">Seeker Missile</option>
+			</select>
+			<button id = "buyAmmo">Buy Selected Ammo</button>
+				<br>
+			<select id = "runeShop">
+				<option value = "10">Fire Abatement</option>
+				<option value = "11">Frost Abatement</option>
+				<option value = "12">Lightning Dampener</option>
+				<option value = "13">Telekine Enhancer</option>
+				<option value = "14">Thought Booster</option>
+				<option value = "15">Divinator</option>
+				<option value = "16">Vision Distruptor</option>
+				<option value = "17">Charmer</option>
+				<option value = "18">Empowerer</option>
+				<option value = "19">Gravity Dampener</option>
+				<option value = "20">Cleanser</option>
+				<option value = "21">Corruptor</option>
+				<option value = "22">Focus Rune</option>
+			</select>
+			<select id = "runegrade">
+				<option value = "0">Common</option>
+				<option value = "1">Uncommon</option>
+				<option value = "2">Rare</option>
+				<option value = "3">Legendary</option>
+			</select>
+			<button id = "buyRune">Buy Selected Rune</button>
+				<br>
+			<select id = "upgShop">
+				<option value = "23">Target Identifier</option>
+				<option value = "24">Range Sensor</option>
+				<option value = "25">Servos</option>
+				<option value = "26">Jetpack</option>
+				<option value = "27">Teleporter</option>
+				<option value = "28">Climate Control</option>
+			</select>
+			<select id = "upggrade">
+				<option value = "0">MK1</option>
+				<option value = "1">MK2</option>
+				<option value = "2">MK3</option>
+			</select>
+			<button id = "buyUpg">Buy Selected Upgrade</button>
+				<br>
+			<select id = "weapUpgShop">
+				<option disabled>Sights</option>
+				<option value = "19">Iron Sight</option>
+				<option value = "1">Red Dot Scope</option>
+				<option value = "2">Holo Sight</option>
+				<option value = "3">Target Assist</option>
+				<option value = "4">5x Telescopic Sight</option>
+				<option value = "5">10x Telescopic Sight</option>
+				<option value = "6">Ballistics Sensor Array</option>
+				<option value = "7">Machine Spirit Sight</option>
+				<option value = "8">Infrared Sight</option>
+				<option value = "9">Broad Spectrum Sight</option>
+				<option disabled>Suppressors</option>
+				<option value = "10">Flash Reducer</option>
+				<option value = "11">Basic Silencer</option>
+				<option value = "12">Long Suppressor</option>
+				<option value = "13">Exitus Suppressor</option>
+				<option value = "14">Machine Spirit Silencer</option>
+				<option disabled>Accessories</option>
+				<option value = "15">Flashlight</option>
+				<option value = "16">Laser Pointer</option>
+				<option value = "17">Bipod</option>
+				<option value = "18">Integrated Gyroscopes</option>
+			</select>
+			<button id = "buyweapUpg">Buy Selected Weapon Upgrade</button>
+				<br class = "psykerPath">
+			<select id = "spellShop" class = "psykerPath">
+				<option disabled class = "fire">Pyromancy</option><!--16 spells-->
+				<option value = "0" class = "fire">Torch</option>
+				<option value = "1" class = "fire">Burning Fist</option>
+				<option value = "2" class = "fire">Flaming Weapon</option>
+				<option value = "3" class = "fire">Fire Bolt</option>
+				<option value = "4" class = "fire">Douse Flames</option>
+				<option value = "5" class = "fire">Lesser Flame Sculpt</option>
+				<option value = "6" class = "fire">Wyrdlight</option>
+				<option value = "7" class = "fire">Fireball</option>
+				<option value = "8" class = "fire">Extinguish Flames</option>
+				<option value = "9" class = "fire">Greater Flame Scuplt</option>
+				<option value = "10" class = "fire">Incinirate</option>
+				<option value = "11" class = "fire">Exterminate Flames</option>
+				<option value = "12" class = "fire">Flare</option>
+				<option value = "13" class = "fire">Fire Storm</option>
+				<option value = "14" class = "fire">Supreme Flame Sculpt</option>
+				<option value = "15" class = "fire">Sunburst</option>
+				<option disabled class = "frost">Cryomancy</option><!--16 spells-->
+				<option value = "16" class = "frost">Frost Touch</option>
+				<option value = "17" class = "frost">Cryocharge</option>
+				<option value = "18" class = "frost">Frost Spike</option>
+				<option value = "19" class = "frost">Frost Armour</option>
+				<option value = "20" class = "frost">Snowfall</option>
+				<option value = "21" class = "frost">Frost Sphere</option>
+				<option value = "22" class = "frost">Frozen Armour</option>
+				<option value = "23" class = "frost">Ice Rink</option>
+				<option value = "24" class = "frost">Snow Storm</option>
+				<option value = "25" class = "frost">Permafrost Armour</option>
+				<option value = "26" class = "frost">Permafrost Spike</option>
+				<option value = "27" class = "frost">Blizzard</option>
+				<option value = "28" class = "frost">Frozen Shards</option>
+				<option value = "29" class = "frost">Frozen Tempest</option>
+				<option value = "30" class = "frost">Frozen Sarcophagus</option>
+				<option value = "31" class = "frost">Frozen Nova</option>
+				<option disabled class = "shock">Fulmination</option><!--16 spells-->
+				<option value = "32" class = "shock">Flash</option>
+				<option value = "33" class = "shock">Lightning Fist</option>
+				<option value = "34" class = "shock">Shocking Weapon</option>
+				<option value = "38" class = "shock">Lightning Bolt</option>
+				<option value = "35" class = "shock">Magnetokinesis</option>
+				<option value = "36" class = "shock">Charge</option>
+				<option value = "37" class = "shock">Flashbang</option>
+				<option value = "39" class = "shock">Electric Surge</option>
+				<option value = "40" class = "shock">Overload</option>
+				<option value = "41" class = "shock">Surcharge</option>
+				<option value = "42" class = "shock">Lightning Arc</option>
+				<option value = "43" class = "shock">Critical Failiure</option>
+				<option value = "44" class = "shock">Lightning Storm</option>
+				<option value = "45" class = "shock">Overcharge</option>
+				<option value = "46" class = "shock">Electrodisplacement</option>
+				<option value = "47" class = "shock">Raging Tempest</option>
+				<option disabled class = "teke">Telekinesis</option><!--18 spells-->
+				<option value = "48" class = "teke">Call Lesser Item</option>
+				<option value = "49" class = "teke">Lesser Heal</option>
+				<option value = "50" class = "teke">Psychic Blades</option>
+				<option value = "51" class = "teke">Lesser Distortion</option>
+				<option value = "52" class = "teke">Lesser Chameleon</option>
+				<option value = "53" class = "teke">Call Greater Item</option>
+				<option value = "54" class = "teke">Greater Chameleon</option>
+				<option value = "55" class = "teke">Greater Heal</option>
+				<option value = "56" class = "teke">Greater Distortion</option>
+				<option value = "57" class = "teke">Supreme Chameleon</option>
+				<option value = "58" class = "teke">Catch Projectile</option>
+				<option value = "59" class = "teke">Supeme Heal</option>
+				<option value = "60" class = "teke">Teleport</option>
+				<option value = "61" class = "teke">Supreme Distortion</option>
+				<option value = "62" class = "teke">Mend Metal</option>
+				<option value = "63" class = "teke">Projectile Shield</option>
+				<option value = "64" class = "teke">Greater Projectile Shield</option>
+				<option value = "65" class = "teke">Gaze of Infinity</option>
+				<option disabled class = "tele">Telepathy</option><!--17 spells-->
+				<option value = "66" class = "tele">Dull Pain</option>
+				<option value = "67" class = "tele">Inspiring Presence</option>
+				<option value = "68" class = "tele">Aura of Fear</option>
+				<option value = "69" class = "tele">Telepathy</option>
+				<option value = "70" class = "tele">Aura of Horror</option>
+				<option value = "71" class = "tele">Inspirational Aura</option>
+				<option value = "72" class = "tele">Greater Telepathy</option>
+				<option value = "73" class = "tele">Aura of Terror</option>
+				<option value = "74" class = "tele">Dominate</option>
+				<option value = "75" class = "tele">Supreme Telepathy</option>
+				<option value = "76" class = "tele">Emperor's Word</option>
+				<option value = "77" class = "tele">Abominable Aura</option>
+				<option value = "78" class = "tele">See Me Not</option>
+				<option value = "79" class = "tele">Astropathy</option>
+				<option value = "80" class = "tele">Might of the Ancients</option>
+				<option value = "81" class = "tele">Greater Astropathy</option>
+				<option value = "82" class = "tele">Avenger</option>
+				<option disabled class = "divi">Divination</option><!--13 spells-->
+				<option value = "83" class = "divi">Precognition</option>
+				<option value = "84" class = "divi">Sense Object</option>
+				<option value = "85" class = "divi">Far Sight</option>
+				<option value = "86" class = "divi">Divine Aim</option>
+				<option value = "87" class = "divi">Divine Object</option>
+				<option value = "88" class = "divi">Sense Near Future</option>
+				<option value = "89" class = "divi">Divine Shot</option>
+				<option value = "90" class = "divi">Sense Person</option>
+				<option value = "91" class = "divi">Sense Far Future</option>
+				<option value = "92" class = "divi">Wipe Memory</option>
+				<option value = "93" class = "divi">Possibility shield</option>
+				<option value = "94" class = "divi">Divine Person</option>
+				<option value = "95" class = "divi">Personal Augury</option>
+			</select>
+			<button class = "psykerPath" id = "buySpell">Buy Selected Spell</button>
+				<br>
+			<select id = "otherShop">
+				<option value = "0">Glasses</option>
+				<option value = "1">Night Vision Glasses</option>
+				<option value = "2">Monocle</option>
+				<option value = "3">Hologlasses</option>
+				<option value = "4">Runic Hood</option>
+				<option value = "5">Officer's Eyes</option>
+				<option value = "6">Psychic Hood</option>
+				<option value = "7">Boosted Psyker's Hood</option>
+				<option value = "8">Basic Vox box</option>
+				<option value = "9">Vox Caster</option>
+				<option value = "10">Vox Bead</option>
+				<option value = "11">Small Bag</option>
+				<option value = "12">Medium Bag</option>
+				<option value = "13">Large Bag</option>
+				<option value = "14">Basic Harness</option>
+				<option value = "15">Combat Harness</option>
+				<option value = "16">Advanced Harness</option>
+				<option value = "150">Combat Shield</option>
+				<option value = "151">Power Shield</option>
+				<option value = "152">Storm Shield</option>
+				<option value = "17">Warp Infused Crystal</option>
+				<option value = "18">Emperor's Tarot</option>
+				<option value = "19">Chronometron</option>
+			</select>
+			<button id = "buyOther">Buy Other Item</button>
+				<br>
+			<select id = "training">
+				<option value = "0">Chaos Studies</option>
+				<option value = "1">Cleansing</option>
+				<option value = "2">Library Services</option>
+				<option value = "3">Eye Augments</option>
+				<option value = "4">Training Arena</option>
+				<option value = "5">Target Practice</option>
+				<option value = "6">Dance Course</option>
+				<option value = "7">Stealth Course</option>
+				<option value = "8">Debating Sosciety</option>
+				<option value = "9">Leadership Course</option>
+			</select>
+			<select id = "traintype">
+				<option value = "0">Beginner</option>
+				<option value = "1">Advanced</option>
+				<option value = "2">Master</option>
+			</select>
+			<button id = "buyTrain">Train in Course</button>
+				<br>
+			<select id = "perks">
+				<option value = "0">Ambidexterous</option>
+				<option value = "1">Dual Mastery</option>
+				<option value = "2">Walk and Fire</option>
+				<option value = "3">Nimble Hands</option>
+				<option value = "4">Double Tap</option>
+				<option value = "5">Expert Marksman</option>
+				<option value = "6">Ease of Access</option>
+				<option value = "7">Jetpack Training</option>
+				<option value = "8">Speed Burst</option>
+				<option value = "9">Speedster</option>
+				<option value = "10">Speed Demon</option>
+				<option value = "11">Inhuman Speed</option>
+				<option value = "12">Fast Reflexes</option>
+				<option value = "13">Inhuman Reflexes</option>
+				<option value = "14">Bullet Time</option>
+				<option value = "15" class = "fire">Warp Fury</option>
+				<option value = "16" class = "fire">Flames of Hell</option>
+				<option value = "17" class = "fire">Infernal Blaze</option>
+				<option value = "18" class = "frost">Chilling Presence</option>
+				<option value = "19" class = "frost">Icy Purgatory</option>
+				<option value = "20" class = "frost">Frozen End Domain</option>
+				<option value = "21" class = "shock">Sparkling Personality</option>
+				<option value = "22" class = "shock">Thunderous Gaze</option>
+				<option value = "23" class = "shock">Heaven's Wrath</option>
+				<option value = "24" class = "psykerPath">Mental Discipline</option>
+				<option value = "25" class = "psykerPath">Mind Games</option>
+				<option value = "26" class = "psykerPath">Iron Will</option>
+				<option value = "27" class = "psykerPath">Master of the Warp</option>
+				<option value = "28">Elementary Resistance</option>
+				<option value = "29">Friend of the Elements</option>
+				<option value = "30">One with Nature</option>
+				<option value = "31">Long Range Combatant</option>
+				<option value = "32">Long Ranged Specialist</option>
+				<option value = "33">Sniper Disciplne</option>
+				<option value = "34">Distance Mastery</option>
+			</select>
+			<button id = "buyPerk">Buy Selected Perk</button>
+		</div>
+		<div class = "out" id = "save">
+			<h3>Save code</h3>
+			<p>Inventory items and unused stat points are not saved!</p>
+			<button id = "savecharacter">Save current character</button>
+				<br>
+			<textarea id = "savecode"></textarea>
+		</div>
+	</main>
 </body>
 
 </html>

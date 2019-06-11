@@ -8,26 +8,26 @@ Charisma - interaction with NPCs (intimidation / persuasion)
 Warp resistance - resisting the forces of the warp and the chaos gods, temptation resistance
 
                     AS      SM      E       IG      T
-Strength            3       4       1       1       0
+Strength            3       4       1       1       -1
 Constitution        3       4       1       1       0
 Marksmanship        2       2       3       1       4
 Agility             0       0       3       2       2
-Intelligence        1       0       2       0       0
+Intelligence        1       0       2       0       1
 Charisma            1       0       1       4       2
-Warp resistance     1       1       0       0       3
-Total               11      11      11      9       11
+Warp resistance     1       1       0       1       3
+Total               11      11      11      10      11
 
 Secondary skills
-Corruption - affected by Warp resistance
+Corruption -                                                                Warp resistance
 Knowledge: xenos, warp, history, geography
-Perception - ability to notice things, affected by Intelligence
-Melee accuracy - ability to hit a target at close combat, affected by Strength + Agility
-Ranged accuracy - ability to hit a ranged target, affected by Marksmanship + Intelligence
-Dodge - ability to evade from a blow, affected by Agility
-Elemental resist - lower penalty from environment and enviromental spells, affected by Constitution
-Stealth - ability to evade detection, affected by Agility
-Diplomacy - ability to persuade others to your cause, affected by Charisma
-Leadership - ability to insipre subordinates and improve morale, affected by Charisma + Intelligence
+Perception - ability to notice things,                                      Intelligence
+Melee accuracy - ability to hit a target at close combat,                   Strength + Agility
+Ranged accuracy - ability to hit a ranged target,                           Marksmanship
+Dodge - ability to evade from a blow,                                       Agility
+Elemental resist - lower penalty from environment and enviromental spells,  Constitution
+Stealth - ability to evade detection,                                       Agility
+Diplomacy - ability to persuade others to your cause,                       Charisma + Intelligence
+Leadership - ability to insipre subordinates and improve morale,            Charisma
 
 Weapons
 One handed melee: dagger, sword, hammer

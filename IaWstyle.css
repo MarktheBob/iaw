@@ -77,3 +77,37 @@ body{
 table{
 	width: 100%;
 }
+
+/*Char creation*/
+#create{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+#create div{
+	margin: 0em 0.5em 1em 0.5em;
+	max-width: 30vw;
+	width: 30vw;
+}
+
+.small{
+	height: 2em;
+	width: 10vw;
+}
+
+#story{
+	width: 100%;
+}
+
+select{
+	min-width: 10vw;
+}
+
+#save{
+	min-width: 90vw;
+}
+
+#savecode{
+	min-width: 50%;
+}
