@@ -7286,7 +7286,7 @@ $(document).ready(function(){
 		}
 		else if(code == "clo"){
 			var twohands = closeCombat[num]["two"];
-			if(twohands == 1 && canback[2] == 1 && inback[2][0] == 200){
+			if((twohands == 1 || closeCombat[num]["type"] == 3) && canback[2] == 1 && inback[2][0] == 200){
 				inback[2][0] = num;
 				$("#inventory option[value='" + code + num + "']:first").remove();
 				$('#backpack').append('<option value = "20">' + closeCombat[num]["name"] + '</option>');
@@ -7648,7 +7648,7 @@ $(document).ready(function(){
 		}
 		else if(code == "clo"){
 			var twohands = closeCombat[num]["two"];
-			if(twohands == 1 && canhar[2] == 1 && inhar[2][0] == 200 && inhar[1][0] == 200){
+			if((twohands == 1 || closeCombat[num]["type"] == 3) && canhar[2] == 1 && inhar[2][0] == 200 && inhar[1][0] == 200){
 				inhar[2][0] = num;
 				$("#inventory option[value='" + code + num + "']:first").remove();
 				$('#harness').append('<option value = "20">' + closeCombat[num]["name"] + '</option>');
