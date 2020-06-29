@@ -83,10 +83,10 @@
 			</select>
 			<button id = "genSelect">Next</button>
 		</div>
-		<div class = "out">
+		<div class = "out"><!--Stats-->
 			<h3>Character Description</h3>
 			<p>You (<b id = "namechar">Name</b>) are a <b id = "genchar">Gender</b> <b id = "racechar">Race</b><b id = "modifier">.</b></p>
-			<p>You are currently a Level <b id = "level">1</b> <b id = "rank">Rank Name</b> with a max HP of <b id = "maxhp">0</b>.</p>
+			<p>You are currently a Level <b id = "level">1</b> <b id = "rank">Rank Name</b> with <b id = "chp">0</b> of <b id = "maxhp">0</b> HP.</p>
 			<p>You are proficient in <i id = "prof">N/A</i>. You take reduced penalty in <i id = "red">N/A</i>.</p>
 			<p class = "psykerPath">You are a Psyker and can cast spells. You specialise in the <b id = "schoolE">SCH</b> and the <b id = "schoolM">SCH</b> schools of spells</p>
 			<p class = "pariahGene">You have the Pariah Gene.</p>
@@ -201,7 +201,7 @@
 				</tr>
 			</table>
 		</div>
-		<div class = "out">
+		<div class = "out"><!--Player-->
 			<h3>Current Equips</h3>
 			<p>Right Hand: <b id = "rightHand">None</b></p>
 			<ul id = "weaponUpg">
@@ -292,10 +292,13 @@
 			<p>Perks Known</p>
 			<ul id = "perklist"></ul>
 		</div>
-		<div class = "out">
+		<div class = "out"><!--Actions/Shop-->
+			<button id = "showtanks">Show Tanks</button>
 			<h3>Campaign Actions</h3>
 			<button id = "addGold">Add Union Credits</button>
 			<button id = "addspecial">Add Special Item</button>
+			<button id = "takeDamage">Take Damage</button>
+			<button id = "heal">Heal Player</button>
 			<h3>Equipment Actions</h3>
 			<button id = "invEquip">Equip from Inventory</button>
 			<button id = "invSell">Sell from Inventory</button>
@@ -810,6 +813,124 @@
 			<button id = "savecharacter">Save current character</button>
 				<br>
 			<textarea id = "savecode"></textarea>
+		</div>
+		<div id="tanks">
+			<h3>Current Tanks</h3>
+			<button id = "closetanks">&times;</button>
+			<p>Armour key: L = Light Armour, M = Medium Armour, H = Heavy Armour, S = Super Heavy Armour</p>
+			<p>Weapons section key: Damage / Range / Gun Size / Slot Size. Note that if a weapon shoots multiple shots each shot deals rolled damage</p>
+			<p>Movement type (MT) key: H = Hover, T = Track, W = Walker</p>
+			<table id = "currT">
+				<tr>
+					<td>Tank ID</td>
+					<td>Chassis (Config) / Class</td>
+					<td>Gunners</td>
+					<td>Armour Upg</td>
+					<td>Sight Upg</td>
+					<td>Engine Upg</td>
+					<td>Health / AB</td>
+					<td>MT / Speed</td>
+					<td>Passengers</td>
+					<td>Top Weapon</td>
+					<td>Left Weapon</td>
+					<td>Right Weapon</td>
+					<td>Front Weapon</td>
+					<td class = "note">Notes</td>
+				</tr>
+			</table>
+				<br>
+				<br>
+			<table id = "currS">
+				<tr>
+					<td>Staff ID</td>
+					<td>Tank ID</td>
+					<td>Skill Level / Rank</td>
+					<td class = "note">Notes</td>
+				</tr>
+			</table>
+			<br><br>
+			<h3>Tank Creator</h3>
+            <select id = "chassisT">
+                <option value = "0">Sentinel</option>
+                <option value = "1">Land Speeder</option>
+                <option value = "2">Vyper</option>
+                <option value = "3">Pirahna</option>
+                <option value = "4">Chimera</option>
+                <option value = "5">Falcon</option>
+                <option value = "6">Devilfish</option>
+                <option value = "7">Rhino</option>
+                <option value = "8">Leman Russ</option>
+                <option value = "9">Engine of Vaul</option>
+                <option value = "10">Land Raider</option>
+                <option value = "11">Bane Blade</option>
+            </select>
+            <button id = "buyChassis">Buy Chassis</button>
+                <br>
+            <select id = "weaponsT">
+                <option disabled>Small</option>
+                <option value = "0">Gun Drone</option>
+                <option value = "1">Assault Cannon</option>
+                <option value = "2">Heavy Flamer</option>
+                <option value = "3">Heavy Bolter</option>
+                <option value = "4">Multilaser</option>
+                <option value = "5">Shuriken Cannon</option>
+                <option disabled>Medium</option>
+                <option value = "6">Ion Blaster</option>
+                <option value = "7">Lascannon</option>
+                <option value = "8">Twin Bolter</option>
+                <option value = "9">Twin Flamer</option>
+                <option value = "10">Twin Shuriken Cannon</option>
+                <option value = "11">Missile Launcher</option>
+                <option disabled>Large</option>
+                <option value = "12">Tempest Launcher</option>
+                <option value = "13">Hunter-Killer Launcher</option>
+                <option value = "14">Autocannon</option>
+                <option value = "15">Battle Cannon</option>
+                <option value = "16">Plasma Destructor</option>
+                <option value = "17">Plasma Cannon</option>
+                <option value = "18">Brightlance</option>
+                <option value = "19">Fire Prism</option>
+                <option value = "20">Death Spinner</option>
+                <option value = "21">Rail Gun</option>
+                <option value = "22">Sky Ray Platform</option>
+                <option disabled>Super</option>
+                <option value = "23">Earth Shaker Cannon</option>
+                <option value = "24">Plasma Blast Gun</option>
+                <option value = "25">Baneblade Cannon</option>
+                <option value = "26">Distortion Cannon</option>
+                <option value = "27">Twin Brightlance</option>
+                <option value = "49">Drone Factory</option>
+            </select>
+            <button id = "buyWeapon">Buy Weapon</button>
+                <br>
+            <select id = "upgsT">
+                <option disabled>Armour</option>
+                <option value = "0">Light Plating</option>
+                <option value = "1">Heavy Plating</option>
+                <option value = "2">Void Shielding</option>
+                <option value = "3">Holo Field</option>
+                <option value = "4">Light Inner Shielding</option>
+                <option value = "5">Heavy Inner Shielding</option>
+                <option disabled>Sight</option>
+                <option value = "6">Basic Sights</option>
+                <option value = "7">Advanced Sights</option>
+                <option value = "8">Targeting Comp</option>
+                <option value = "9">Ballistics Comp</option>
+                <option value = "10">Advanced Ballistics Comp</option>
+                <option value = "11">Night Sight</option>
+                <option value = "12">Radar</option>
+                <option value = "13">Cooling System</option>
+                <option value = "14">Autoloader</option>
+                <option disabled>Engine</option>
+                <option value = "15">Jump Jets</option>
+                <option value = "16">Boosted Jets</option>
+                <option value = "17">Enhanced Engine</option>
+            </select>
+            <button id = "buyUpgT">Buy Upgrade</button>
+            <br>
+            <button id = "selltank">Sell Tank</button>
+            <button id = "sellweapT">Sell Weapon</button>
+            <button id = "sellupgT">Sell Upgrade</button>
 		</div>
 	</main>
 </body>

@@ -111,3 +111,24 @@ select{
 #savecode{
 	min-width: 50%;
 }
+
+#tanks{
+	display: none;
+	position: fixed;
+	width: 100% !important;
+	max-width: 96% !important;
+	padding: 0em 1em 0em 1em;
+	height: 100%;
+	z-index: 2;
+	background-color: rgb(200, 200, 200);
+}
+
+#closetanks{
+	position: absolute;
+	z-index: 3;
+	background-color: rgb(200, 200, 200);
+	right: 1vw;
+	top:1vw;
+	padding: 0em 0.25em;
+	font-size:2em;
+}

@@ -1,0 +1,182 @@
+<html>
+
+<head>
+
+<title>Ally Tracker</title>
+<script src = "jqMin.js"></script>
+<script src = "allycreate.js"></script>
+<link rel="stylesheet" type="text/css" href="IaWstyle.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<nav>
+		<a href = "index.html">Home</a>
+		<div class = "dropdown">
+			<button class="dropbtn">Races <i class="fa fa-caret-down"></i></button>
+			<div class="dropdown-content">
+				<a href = "SM.html">Adeptus Astartes</a>
+				<a href = "AS.html">Adeptus Sororitas</a>
+				<a href = "IG.html">Imperial Guard</a>
+				<a href = "T.html">Tau</a>
+				<a href = "E.html">Eldar</a>
+			</div>
+		</div>
+		<div class = "dropdown">
+			<button class="dropbtn">Shop <i class="fa fa-caret-down"></i></button>
+			<div class="dropdown-content">
+				<a href = "cloth.html">Armour and Clothes</a>
+				<a href = "close.html">Close Combat</a>
+				<a href = "ranged.html">Ranged Combat</a>
+				<a href = "ammo.html">Weapon Accesories</a>
+				<a href = "vehicles.html">Vehicle Builder</a>
+				<a href = "friend.html">Allies</a>
+				<a href = "spells.html">Spells</a>
+				<a href = "other.html">Other Things</a>
+			</div>
+		</div>
+		<a href = "create.html">Character Creation</a>
+		<a href = "rules.html">Rules and Guidelines</a>
+	</nav>
+	<header>
+		<h1>Ally Tracker</h1>
+		<h2>Recruit allies and build tanks</h2>
+    </header>
+    <main id = "allycr">
+        <div id = "list">
+            <h3>Current Tanks</h3>
+            <p>Credits spent on tanks: <b id = "goldtank">0</b></p>
+            <p>Armour key: L = Light Armour, M = Medium Armour, H = Heavy Armour, S = Super Heavy Armour</p>
+            <p>Weapons section key: Damage / Range / Gun Size / Slot Size. Note that if a weapon shoots multiple shots each shot deals rolled damage</p>
+            <p>Movement type (MT) key: H = Hover, T = Track, W = Walker</p>
+            <table id = "tanks">
+                <tr>
+                    <td>Tank ID</td>
+                    <td>Chassis (Config) / Class</td>
+                    <td>Gunners</td>
+                    <td>Armour Upg</td>
+                    <td>Sight Upg</td>
+                    <td>Engine Upg</td>
+                    <td>Health / AB</td>
+                    <td>MT / Speed</td>
+                    <td>Passengers</td>
+                    <td>Top Weapon</td>
+                    <td>Left Weapon</td>
+                    <td>Right Weapon</td>
+                    <td>Front Weapon</td>
+                    <td class = "note">Notes</td>
+                </tr>
+            </table>
+                <br>
+                <br>
+            <table id = "staff">
+                <tr>
+                    <td>Staff ID</td>
+                    <td>Tank ID</td>
+                    <td>Skill Level / Rank</td>
+                    <td class = "note">Notes</td>
+                </tr>
+            </table>
+                <br>
+            <h3>Current Allies</h3>
+            <talble id = "allies">
+                <tr>
+                    <td>Ally ID</td>
+                    <td>Ally Name</td>
+                    <td>Armour</td>
+                    <td>Weapons</td>
+                    <td>Rank</td>
+                    <td>HP / AB</td>
+                    <td>Number of Troops</td>
+                    <td>Grenades Equipped / Can Equip</td>
+                    <td class = "notes">Notes</td>
+                </tr>
+            </talble>
+        </div>
+        <div id = "options">
+            <h3>Tank Creator</h3>
+            <select id = "chassis">
+                <option value = "0">Sentinel</option>
+                <option value = "1">Land Speeder</option>
+                <option value = "2">Vyper</option>
+                <option value = "3">Pirahna</option>
+                <option value = "4">Chimera</option>
+                <option value = "5">Falcon</option>
+                <option value = "6">Devilfish</option>
+                <option value = "7">Rhino</option>
+                <option value = "8">Leman Russ</option>
+                <option value = "9">Engine of Vaul</option>
+                <option value = "10">Land Raider</option>
+                <option value = "11">Bane Blade</option>
+            </select>
+            <button id = "buyChassis">Buy Chassis</button>
+                <br>
+            <select id = "weapons">
+                <option disabled>Small</option>
+                <option value = "0">Gun Drone</option>
+                <option value = "1">Assault Cannon</option>
+                <option value = "2">Heavy Flamer</option>
+                <option value = "3">Heavy Bolter</option>
+                <option value = "4">Multilaser</option>
+                <option value = "5">Shuriken Cannon</option>
+                <option disabled>Medium</option>
+                <option value = "6">Ion Blaster</option>
+                <option value = "7">Lascannon</option>
+                <option value = "8">Twin Bolter</option>
+                <option value = "9">Twin Flamer</option>
+                <option value = "10">Twin Shuriken Cannon</option>
+                <option value = "11">Missile Launcher</option>
+                <option disabled>Large</option>
+                <option value = "12">Tempest Launcher</option>
+                <option value = "13">Hunter-Killer Launcher</option>
+                <option value = "14">Autocannon</option>
+                <option value = "15">Battle Cannon</option>
+                <option value = "16">Plasma Destructor</option>
+                <option value = "17">Plasma Cannon</option>
+                <option value = "18">Brightlance</option>
+                <option value = "19">Fire Prism</option>
+                <option value = "20">Death Spinner</option>
+                <option value = "21">Rail Gun</option>
+                <option value = "22">Sky Ray Platform</option>
+                <option disabled>Super</option>
+                <option value = "23">Earth Shaker Cannon</option>
+                <option value = "24">Plasma Blast Gun</option>
+                <option value = "25">Baneblade Cannon</option>
+                <option value = "26">Distortion Cannon</option>
+                <option value = "27">Twin Brightlance</option>
+            </select>
+            <button id = "buyWeapon">Buy Weapon</button>
+                <br>
+            <select id = "upgs">
+                <option disabled>Armour</option>
+                <option value = "0">Light Plating</option>
+                <option value = "1">Heavy Plating</option>
+                <option value = "2">Void Shielding</option>
+                <option value = "3">Holo Field</option>
+                <option value = "4">Light Inner Shielding</option>
+                <option value = "5">Heavy Inner Shielding</option>
+                <option disabled>Sight</option>
+                <option value = "6">Basic Sights</option>
+                <option value = "7">Advanced Sights</option>
+                <option value = "8">Targeting Comp</option>
+                <option value = "9">Ballistics Comp</option>
+                <option value = "10">Advanced Ballistics Comp</option>
+                <option value = "11">Night Sight</option>
+                <option value = "12">Radar</option>
+                <option value = "13">Cooling System</option>
+                <option value = "14">Autoloader</option>
+                <option disabled>Engine</option>
+                <option value = "15">Jump Jets</option>
+                <option value = "16">Boosted Jets</option>
+                <option value = "17">Enhanced Engine</option>
+            </select>
+            <button id = "buyUpg">Buy Upgrade</button>
+            <br>
+            <button id = "selltank">Sell Tank</button>
+            <button id = "sellweap">Sell Weapon</button>
+            <button id = "sellupg">Sell Upgrade</button>
+        </div>
+    </main>
+</body>
+
+</html>
